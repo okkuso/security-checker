@@ -1,0 +1,202 @@
+[
+  {
+    "name": "amazon.co.jp",
+    "score": 90
+  },
+  {
+    "name": "note.com",
+    "score": 90
+  },
+  {
+    "name": "mercari.com",
+    "score": 85
+  },
+  {
+    "name": "nikkei.com",
+    "score": 85
+  },
+  {
+    "name": "cookpad.com",
+    "score": 80
+  },
+  {
+    "name": "moneyforward.com",
+    "score": 80
+  },
+  {
+    "name": "qiita.com",
+    "score": 80
+  },
+  {
+    "name": "panasonic.jp",
+    "score": 75
+  },
+  {
+    "name": "www.mizuhobank.co.jp",
+    "score": 75
+  },
+  {
+    "name": "ntt.com",
+    "score": 75
+  },
+  {
+    "name": "sony.co.jp",
+    "score": 70
+  },
+  {
+    "name": "nintendo.co.jp",
+    "score": 70
+  },
+  {
+    "name": "au.com",
+    "score": 70
+  },
+  {
+    "name": "uniqlo.com",
+    "score": 70
+  },
+  {
+    "name": "gurunavi.com",
+    "score": 70
+  },
+  {
+    "name": "hotpepper.jp",
+    "score": 70
+  },
+  {
+    "name": "cybozu.co.jp",
+    "score": 70
+  },
+  {
+    "name": "nec.com",
+    "score": 70
+  },
+  {
+    "name": "yahoo.co.jp",
+    "score": 65
+  },
+  {
+    "name": "line.me",
+    "score": 65
+  },
+  {
+    "name": "zozo.jp",
+    "score": 65
+  },
+  {
+    "name": "tabelog.com",
+    "score": 65
+  },
+  {
+    "name": "suumo.jp",
+    "score": 65
+  },
+  {
+    "name": "freee.co.jp",
+    "score": 65
+  },
+  {
+    "name": "smarthr.jp",
+    "score": 65
+  },
+  {
+    "name": "www.honda.co.jp",
+    "score": 65
+  },
+  {
+    "name": "rakuten.co.jp",
+    "score": 60
+  },
+  {
+    "name": "gree.jp",
+    "score": 55
+  },
+  {
+    "name": "sansan.com",
+    "score": 55
+  },
+  {
+    "name": "www.cyberagent.co.jp",
+    "score": 55
+  },
+  {
+    "name": "www.smbc.co.jp",
+    "score": 55
+  },
+  {
+    "name": "www.hitachi.co.jp",
+    "score": 55
+  },
+  {
+    "name": "www.7andi.com",
+    "score": 55
+  },
+  {
+    "name": "docomo.ne.jp",
+    "score": 50
+  },
+  {
+    "name": "dena.com",
+    "score": 50
+  },
+  {
+    "name": "mixi.co.jp",
+    "score": 50
+  },
+  {
+    "name": "kddi.com",
+    "score": 50
+  },
+  {
+    "name": "aeon.co.jp",
+    "score": 50
+  },
+  {
+    "name": "rakus.co.jp",
+    "score": 50
+  },
+  {
+    "name": "fujitsu.com",
+    "score": 50
+  },
+  {
+    "name": "nissan.co.jp",
+    "score": 50
+  },
+  {
+    "name": "benesse.co.jp",
+    "score": 50
+  },
+  {
+    "name": "group.ntt",
+    "score": 50
+  },
+  {
+    "name": "www.mufg.jp",
+    "score": 45
+  },
+  {
+    "name": "softbank.jp",
+    "score": 40
+  },
+  {
+    "name": "www.sbigroup.co.jp",
+    "score": 35
+  },
+  {
+    "name": "www.dentsu.co.jp",
+    "score": 35
+  },
+  {
+    "name": "toyota.jp",
+    "score": 30
+  },
+  {
+    "name": "www.fastretailing.com",
+    "score": 30
+  },
+  {
+    "name": "recruit.co.jp",
+    "score": 20
+  }
+]
