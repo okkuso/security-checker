@@ -11,8 +11,8 @@ export interface Article {
 const cta = `
 <div class="not-prose bg-zinc-100 rounded-xl p-6 mt-8">
   <h3 class="font-bold text-lg mb-2">あなたのサイトは大丈夫？</h3>
-  <p class="text-zinc-600 mb-4">無料でセキュリティスコアをチェックできます。</p>
-  <a href="/" class="inline-block px-6 py-3 bg-zinc-900 text-white rounded-lg font-bold hover:bg-zinc-800">今すぐ診断する →</a>
+  <p class="text-zinc-600 mb-4">無料でセキュリティ設定をチェックできます。</p>
+  <a href="/" class="inline-block px-6 py-3 bg-zinc-900 text-white rounded-lg font-bold hover:bg-zinc-800">今すぐチェックする →</a>
 </div>`;
 
 export const articles: Article[] = [

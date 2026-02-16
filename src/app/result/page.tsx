@@ -101,7 +101,7 @@ function ScanAnimation({ onComplete, result }: { onComplete: () => void; result:
         <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-zinc-100 mb-4">
           <div className="w-8 h-8 border-3 border-zinc-300 border-t-zinc-900 rounded-full animate-spin" />
         </div>
-        <h2 className="text-xl font-bold text-zinc-900 mb-1">セキュリティ診断中</h2>
+        <h2 className="text-xl font-bold text-zinc-900 mb-1">セキュリティ設定チェック中</h2>
         <p className="text-zinc-400 text-sm">10項目をチェックしています...</p>
       </div>
 
@@ -385,7 +385,7 @@ export default function ResultPage() {
       </Suspense>
 
       <footer className="text-center text-zinc-400 text-xs mt-8 border-t border-zinc-200 pt-6">
-        本診断は公開情報に基づく設定状況の確認であり、安全性を保証・否定するものではありません。
+        本チェックは公開情報に基づくセキュリティ設定の確認であり、Webサイトの安全性を保証・否定するものではありません。
       </footer>
     </main>
   );

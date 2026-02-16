@@ -39,13 +39,13 @@ export default function Home() {
     <main className="max-w-3xl mx-auto px-4 py-16">
       {/* Hero */}
       <section className="text-center mb-20">
-        <p className="text-sm font-medium text-zinc-400 tracking-widest uppercase mb-4">Security Score Check</p>
+        <p className="text-sm font-medium text-zinc-400 tracking-widest uppercase mb-4">Web Security Settings Check</p>
         <h1 className="text-4xl sm:text-5xl font-bold mb-4 text-zinc-900">
           あなたのサイト、<br />
           <span className="text-red-500">丸見え</span>かも。
         </h1>
         <p className="text-zinc-500 text-lg mb-10 max-w-lg mx-auto">
-          URLを入力するだけで、公開情報からセキュリティスコアを診断。設定漏れを見逃していませんか？
+          URLを入力するだけで、公開情報からセキュリティ設定をスコアリング。設定漏れを見逃していませんか？
         </p>
 
         <form onSubmit={handleSubmit} className="flex gap-2 max-w-xl mx-auto">
@@ -68,7 +68,7 @@ export default function Home() {
       {/* Ranking */}
       <section>
         <div className="flex items-center justify-between mb-4">
-          <h2 className="text-lg font-semibold text-zinc-900">🏆 セキュリティランキング</h2>
+          <h2 className="text-lg font-semibold text-zinc-900">🏆 セキュリティ設定ランキング</h2>
           <span className="text-xs text-zinc-400">{rankingsData.length}社 • 2025年2月調査</span>
         </div>
         <div className="bg-white border border-zinc-200 rounded-xl overflow-hidden shadow-sm">
@@ -126,7 +126,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="text-center text-zinc-400 text-xs mt-16 pt-6 border-t border-zinc-200">
-        本診断は公開情報に基づく設定状況の確認であり、安全性を保証・否定するものではありません。
+        本チェックは公開情報に基づくセキュリティ設定の確認であり、Webサイトの安全性を保証・否定するものではありません。
       </footer>
     </main>
   );

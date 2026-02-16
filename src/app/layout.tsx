@@ -3,9 +3,9 @@ import Link from "next/link";
 import Script from "next/script";
 import "./globals.css";
 
-const siteName = "セキュリティ診断チェッカー";
-const siteUrl = "https://security-check-site.net"; // TODO: 本番ドメイン決定後に変更
-const siteDescription = "URLを入力するだけでWebサイトのセキュリティをスコアリング。HTTPS・HSTS・CSP・SPF・DMARCなど10項目を無料診断。日本企業50社のランキングも公開中。";
+const siteName = "Webセキュリティ設定チェッカー";
+const siteUrl = "https://security-check-site.net";
+const siteDescription = "URLを入力するだけでWebサイトのセキュリティ設定をスコアリング。HTTPS・HSTS・CSP・SPF・DMARCなど10項目を無料チェック。日本企業50社のランキングも公開中。";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

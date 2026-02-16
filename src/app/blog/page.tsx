@@ -3,8 +3,8 @@ import { articles } from "@/content/articles";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "セキュリティ知識ベース｜HTTPS・HSTS・CSP・SPF・DMARC解説",
-  description: "HTTPS、HSTS、CSP、SPF、DMARCなどWebセキュリティの基礎知識を非エンジニアにもわかりやすく解説。セキュリティ対策の第一歩に。",
+  title: "セキュリティ設定の知識ベース｜HTTPS・HSTS・CSP・SPF・DMARC解説",
+  description: "HTTPS、HSTS、CSP、SPF、DMARCなどWebセキュリティ設定の基礎知識を非エンジニアにもわかりやすく解説。セキュリティ対策の第一歩に。",
   alternates: {
     canonical: "/blog",
   },
