@@ -42,6 +42,18 @@ export async function POST(req: Request) {
       },
     });
 
+    // Discord通知
+    const webhookUrl = process.env.DISCORD_WEBHOOK_URL;
+    if (webhookUrl) {
+      fetch(webhookUrl, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          content: `📩 **新規リード登録**\nメール: ${email}\n診断URL: ${url || "なし"}\nスコア: ${score ?? "不明"}\n日時: ${now}`,
+        }),
+      }).catch(() => {}); // 通知失敗は無視
+    }
+
     return NextResponse.json({ ok: true });
   } catch (e) {
     console.error("Subscribe error:", e);
