@@ -151,6 +151,115 @@ function ScanAnimation({ onComplete, result }: { onComplete: () => void; result:
   );
 }
 
+function CTASection({ url, score, shareText }: { url: string; score: number; shareText: string }) {
+  const [showModal, setShowModal] = useState(false);
+  const [email, setEmail] = useState("");
+  const [submitting, setSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState("");
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email.trim()) return;
+    setSubmitting(true);
+    setSubmitError("");
+    try {
+      const res = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: email.trim(), url, score }),
+      });
+      if (!res.ok) {
+        const data = await res.json();
+        throw new Error(data.error || "送信に失敗しました");
+      }
+      setSubmitted(true);
+    } catch (err: unknown) {
+      setSubmitError(err instanceof Error ? err.message : "送信に失敗しました");
+    } finally {
+      setSubmitting(false);
+    }
+  };
+
+  return (
+    <>
+      <div className="bg-zinc-900 text-white rounded-2xl p-8 mb-8">
+        <h3 className="text-xl font-bold mb-2">スコアを改善しませんか？</h3>
+        <p className="text-zinc-400 text-sm mb-6">
+          診断結果の詳細レポートと改善方法をメールでお届けします。
+        </p>
+        <div className="flex flex-col sm:flex-row gap-3">
+          <button
+            onClick={() => setShowModal(true)}
+            className="flex-1 px-6 py-3 rounded-xl bg-white text-zinc-900 font-bold hover:bg-zinc-100 transition-colors text-center"
+          >
+            📧 無料レポートを受け取る
+          </button>
+          <button
+            onClick={() => {
+              if (navigator.share) {
+                navigator.share({ title: "セキュリティ診断結果", text: shareText, url: window.location.href });
+              } else {
+                navigator.clipboard.writeText(`${shareText}\n${window.location.href}`);
+                alert("クリップボードにコピーしました");
+              }
+            }}
+            className="flex-1 px-6 py-3 rounded-xl border border-zinc-700 text-white font-bold hover:bg-zinc-800 transition-colors text-center"
+          >
+            🔗 この結果をシェアする
+          </button>
+        </div>
+      </div>
+
+      {/* Email Modal */}
+      {showModal && (
+        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4" onClick={() => !submitting && setShowModal(false)}>
+          <div className="bg-white rounded-2xl p-8 max-w-md w-full shadow-2xl" onClick={(e) => e.stopPropagation()}>
+            {submitted ? (
+              <div className="text-center py-4">
+                <div className="text-4xl mb-4">✅</div>
+                <h3 className="text-xl font-bold text-zinc-900 mb-2">登録ありがとうございます！</h3>
+                <p className="text-zinc-500 text-sm mb-6">レポートの準備ができ次第、メールでお届けします。</p>
+                <button onClick={() => setShowModal(false)} className="px-6 py-3 rounded-xl bg-zinc-900 text-white font-bold hover:bg-zinc-800 transition-colors">
+                  閉じる
+                </button>
+              </div>
+            ) : (
+              <>
+                <h3 className="text-xl font-bold text-zinc-900 mb-2">📧 無料レポートを受け取る</h3>
+                <p className="text-zinc-500 text-sm mb-6">
+                  診断結果の詳細と具体的な改善手順をまとめたレポートをお送りします。
+                </p>
+                <form onSubmit={handleSubmit}>
+                  <input
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="example@company.com"
+                    required
+                    className="w-full px-4 py-3 rounded-xl border border-zinc-200 text-zinc-900 placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-zinc-900/20 mb-4"
+                  />
+                  {submitError && <p className="text-red-500 text-sm mb-3">{submitError}</p>}
+                  <button
+                    type="submit"
+                    disabled={submitting}
+                    className="w-full px-6 py-3 rounded-xl bg-zinc-900 text-white font-bold hover:bg-zinc-800 transition-colors disabled:opacity-50"
+                  >
+                    {submitting ? "送信中..." : "レポートを受け取る"}
+                  </button>
+                </form>
+                <p className="text-zinc-400 text-xs mt-4 text-center">
+                  メールアドレスは診断レポートの送付のみに使用します。
+                </p>
+              </>
+            )}
+          </div>
+        </div>
+      )}
+    </>
+  );
+}
+
 function ResultContent() {
   const searchParams = useSearchParams();
   const url = searchParams.get("url") || "";
@@ -256,30 +365,7 @@ function ResultContent() {
       )}
 
       {/* CTA Section */}
-      <div className="bg-zinc-900 text-white rounded-2xl p-8 mb-8">
-        <h3 className="text-xl font-bold mb-2">スコアを改善しませんか？</h3>
-        <p className="text-zinc-400 text-sm mb-6">
-          診断結果の詳細レポートと改善方法をメールでお届けします。
-        </p>
-        <div className="flex flex-col sm:flex-row gap-3">
-          <button className="flex-1 px-6 py-3 rounded-xl bg-white text-zinc-900 font-bold hover:bg-zinc-100 transition-colors text-center">
-            📧 無料レポートを受け取る
-          </button>
-          <button
-            onClick={() => {
-              if (navigator.share) {
-                navigator.share({ title: "セキュリティ診断結果", text: shareText, url: window.location.href });
-              } else {
-                navigator.clipboard.writeText(`${shareText}\n${window.location.href}`);
-                alert("クリップボードにコピーしました");
-              }
-            }}
-            className="flex-1 px-6 py-3 rounded-xl border border-zinc-700 text-white font-bold hover:bg-zinc-800 transition-colors text-center"
-          >
-            🔗 この結果をシェアする
-          </button>
-        </div>
-      </div>
+      <CTASection url={result.url} score={result.score} shareText={shareText} />
     </>
   );
 }
