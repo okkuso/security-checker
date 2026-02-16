@@ -1,7 +1,7 @@
 "use client";
 
 import { useSearchParams } from "next/navigation";
-import { useEffect, useState, Suspense } from "react";
+import { useEffect, useState, useRef, Suspense } from "react";
 import Link from "next/link";
 
 interface Check {
@@ -19,6 +19,19 @@ interface Result {
   score: number;
   checks: Check[];
 }
+
+const CHECK_LABELS = [
+  "HTTPS接続を確認中...",
+  "SSL証明書を検証中...",
+  "HSTSヘッダーを確認中...",
+  "CSPヘッダーを確認中...",
+  "X-Content-Type-Optionsを確認中...",
+  "X-Frame-Optionsを確認中...",
+  "Referrer-Policyを確認中...",
+  "Permissions-Policyを確認中...",
+  "SPFレコードを照会中...",
+  "DMARCレコードを照会中...",
+];
 
 function scoreColor(score: number) {
   if (score >= 80) return "text-emerald-600";
@@ -38,15 +51,116 @@ function scoreLabel(score: number) {
   return { text: "要対策", color: "text-red-600 bg-red-100" };
 }
 
+function ScanAnimation({ onComplete, result }: { onComplete: () => void; result: Result | null }) {
+  const [currentStep, setCurrentStep] = useState(0);
+  const [progress, setProgress] = useState(0);
+  const completedRef = useRef(false);
+
+  useEffect(() => {
+    const STEP_INTERVAL = 350; // ms per step
+    const TOTAL_STEPS = CHECK_LABELS.length;
+
+    const stepTimer = setInterval(() => {
+      setCurrentStep((prev) => {
+        const next = prev + 1;
+        if (next >= TOTAL_STEPS) {
+          clearInterval(stepTimer);
+        }
+        return Math.min(next, TOTAL_STEPS);
+      });
+    }, STEP_INTERVAL);
+
+    // Smooth progress bar
+    const progressTimer = setInterval(() => {
+      setProgress((prev) => {
+        if (prev >= 100) {
+          clearInterval(progressTimer);
+          return 100;
+        }
+        return prev + 1;
+      });
+    }, (STEP_INTERVAL * TOTAL_STEPS) / 100);
+
+    return () => {
+      clearInterval(stepTimer);
+      clearInterval(progressTimer);
+    };
+  }, []);
+
+  useEffect(() => {
+    // Complete when both animation is done AND result is ready
+    if (currentStep >= CHECK_LABELS.length && result && !completedRef.current) {
+      completedRef.current = true;
+      setTimeout(onComplete, 400);
+    }
+  }, [currentStep, result, onComplete]);
+
+  return (
+    <div className="py-16">
+      <div className="text-center mb-10">
+        <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-zinc-100 mb-4">
+          <div className="w-8 h-8 border-3 border-zinc-300 border-t-zinc-900 rounded-full animate-spin" />
+        </div>
+        <h2 className="text-xl font-bold text-zinc-900 mb-1">セキュリティ診断中</h2>
+        <p className="text-zinc-400 text-sm">10項目をチェックしています...</p>
+      </div>
+
+      {/* Progress bar */}
+      <div className="max-w-md mx-auto mb-8">
+        <div className="flex justify-between text-xs text-zinc-400 mb-2">
+          <span>進捗</span>
+          <span>{Math.min(Math.round(progress), 100)}%</span>
+        </div>
+        <div className="w-full h-2 bg-zinc-100 rounded-full overflow-hidden">
+          <div
+            className="h-full bg-zinc-900 rounded-full transition-all duration-100 ease-linear"
+            style={{ width: `${Math.min(progress, 100)}%` }}
+          />
+        </div>
+      </div>
+
+      {/* Check items */}
+      <div className="max-w-md mx-auto space-y-2">
+        {CHECK_LABELS.map((label, i) => {
+          const done = i < currentStep;
+          const active = i === currentStep;
+          return (
+            <div
+              key={label}
+              className={`flex items-center gap-3 px-4 py-2.5 rounded-lg transition-all duration-300 ${
+                done ? "opacity-100" : active ? "opacity-100 bg-zinc-50" : "opacity-30"
+              }`}
+            >
+              <span className="w-5 h-5 flex items-center justify-center flex-shrink-0">
+                {done ? (
+                  <span className="text-emerald-500 text-sm">✓</span>
+                ) : active ? (
+                  <div className="w-3.5 h-3.5 border-2 border-zinc-300 border-t-zinc-700 rounded-full animate-spin" />
+                ) : (
+                  <span className="w-2 h-2 rounded-full bg-zinc-200" />
+                )}
+              </span>
+              <span className={`text-sm ${done ? "text-zinc-600" : active ? "text-zinc-900 font-medium" : "text-zinc-400"}`}>
+                {label}
+              </span>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
 function ResultContent() {
   const searchParams = useSearchParams();
   const url = searchParams.get("url") || "";
   const [result, setResult] = useState<Result | null>(null);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(true);
+  const [scanning, setScanning] = useState(true);
 
   useEffect(() => {
-    if (!url) { setError("URLが指定されていません"); setLoading(false); return; }
+    if (!url) { setError("URLが指定されていません"); setLoading(false); setScanning(false); return; }
 
     fetch("/api/check", {
       method: "POST",
@@ -58,18 +172,9 @@ function ResultContent() {
         if (!res.ok) throw new Error(data.error || "診断に失敗しました");
         setResult(data);
       })
-      .catch((e) => setError(e.message))
+      .catch((e) => { setError(e.message); setScanning(false); })
       .finally(() => setLoading(false));
   }, [url]);
-
-  if (loading) {
-    return (
-      <div className="text-center py-32">
-        <div className="inline-block w-10 h-10 border-4 border-zinc-200 border-t-zinc-900 rounded-full animate-spin mb-4" />
-        <p className="text-zinc-500 text-lg">診断中...</p>
-      </div>
-    );
-  }
 
   if (error) {
     return (
@@ -80,7 +185,11 @@ function ResultContent() {
     );
   }
 
-  if (!result) return null;
+  if (scanning) {
+    return <ScanAnimation result={result} onComplete={() => setScanning(false)} />;
+  }
+
+  if (loading || !result) return null;
 
   const label = scoreLabel(result.score);
   const failedChecks = result.checks.filter(c => !c.passed);
@@ -90,7 +199,7 @@ function ResultContent() {
   return (
     <>
       {/* Score Card */}
-      <div className={`text-center p-10 rounded-2xl border-2 mb-8 ${scoreBorder(result.score)}`}>
+      <div className={`text-center p-10 rounded-2xl border-2 mb-8 animate-fade-in ${scoreBorder(result.score)}`}>
         <p className="text-zinc-500 mb-1 text-sm font-mono">{result.url}</p>
         <p className={`text-7xl font-bold font-mono mt-2 ${scoreColor(result.score)}`}>{result.score}</p>
         <p className="text-zinc-400 mt-1 text-sm">/ 100</p>
