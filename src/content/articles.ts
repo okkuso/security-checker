@@ -307,6 +307,2896 @@ ${cta}
 ${cta}
 `
   }
+,
+
+  // === 企業別分析記事（50社） ===
+  {
+    slug: "amazon-security",
+    title: "Amazon JapanのWebセキュリティ設定を分析｜設定状況とスコア",
+    description: "Amazon Japan（amazon.co.jp）のWebセキュリティ設定状況を分析。スコア90点（A+ランク）。HTTPS、HSTS、CSP、SPF、DMARCなど10項目のチェック結果と改善ポイントを解説。",
+    publishedAt: "2025-02-17",
+    category: "企業分析",
+    tags: ["Amazon Japan","EC・小売","セキュリティ分析","企業分析"],
+    content: `
+
+<h2>Amazon Japanの概要</h2>
+<p>Amazon Japanは、世界最大級のECプラットフォームAmazonの日本法人です。本記事では、amazon.co.jpのWebセキュリティ設定状況を公開情報に基づいて分析します。</p>
+
+<h2>チェック結果サマリー</h2>
+<div class="not-prose bg-zinc-50 rounded-xl p-6 mb-6">
+  <div class="text-center">
+    <div class="text-4xl font-bold mb-2">90<span class="text-lg text-zinc-500">/100</span></div>
+    <div class="text-xl font-bold text-zinc-700">ランク: A+</div>
+    <p class="text-zinc-500 mt-2">10項目中 9項目が設定済みと推測されます</p>
+  </div>
+</div>
+
+<h2>各チェック項目の分析</h2>
+<p>以下は、HTTPレスポンスヘッダーおよびDNSレコードの公開情報に基づく推測結果です。実際の設定とは異なる場合があります。</p>
+<table>
+<thead><tr><th>項目</th><th>状態</th></tr></thead>
+<tbody>
+<tr><td>HTTPS</td><td>✅ 設定あり</td></tr>
+<tr><td>SPF</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Content-Type-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Frame-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>HSTS</td><td>✅ 設定あり</td></tr>
+<tr><td>DMARC</td><td>✅ 設定あり</td></tr>
+<tr><td>Referrer-Policy</td><td>✅ 設定あり</td></tr>
+<tr><td>DKIM</td><td>✅ 設定あり</td></tr>
+<tr><td>CSP</td><td>✅ 設定あり</td></tr>
+<tr><td>Permissions-Policy</td><td>❌ 未検出</td></tr>
+</tbody>
+</table>
+
+<h2>改善が推奨されるポイント</h2>
+<p>Amazon JapanのWebセキュリティをさらに強化するために、以下の対策が考えられます。</p>
+<ul>
+<li><strong>Permissions-Policy</strong>：Permissions-Policyヘッダーを設定し、ブラウザ機能（カメラ、マイク等）へのアクセスを制御することが推奨されます。</li>
+</ul>
+
+<h2>まとめ</h2>
+<p>Amazon Japan（amazon.co.jp）のセキュリティスコアは<strong>90点（A+ランク）</strong>です。比較的高いセキュリティ水準が維持されていると推測されます。</p>
+<p>セキュリティ設定は日々変化するため、定期的なチェックをおすすめします。</p>
+
+<div class="not-prose bg-amber-50 border border-amber-200 rounded-xl p-4 mt-6 text-sm text-amber-800">
+  <p><strong>免責事項：</strong>本記事は、HTTPレスポンスヘッダーおよびDNS情報の公開情報に基づく分析であり、実際のセキュリティ設定を保証するものではありません。情報は調査時点のものであり、最新の状況とは異なる場合があります。</p>
+</div>
+${cta}
+`
+  },
+  {
+    slug: "note-security",
+    title: "noteのWebセキュリティ設定を分析｜設定状況とスコア",
+    description: "note（note.com）のWebセキュリティ設定状況を分析。スコア90点（A+ランク）。HTTPS、HSTS、CSP、SPF、DMARCなど10項目のチェック結果と改善ポイントを解説。",
+    publishedAt: "2025-02-17",
+    category: "企業分析",
+    tags: ["note","メディア・プラットフォーム","セキュリティ分析","企業分析"],
+    content: `
+
+<h2>noteの概要</h2>
+<p>noteは、クリエイターが文章やマンガ、写真、音声を投稿できるメディアプラットフォームです。本記事では、note.comのWebセキュリティ設定状況を公開情報に基づいて分析します。</p>
+
+<h2>チェック結果サマリー</h2>
+<div class="not-prose bg-zinc-50 rounded-xl p-6 mb-6">
+  <div class="text-center">
+    <div class="text-4xl font-bold mb-2">90<span class="text-lg text-zinc-500">/100</span></div>
+    <div class="text-xl font-bold text-zinc-700">ランク: A+</div>
+    <p class="text-zinc-500 mt-2">10項目中 9項目が設定済みと推測されます</p>
+  </div>
+</div>
+
+<h2>各チェック項目の分析</h2>
+<p>以下は、HTTPレスポンスヘッダーおよびDNSレコードの公開情報に基づく推測結果です。実際の設定とは異なる場合があります。</p>
+<table>
+<thead><tr><th>項目</th><th>状態</th></tr></thead>
+<tbody>
+<tr><td>HTTPS</td><td>✅ 設定あり</td></tr>
+<tr><td>SPF</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Content-Type-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Frame-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>HSTS</td><td>✅ 設定あり</td></tr>
+<tr><td>DMARC</td><td>✅ 設定あり</td></tr>
+<tr><td>Referrer-Policy</td><td>✅ 設定あり</td></tr>
+<tr><td>DKIM</td><td>✅ 設定あり</td></tr>
+<tr><td>CSP</td><td>✅ 設定あり</td></tr>
+<tr><td>Permissions-Policy</td><td>❌ 未検出</td></tr>
+</tbody>
+</table>
+
+<h2>改善が推奨されるポイント</h2>
+<p>noteのWebセキュリティをさらに強化するために、以下の対策が考えられます。</p>
+<ul>
+<li><strong>Permissions-Policy</strong>：Permissions-Policyヘッダーを設定し、ブラウザ機能（カメラ、マイク等）へのアクセスを制御することが推奨されます。</li>
+</ul>
+
+<h2>まとめ</h2>
+<p>note（note.com）のセキュリティスコアは<strong>90点（A+ランク）</strong>です。比較的高いセキュリティ水準が維持されていると推測されます。</p>
+<p>セキュリティ設定は日々変化するため、定期的なチェックをおすすめします。</p>
+
+<div class="not-prose bg-amber-50 border border-amber-200 rounded-xl p-4 mt-6 text-sm text-amber-800">
+  <p><strong>免責事項：</strong>本記事は、HTTPレスポンスヘッダーおよびDNS情報の公開情報に基づく分析であり、実際のセキュリティ設定を保証するものではありません。情報は調査時点のものであり、最新の状況とは異なる場合があります。</p>
+</div>
+${cta}
+`
+  },
+  {
+    slug: "mercari-security",
+    title: "メルカリのWebセキュリティ設定を分析｜設定状況とスコア",
+    description: "メルカリ（mercari.com）のWebセキュリティ設定状況を分析。スコア85点（Aランク）。HTTPS、HSTS、CSP、SPF、DMARCなど10項目のチェック結果と改善ポイントを解説。",
+    publishedAt: "2025-02-17",
+    category: "企業分析",
+    tags: ["メルカリ","EC・フリマ","セキュリティ分析","企業分析"],
+    content: `
+
+<h2>メルカリの概要</h2>
+<p>メルカリは、日本最大級のフリマアプリを運営するテクノロジー企業です。本記事では、mercari.comのWebセキュリティ設定状況を公開情報に基づいて分析します。</p>
+
+<h2>チェック結果サマリー</h2>
+<div class="not-prose bg-zinc-50 rounded-xl p-6 mb-6">
+  <div class="text-center">
+    <div class="text-4xl font-bold mb-2">85<span class="text-lg text-zinc-500">/100</span></div>
+    <div class="text-xl font-bold text-zinc-700">ランク: A</div>
+    <p class="text-zinc-500 mt-2">10項目中 9項目が設定済みと推測されます</p>
+  </div>
+</div>
+
+<h2>各チェック項目の分析</h2>
+<p>以下は、HTTPレスポンスヘッダーおよびDNSレコードの公開情報に基づく推測結果です。実際の設定とは異なる場合があります。</p>
+<table>
+<thead><tr><th>項目</th><th>状態</th></tr></thead>
+<tbody>
+<tr><td>HTTPS</td><td>✅ 設定あり</td></tr>
+<tr><td>SPF</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Content-Type-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Frame-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>HSTS</td><td>✅ 設定あり</td></tr>
+<tr><td>DMARC</td><td>✅ 設定あり</td></tr>
+<tr><td>Referrer-Policy</td><td>✅ 設定あり</td></tr>
+<tr><td>DKIM</td><td>✅ 設定あり</td></tr>
+<tr><td>CSP</td><td>✅ 設定あり</td></tr>
+<tr><td>Permissions-Policy</td><td>❌ 未検出</td></tr>
+</tbody>
+</table>
+
+<h2>改善が推奨されるポイント</h2>
+<p>メルカリのWebセキュリティをさらに強化するために、以下の対策が考えられます。</p>
+<ul>
+<li><strong>Permissions-Policy</strong>：Permissions-Policyヘッダーを設定し、ブラウザ機能（カメラ、マイク等）へのアクセスを制御することが推奨されます。</li>
+</ul>
+
+<h2>まとめ</h2>
+<p>メルカリ（mercari.com）のセキュリティスコアは<strong>85点（Aランク）</strong>です。比較的高いセキュリティ水準が維持されていると推測されます。</p>
+<p>セキュリティ設定は日々変化するため、定期的なチェックをおすすめします。</p>
+
+<div class="not-prose bg-amber-50 border border-amber-200 rounded-xl p-4 mt-6 text-sm text-amber-800">
+  <p><strong>免責事項：</strong>本記事は、HTTPレスポンスヘッダーおよびDNS情報の公開情報に基づく分析であり、実際のセキュリティ設定を保証するものではありません。情報は調査時点のものであり、最新の状況とは異なる場合があります。</p>
+</div>
+${cta}
+`
+  },
+  {
+    slug: "nikkei-security",
+    title: "日本経済新聞社のWebセキュリティ設定を分析｜設定状況とスコア",
+    description: "日本経済新聞社（nikkei.com）のWebセキュリティ設定状況を分析。スコア85点（Aランク）。HTTPS、HSTS、CSP、SPF、DMARCなど10項目のチェック結果と改善ポイントを解説。",
+    publishedAt: "2025-02-17",
+    category: "企業分析",
+    tags: ["日本経済新聞社","メディア・新聞","セキュリティ分析","企業分析"],
+    content: `
+
+<h2>日本経済新聞社の概要</h2>
+<p>日本経済新聞社は、日本を代表する経済メディアで、電子版も広く利用されています。本記事では、nikkei.comのWebセキュリティ設定状況を公開情報に基づいて分析します。</p>
+
+<h2>チェック結果サマリー</h2>
+<div class="not-prose bg-zinc-50 rounded-xl p-6 mb-6">
+  <div class="text-center">
+    <div class="text-4xl font-bold mb-2">85<span class="text-lg text-zinc-500">/100</span></div>
+    <div class="text-xl font-bold text-zinc-700">ランク: A</div>
+    <p class="text-zinc-500 mt-2">10項目中 9項目が設定済みと推測されます</p>
+  </div>
+</div>
+
+<h2>各チェック項目の分析</h2>
+<p>以下は、HTTPレスポンスヘッダーおよびDNSレコードの公開情報に基づく推測結果です。実際の設定とは異なる場合があります。</p>
+<table>
+<thead><tr><th>項目</th><th>状態</th></tr></thead>
+<tbody>
+<tr><td>HTTPS</td><td>✅ 設定あり</td></tr>
+<tr><td>SPF</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Content-Type-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Frame-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>HSTS</td><td>✅ 設定あり</td></tr>
+<tr><td>DMARC</td><td>✅ 設定あり</td></tr>
+<tr><td>Referrer-Policy</td><td>✅ 設定あり</td></tr>
+<tr><td>DKIM</td><td>✅ 設定あり</td></tr>
+<tr><td>CSP</td><td>✅ 設定あり</td></tr>
+<tr><td>Permissions-Policy</td><td>❌ 未検出</td></tr>
+</tbody>
+</table>
+
+<h2>改善が推奨されるポイント</h2>
+<p>日本経済新聞社のWebセキュリティをさらに強化するために、以下の対策が考えられます。</p>
+<ul>
+<li><strong>Permissions-Policy</strong>：Permissions-Policyヘッダーを設定し、ブラウザ機能（カメラ、マイク等）へのアクセスを制御することが推奨されます。</li>
+</ul>
+
+<h2>まとめ</h2>
+<p>日本経済新聞社（nikkei.com）のセキュリティスコアは<strong>85点（Aランク）</strong>です。比較的高いセキュリティ水準が維持されていると推測されます。</p>
+<p>セキュリティ設定は日々変化するため、定期的なチェックをおすすめします。</p>
+
+<div class="not-prose bg-amber-50 border border-amber-200 rounded-xl p-4 mt-6 text-sm text-amber-800">
+  <p><strong>免責事項：</strong>本記事は、HTTPレスポンスヘッダーおよびDNS情報の公開情報に基づく分析であり、実際のセキュリティ設定を保証するものではありません。情報は調査時点のものであり、最新の状況とは異なる場合があります。</p>
+</div>
+${cta}
+`
+  },
+  {
+    slug: "cookpad-security",
+    title: "クックパッドのWebセキュリティ設定を分析｜設定状況とスコア",
+    description: "クックパッド（cookpad.com）のWebセキュリティ設定状況を分析。スコア80点（Aランク）。HTTPS、HSTS、CSP、SPF、DMARCなど10項目のチェック結果と改善ポイントを解説。",
+    publishedAt: "2025-02-17",
+    category: "企業分析",
+    tags: ["クックパッド","レシピ・メディア","セキュリティ分析","企業分析"],
+    content: `
+
+<h2>クックパッドの概要</h2>
+<p>クックパッドは、日本最大級の料理レシピ共有サービスを運営しています。本記事では、cookpad.comのWebセキュリティ設定状況を公開情報に基づいて分析します。</p>
+
+<h2>チェック結果サマリー</h2>
+<div class="not-prose bg-zinc-50 rounded-xl p-6 mb-6">
+  <div class="text-center">
+    <div class="text-4xl font-bold mb-2">80<span class="text-lg text-zinc-500">/100</span></div>
+    <div class="text-xl font-bold text-zinc-700">ランク: A</div>
+    <p class="text-zinc-500 mt-2">10項目中 8項目が設定済みと推測されます</p>
+  </div>
+</div>
+
+<h2>各チェック項目の分析</h2>
+<p>以下は、HTTPレスポンスヘッダーおよびDNSレコードの公開情報に基づく推測結果です。実際の設定とは異なる場合があります。</p>
+<table>
+<thead><tr><th>項目</th><th>状態</th></tr></thead>
+<tbody>
+<tr><td>HTTPS</td><td>✅ 設定あり</td></tr>
+<tr><td>SPF</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Content-Type-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Frame-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>HSTS</td><td>✅ 設定あり</td></tr>
+<tr><td>DMARC</td><td>✅ 設定あり</td></tr>
+<tr><td>Referrer-Policy</td><td>✅ 設定あり</td></tr>
+<tr><td>DKIM</td><td>✅ 設定あり</td></tr>
+<tr><td>CSP</td><td>❌ 未検出</td></tr>
+<tr><td>Permissions-Policy</td><td>❌ 未検出</td></tr>
+</tbody>
+</table>
+
+<h2>改善が推奨されるポイント</h2>
+<p>クックパッドのWebセキュリティをさらに強化するために、以下の対策が考えられます。</p>
+<ul>
+<li><strong>CSP</strong>：Content-Security-Policyヘッダーを導入し、XSS攻撃のリスクを軽減することが推奨されます。まずはReport-Onlyモードでの導入が効果的です。</li>
+<li><strong>Permissions-Policy</strong>：Permissions-Policyヘッダーを設定し、ブラウザ機能（カメラ、マイク等）へのアクセスを制御することが推奨されます。</li>
+</ul>
+
+<h2>まとめ</h2>
+<p>クックパッド（cookpad.com）のセキュリティスコアは<strong>80点（Aランク）</strong>です。比較的高いセキュリティ水準が維持されていると推測されます。</p>
+<p>セキュリティ設定は日々変化するため、定期的なチェックをおすすめします。</p>
+
+<div class="not-prose bg-amber-50 border border-amber-200 rounded-xl p-4 mt-6 text-sm text-amber-800">
+  <p><strong>免責事項：</strong>本記事は、HTTPレスポンスヘッダーおよびDNS情報の公開情報に基づく分析であり、実際のセキュリティ設定を保証するものではありません。情報は調査時点のものであり、最新の状況とは異なる場合があります。</p>
+</div>
+${cta}
+`
+  },
+  {
+    slug: "moneyforward-security",
+    title: "マネーフォワードのWebセキュリティ設定を分析｜設定状況とスコア",
+    description: "マネーフォワード（moneyforward.com）のWebセキュリティ設定状況を分析。スコア80点（Aランク）。HTTPS、HSTS、CSP、SPF、DMARCなど10項目のチェック結果と改善ポイントを解説。",
+    publishedAt: "2025-02-17",
+    category: "企業分析",
+    tags: ["マネーフォワード","フィンテック","セキュリティ分析","企業分析"],
+    content: `
+
+<h2>マネーフォワードの概要</h2>
+<p>マネーフォワードは、家計簿アプリやクラウド会計ソフトなどを提供するフィンテック企業です。本記事では、moneyforward.comのWebセキュリティ設定状況を公開情報に基づいて分析します。</p>
+
+<h2>チェック結果サマリー</h2>
+<div class="not-prose bg-zinc-50 rounded-xl p-6 mb-6">
+  <div class="text-center">
+    <div class="text-4xl font-bold mb-2">80<span class="text-lg text-zinc-500">/100</span></div>
+    <div class="text-xl font-bold text-zinc-700">ランク: A</div>
+    <p class="text-zinc-500 mt-2">10項目中 8項目が設定済みと推測されます</p>
+  </div>
+</div>
+
+<h2>各チェック項目の分析</h2>
+<p>以下は、HTTPレスポンスヘッダーおよびDNSレコードの公開情報に基づく推測結果です。実際の設定とは異なる場合があります。</p>
+<table>
+<thead><tr><th>項目</th><th>状態</th></tr></thead>
+<tbody>
+<tr><td>HTTPS</td><td>✅ 設定あり</td></tr>
+<tr><td>SPF</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Content-Type-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Frame-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>HSTS</td><td>✅ 設定あり</td></tr>
+<tr><td>DMARC</td><td>✅ 設定あり</td></tr>
+<tr><td>Referrer-Policy</td><td>✅ 設定あり</td></tr>
+<tr><td>DKIM</td><td>✅ 設定あり</td></tr>
+<tr><td>CSP</td><td>❌ 未検出</td></tr>
+<tr><td>Permissions-Policy</td><td>❌ 未検出</td></tr>
+</tbody>
+</table>
+
+<h2>改善が推奨されるポイント</h2>
+<p>マネーフォワードのWebセキュリティをさらに強化するために、以下の対策が考えられます。</p>
+<ul>
+<li><strong>CSP</strong>：Content-Security-Policyヘッダーを導入し、XSS攻撃のリスクを軽減することが推奨されます。まずはReport-Onlyモードでの導入が効果的です。</li>
+<li><strong>Permissions-Policy</strong>：Permissions-Policyヘッダーを設定し、ブラウザ機能（カメラ、マイク等）へのアクセスを制御することが推奨されます。</li>
+</ul>
+
+<h2>まとめ</h2>
+<p>マネーフォワード（moneyforward.com）のセキュリティスコアは<strong>80点（Aランク）</strong>です。比較的高いセキュリティ水準が維持されていると推測されます。</p>
+<p>セキュリティ設定は日々変化するため、定期的なチェックをおすすめします。</p>
+
+<div class="not-prose bg-amber-50 border border-amber-200 rounded-xl p-4 mt-6 text-sm text-amber-800">
+  <p><strong>免責事項：</strong>本記事は、HTTPレスポンスヘッダーおよびDNS情報の公開情報に基づく分析であり、実際のセキュリティ設定を保証するものではありません。情報は調査時点のものであり、最新の状況とは異なる場合があります。</p>
+</div>
+${cta}
+`
+  },
+  {
+    slug: "qiita-security",
+    title: "QiitaのWebセキュリティ設定を分析｜設定状況とスコア",
+    description: "Qiita（qiita.com）のWebセキュリティ設定状況を分析。スコア80点（Aランク）。HTTPS、HSTS、CSP、SPF、DMARCなど10項目のチェック結果と改善ポイントを解説。",
+    publishedAt: "2025-02-17",
+    category: "企業分析",
+    tags: ["Qiita","IT・エンジニアコミュニティ","セキュリティ分析","企業分析"],
+    content: `
+
+<h2>Qiitaの概要</h2>
+<p>Qiitaは、エンジニア向けの技術情報共有プラットフォームです。本記事では、qiita.comのWebセキュリティ設定状況を公開情報に基づいて分析します。</p>
+
+<h2>チェック結果サマリー</h2>
+<div class="not-prose bg-zinc-50 rounded-xl p-6 mb-6">
+  <div class="text-center">
+    <div class="text-4xl font-bold mb-2">80<span class="text-lg text-zinc-500">/100</span></div>
+    <div class="text-xl font-bold text-zinc-700">ランク: A</div>
+    <p class="text-zinc-500 mt-2">10項目中 8項目が設定済みと推測されます</p>
+  </div>
+</div>
+
+<h2>各チェック項目の分析</h2>
+<p>以下は、HTTPレスポンスヘッダーおよびDNSレコードの公開情報に基づく推測結果です。実際の設定とは異なる場合があります。</p>
+<table>
+<thead><tr><th>項目</th><th>状態</th></tr></thead>
+<tbody>
+<tr><td>HTTPS</td><td>✅ 設定あり</td></tr>
+<tr><td>SPF</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Content-Type-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Frame-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>HSTS</td><td>✅ 設定あり</td></tr>
+<tr><td>DMARC</td><td>✅ 設定あり</td></tr>
+<tr><td>Referrer-Policy</td><td>✅ 設定あり</td></tr>
+<tr><td>DKIM</td><td>✅ 設定あり</td></tr>
+<tr><td>CSP</td><td>❌ 未検出</td></tr>
+<tr><td>Permissions-Policy</td><td>❌ 未検出</td></tr>
+</tbody>
+</table>
+
+<h2>改善が推奨されるポイント</h2>
+<p>QiitaのWebセキュリティをさらに強化するために、以下の対策が考えられます。</p>
+<ul>
+<li><strong>CSP</strong>：Content-Security-Policyヘッダーを導入し、XSS攻撃のリスクを軽減することが推奨されます。まずはReport-Onlyモードでの導入が効果的です。</li>
+<li><strong>Permissions-Policy</strong>：Permissions-Policyヘッダーを設定し、ブラウザ機能（カメラ、マイク等）へのアクセスを制御することが推奨されます。</li>
+</ul>
+
+<h2>まとめ</h2>
+<p>Qiita（qiita.com）のセキュリティスコアは<strong>80点（Aランク）</strong>です。比較的高いセキュリティ水準が維持されていると推測されます。</p>
+<p>セキュリティ設定は日々変化するため、定期的なチェックをおすすめします。</p>
+
+<div class="not-prose bg-amber-50 border border-amber-200 rounded-xl p-4 mt-6 text-sm text-amber-800">
+  <p><strong>免責事項：</strong>本記事は、HTTPレスポンスヘッダーおよびDNS情報の公開情報に基づく分析であり、実際のセキュリティ設定を保証するものではありません。情報は調査時点のものであり、最新の状況とは異なる場合があります。</p>
+</div>
+${cta}
+`
+  },
+  {
+    slug: "panasonic-security",
+    title: "パナソニックのWebセキュリティ設定を分析｜設定状況とスコア",
+    description: "パナソニック（panasonic.jp）のWebセキュリティ設定状況を分析。スコア75点（Bランク）。HTTPS、HSTS、CSP、SPF、DMARCなど10項目のチェック結果と改善ポイントを解説。",
+    publishedAt: "2025-02-17",
+    category: "企業分析",
+    tags: ["パナソニック","電機メーカー","セキュリティ分析","企業分析"],
+    content: `
+
+<h2>パナソニックの概要</h2>
+<p>パナソニックは、家電から住宅設備まで幅広い事業を展開する日本の大手電機メーカーです。本記事では、panasonic.jpのWebセキュリティ設定状況を公開情報に基づいて分析します。</p>
+
+<h2>チェック結果サマリー</h2>
+<div class="not-prose bg-zinc-50 rounded-xl p-6 mb-6">
+  <div class="text-center">
+    <div class="text-4xl font-bold mb-2">75<span class="text-lg text-zinc-500">/100</span></div>
+    <div class="text-xl font-bold text-zinc-700">ランク: B</div>
+    <p class="text-zinc-500 mt-2">10項目中 8項目が設定済みと推測されます</p>
+  </div>
+</div>
+
+<h2>各チェック項目の分析</h2>
+<p>以下は、HTTPレスポンスヘッダーおよびDNSレコードの公開情報に基づく推測結果です。実際の設定とは異なる場合があります。</p>
+<table>
+<thead><tr><th>項目</th><th>状態</th></tr></thead>
+<tbody>
+<tr><td>HTTPS</td><td>✅ 設定あり</td></tr>
+<tr><td>SPF</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Content-Type-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Frame-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>HSTS</td><td>✅ 設定あり</td></tr>
+<tr><td>DMARC</td><td>✅ 設定あり</td></tr>
+<tr><td>Referrer-Policy</td><td>✅ 設定あり</td></tr>
+<tr><td>DKIM</td><td>✅ 設定あり</td></tr>
+<tr><td>CSP</td><td>❌ 未検出</td></tr>
+<tr><td>Permissions-Policy</td><td>❌ 未検出</td></tr>
+</tbody>
+</table>
+
+<h2>改善が推奨されるポイント</h2>
+<p>パナソニックのWebセキュリティをさらに強化するために、以下の対策が考えられます。</p>
+<ul>
+<li><strong>CSP</strong>：Content-Security-Policyヘッダーを導入し、XSS攻撃のリスクを軽減することが推奨されます。まずはReport-Onlyモードでの導入が効果的です。</li>
+<li><strong>Permissions-Policy</strong>：Permissions-Policyヘッダーを設定し、ブラウザ機能（カメラ、マイク等）へのアクセスを制御することが推奨されます。</li>
+</ul>
+
+<h2>まとめ</h2>
+<p>パナソニック（panasonic.jp）のセキュリティスコアは<strong>75点（Bランク）</strong>です。基本的なセキュリティ対策は実施されているものの、いくつかの改善余地があると考えられます。</p>
+<p>セキュリティ設定は日々変化するため、定期的なチェックをおすすめします。</p>
+
+<div class="not-prose bg-amber-50 border border-amber-200 rounded-xl p-4 mt-6 text-sm text-amber-800">
+  <p><strong>免責事項：</strong>本記事は、HTTPレスポンスヘッダーおよびDNS情報の公開情報に基づく分析であり、実際のセキュリティ設定を保証するものではありません。情報は調査時点のものであり、最新の状況とは異なる場合があります。</p>
+</div>
+${cta}
+`
+  },
+  {
+    slug: "mizuho-security",
+    title: "みずほ銀行のWebセキュリティ設定を分析｜設定状況とスコア",
+    description: "みずほ銀行（www.mizuhobank.co.jp）のWebセキュリティ設定状況を分析。スコア75点（Bランク）。HTTPS、HSTS、CSP、SPF、DMARCなど10項目のチェック結果と改善ポイントを解説。",
+    publishedAt: "2025-02-17",
+    category: "企業分析",
+    tags: ["みずほ銀行","銀行・金融","セキュリティ分析","企業分析"],
+    content: `
+
+<h2>みずほ銀行の概要</h2>
+<p>みずほ銀行は、日本三大メガバンクの一つで、個人・法人向けの金融サービスを提供しています。本記事では、www.mizuhobank.co.jpのWebセキュリティ設定状況を公開情報に基づいて分析します。</p>
+
+<h2>チェック結果サマリー</h2>
+<div class="not-prose bg-zinc-50 rounded-xl p-6 mb-6">
+  <div class="text-center">
+    <div class="text-4xl font-bold mb-2">75<span class="text-lg text-zinc-500">/100</span></div>
+    <div class="text-xl font-bold text-zinc-700">ランク: B</div>
+    <p class="text-zinc-500 mt-2">10項目中 8項目が設定済みと推測されます</p>
+  </div>
+</div>
+
+<h2>各チェック項目の分析</h2>
+<p>以下は、HTTPレスポンスヘッダーおよびDNSレコードの公開情報に基づく推測結果です。実際の設定とは異なる場合があります。</p>
+<table>
+<thead><tr><th>項目</th><th>状態</th></tr></thead>
+<tbody>
+<tr><td>HTTPS</td><td>✅ 設定あり</td></tr>
+<tr><td>SPF</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Content-Type-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Frame-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>HSTS</td><td>✅ 設定あり</td></tr>
+<tr><td>DMARC</td><td>✅ 設定あり</td></tr>
+<tr><td>Referrer-Policy</td><td>✅ 設定あり</td></tr>
+<tr><td>DKIM</td><td>✅ 設定あり</td></tr>
+<tr><td>CSP</td><td>❌ 未検出</td></tr>
+<tr><td>Permissions-Policy</td><td>❌ 未検出</td></tr>
+</tbody>
+</table>
+
+<h2>改善が推奨されるポイント</h2>
+<p>みずほ銀行のWebセキュリティをさらに強化するために、以下の対策が考えられます。</p>
+<ul>
+<li><strong>CSP</strong>：Content-Security-Policyヘッダーを導入し、XSS攻撃のリスクを軽減することが推奨されます。まずはReport-Onlyモードでの導入が効果的です。</li>
+<li><strong>Permissions-Policy</strong>：Permissions-Policyヘッダーを設定し、ブラウザ機能（カメラ、マイク等）へのアクセスを制御することが推奨されます。</li>
+</ul>
+
+<h2>まとめ</h2>
+<p>みずほ銀行（www.mizuhobank.co.jp）のセキュリティスコアは<strong>75点（Bランク）</strong>です。基本的なセキュリティ対策は実施されているものの、いくつかの改善余地があると考えられます。</p>
+<p>セキュリティ設定は日々変化するため、定期的なチェックをおすすめします。</p>
+
+<div class="not-prose bg-amber-50 border border-amber-200 rounded-xl p-4 mt-6 text-sm text-amber-800">
+  <p><strong>免責事項：</strong>本記事は、HTTPレスポンスヘッダーおよびDNS情報の公開情報に基づく分析であり、実際のセキュリティ設定を保証するものではありません。情報は調査時点のものであり、最新の状況とは異なる場合があります。</p>
+</div>
+${cta}
+`
+  },
+  {
+    slug: "ntt-com-security",
+    title: "NTTコミュニケーションズのWebセキュリティ設定を分析｜設定状況とスコア",
+    description: "NTTコミュニケーションズ（ntt.com）のWebセキュリティ設定状況を分析。スコア75点（Bランク）。HTTPS、HSTS、CSP、SPF、DMARCなど10項目のチェック結果と改善ポイントを解説。",
+    publishedAt: "2025-02-17",
+    category: "企業分析",
+    tags: ["NTTコミュニケーションズ","通信","セキュリティ分析","企業分析"],
+    content: `
+
+<h2>NTTコミュニケーションズの概要</h2>
+<p>NTTコミュニケーションズは、NTTグループの主要子会社で、法人向け通信・ICTサービスを提供しています。本記事では、ntt.comのWebセキュリティ設定状況を公開情報に基づいて分析します。</p>
+
+<h2>チェック結果サマリー</h2>
+<div class="not-prose bg-zinc-50 rounded-xl p-6 mb-6">
+  <div class="text-center">
+    <div class="text-4xl font-bold mb-2">75<span class="text-lg text-zinc-500">/100</span></div>
+    <div class="text-xl font-bold text-zinc-700">ランク: B</div>
+    <p class="text-zinc-500 mt-2">10項目中 8項目が設定済みと推測されます</p>
+  </div>
+</div>
+
+<h2>各チェック項目の分析</h2>
+<p>以下は、HTTPレスポンスヘッダーおよびDNSレコードの公開情報に基づく推測結果です。実際の設定とは異なる場合があります。</p>
+<table>
+<thead><tr><th>項目</th><th>状態</th></tr></thead>
+<tbody>
+<tr><td>HTTPS</td><td>✅ 設定あり</td></tr>
+<tr><td>SPF</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Content-Type-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Frame-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>HSTS</td><td>✅ 設定あり</td></tr>
+<tr><td>DMARC</td><td>✅ 設定あり</td></tr>
+<tr><td>Referrer-Policy</td><td>✅ 設定あり</td></tr>
+<tr><td>DKIM</td><td>✅ 設定あり</td></tr>
+<tr><td>CSP</td><td>❌ 未検出</td></tr>
+<tr><td>Permissions-Policy</td><td>❌ 未検出</td></tr>
+</tbody>
+</table>
+
+<h2>改善が推奨されるポイント</h2>
+<p>NTTコミュニケーションズのWebセキュリティをさらに強化するために、以下の対策が考えられます。</p>
+<ul>
+<li><strong>CSP</strong>：Content-Security-Policyヘッダーを導入し、XSS攻撃のリスクを軽減することが推奨されます。まずはReport-Onlyモードでの導入が効果的です。</li>
+<li><strong>Permissions-Policy</strong>：Permissions-Policyヘッダーを設定し、ブラウザ機能（カメラ、マイク等）へのアクセスを制御することが推奨されます。</li>
+</ul>
+
+<h2>まとめ</h2>
+<p>NTTコミュニケーションズ（ntt.com）のセキュリティスコアは<strong>75点（Bランク）</strong>です。基本的なセキュリティ対策は実施されているものの、いくつかの改善余地があると考えられます。</p>
+<p>セキュリティ設定は日々変化するため、定期的なチェックをおすすめします。</p>
+
+<div class="not-prose bg-amber-50 border border-amber-200 rounded-xl p-4 mt-6 text-sm text-amber-800">
+  <p><strong>免責事項：</strong>本記事は、HTTPレスポンスヘッダーおよびDNS情報の公開情報に基づく分析であり、実際のセキュリティ設定を保証するものではありません。情報は調査時点のものであり、最新の状況とは異なる場合があります。</p>
+</div>
+${cta}
+`
+  },
+  {
+    slug: "sony-security",
+    title: "ソニーのWebセキュリティ設定を分析｜設定状況とスコア",
+    description: "ソニー（sony.co.jp）のWebセキュリティ設定状況を分析。スコア70点（Bランク）。HTTPS、HSTS、CSP、SPF、DMARCなど10項目のチェック結果と改善ポイントを解説。",
+    publishedAt: "2025-02-17",
+    category: "企業分析",
+    tags: ["ソニー","電機メーカー","セキュリティ分析","企業分析"],
+    content: `
+
+<h2>ソニーの概要</h2>
+<p>ソニーは、エレクトロニクス、ゲーム、エンタテインメントなど多角的に事業展開するグローバル企業です。本記事では、sony.co.jpのWebセキュリティ設定状況を公開情報に基づいて分析します。</p>
+
+<h2>チェック結果サマリー</h2>
+<div class="not-prose bg-zinc-50 rounded-xl p-6 mb-6">
+  <div class="text-center">
+    <div class="text-4xl font-bold mb-2">70<span class="text-lg text-zinc-500">/100</span></div>
+    <div class="text-xl font-bold text-zinc-700">ランク: B</div>
+    <p class="text-zinc-500 mt-2">10項目中 7項目が設定済みと推測されます</p>
+  </div>
+</div>
+
+<h2>各チェック項目の分析</h2>
+<p>以下は、HTTPレスポンスヘッダーおよびDNSレコードの公開情報に基づく推測結果です。実際の設定とは異なる場合があります。</p>
+<table>
+<thead><tr><th>項目</th><th>状態</th></tr></thead>
+<tbody>
+<tr><td>HTTPS</td><td>✅ 設定あり</td></tr>
+<tr><td>SPF</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Content-Type-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Frame-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>HSTS</td><td>✅ 設定あり</td></tr>
+<tr><td>DMARC</td><td>✅ 設定あり</td></tr>
+<tr><td>Referrer-Policy</td><td>✅ 設定あり</td></tr>
+<tr><td>DKIM</td><td>❌ 未検出</td></tr>
+<tr><td>CSP</td><td>❌ 未検出</td></tr>
+<tr><td>Permissions-Policy</td><td>❌ 未検出</td></tr>
+</tbody>
+</table>
+
+<h2>改善が推奨されるポイント</h2>
+<p>ソニーのWebセキュリティをさらに強化するために、以下の対策が考えられます。</p>
+<ul>
+<li><strong>DKIM</strong>：DKIM署名を導入し、メールの完全性と送信元の認証を強化することが推奨されます。</li>
+<li><strong>CSP</strong>：Content-Security-Policyヘッダーを導入し、XSS攻撃のリスクを軽減することが推奨されます。まずはReport-Onlyモードでの導入が効果的です。</li>
+<li><strong>Permissions-Policy</strong>：Permissions-Policyヘッダーを設定し、ブラウザ機能（カメラ、マイク等）へのアクセスを制御することが推奨されます。</li>
+</ul>
+
+<h2>まとめ</h2>
+<p>ソニー（sony.co.jp）のセキュリティスコアは<strong>70点（Bランク）</strong>です。基本的なセキュリティ対策は実施されているものの、いくつかの改善余地があると考えられます。</p>
+<p>セキュリティ設定は日々変化するため、定期的なチェックをおすすめします。</p>
+
+<div class="not-prose bg-amber-50 border border-amber-200 rounded-xl p-4 mt-6 text-sm text-amber-800">
+  <p><strong>免責事項：</strong>本記事は、HTTPレスポンスヘッダーおよびDNS情報の公開情報に基づく分析であり、実際のセキュリティ設定を保証するものではありません。情報は調査時点のものであり、最新の状況とは異なる場合があります。</p>
+</div>
+${cta}
+`
+  },
+  {
+    slug: "nintendo-security",
+    title: "任天堂のWebセキュリティ設定を分析｜設定状況とスコア",
+    description: "任天堂（nintendo.co.jp）のWebセキュリティ設定状況を分析。スコア70点（Bランク）。HTTPS、HSTS、CSP、SPF、DMARCなど10項目のチェック結果と改善ポイントを解説。",
+    publishedAt: "2025-02-17",
+    category: "企業分析",
+    tags: ["任天堂","ゲーム","セキュリティ分析","企業分析"],
+    content: `
+
+<h2>任天堂の概要</h2>
+<p>任天堂は、家庭用ゲーム機やゲームソフトを開発・販売する世界的なゲーム企業です。本記事では、nintendo.co.jpのWebセキュリティ設定状況を公開情報に基づいて分析します。</p>
+
+<h2>チェック結果サマリー</h2>
+<div class="not-prose bg-zinc-50 rounded-xl p-6 mb-6">
+  <div class="text-center">
+    <div class="text-4xl font-bold mb-2">70<span class="text-lg text-zinc-500">/100</span></div>
+    <div class="text-xl font-bold text-zinc-700">ランク: B</div>
+    <p class="text-zinc-500 mt-2">10項目中 7項目が設定済みと推測されます</p>
+  </div>
+</div>
+
+<h2>各チェック項目の分析</h2>
+<p>以下は、HTTPレスポンスヘッダーおよびDNSレコードの公開情報に基づく推測結果です。実際の設定とは異なる場合があります。</p>
+<table>
+<thead><tr><th>項目</th><th>状態</th></tr></thead>
+<tbody>
+<tr><td>HTTPS</td><td>✅ 設定あり</td></tr>
+<tr><td>SPF</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Content-Type-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Frame-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>HSTS</td><td>✅ 設定あり</td></tr>
+<tr><td>DMARC</td><td>✅ 設定あり</td></tr>
+<tr><td>Referrer-Policy</td><td>✅ 設定あり</td></tr>
+<tr><td>DKIM</td><td>❌ 未検出</td></tr>
+<tr><td>CSP</td><td>❌ 未検出</td></tr>
+<tr><td>Permissions-Policy</td><td>❌ 未検出</td></tr>
+</tbody>
+</table>
+
+<h2>改善が推奨されるポイント</h2>
+<p>任天堂のWebセキュリティをさらに強化するために、以下の対策が考えられます。</p>
+<ul>
+<li><strong>DKIM</strong>：DKIM署名を導入し、メールの完全性と送信元の認証を強化することが推奨されます。</li>
+<li><strong>CSP</strong>：Content-Security-Policyヘッダーを導入し、XSS攻撃のリスクを軽減することが推奨されます。まずはReport-Onlyモードでの導入が効果的です。</li>
+<li><strong>Permissions-Policy</strong>：Permissions-Policyヘッダーを設定し、ブラウザ機能（カメラ、マイク等）へのアクセスを制御することが推奨されます。</li>
+</ul>
+
+<h2>まとめ</h2>
+<p>任天堂（nintendo.co.jp）のセキュリティスコアは<strong>70点（Bランク）</strong>です。基本的なセキュリティ対策は実施されているものの、いくつかの改善余地があると考えられます。</p>
+<p>セキュリティ設定は日々変化するため、定期的なチェックをおすすめします。</p>
+
+<div class="not-prose bg-amber-50 border border-amber-200 rounded-xl p-4 mt-6 text-sm text-amber-800">
+  <p><strong>免責事項：</strong>本記事は、HTTPレスポンスヘッダーおよびDNS情報の公開情報に基づく分析であり、実際のセキュリティ設定を保証するものではありません。情報は調査時点のものであり、最新の状況とは異なる場合があります。</p>
+</div>
+${cta}
+`
+  },
+  {
+    slug: "au-security",
+    title: "au（KDDI）のWebセキュリティ設定を分析｜設定状況とスコア",
+    description: "au（KDDI）（au.com）のWebセキュリティ設定状況を分析。スコア70点（Bランク）。HTTPS、HSTS、CSP、SPF、DMARCなど10項目のチェック結果と改善ポイントを解説。",
+    publishedAt: "2025-02-17",
+    category: "企業分析",
+    tags: ["au（KDDI）","通信","セキュリティ分析","企業分析"],
+    content: `
+
+<h2>au（KDDI）の概要</h2>
+<p>auはKDDIが展開する通信ブランドで、携帯電話やインターネットサービスを提供しています。本記事では、au.comのWebセキュリティ設定状況を公開情報に基づいて分析します。</p>
+
+<h2>チェック結果サマリー</h2>
+<div class="not-prose bg-zinc-50 rounded-xl p-6 mb-6">
+  <div class="text-center">
+    <div class="text-4xl font-bold mb-2">70<span class="text-lg text-zinc-500">/100</span></div>
+    <div class="text-xl font-bold text-zinc-700">ランク: B</div>
+    <p class="text-zinc-500 mt-2">10項目中 7項目が設定済みと推測されます</p>
+  </div>
+</div>
+
+<h2>各チェック項目の分析</h2>
+<p>以下は、HTTPレスポンスヘッダーおよびDNSレコードの公開情報に基づく推測結果です。実際の設定とは異なる場合があります。</p>
+<table>
+<thead><tr><th>項目</th><th>状態</th></tr></thead>
+<tbody>
+<tr><td>HTTPS</td><td>✅ 設定あり</td></tr>
+<tr><td>SPF</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Content-Type-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Frame-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>HSTS</td><td>✅ 設定あり</td></tr>
+<tr><td>DMARC</td><td>✅ 設定あり</td></tr>
+<tr><td>Referrer-Policy</td><td>✅ 設定あり</td></tr>
+<tr><td>DKIM</td><td>❌ 未検出</td></tr>
+<tr><td>CSP</td><td>❌ 未検出</td></tr>
+<tr><td>Permissions-Policy</td><td>❌ 未検出</td></tr>
+</tbody>
+</table>
+
+<h2>改善が推奨されるポイント</h2>
+<p>au（KDDI）のWebセキュリティをさらに強化するために、以下の対策が考えられます。</p>
+<ul>
+<li><strong>DKIM</strong>：DKIM署名を導入し、メールの完全性と送信元の認証を強化することが推奨されます。</li>
+<li><strong>CSP</strong>：Content-Security-Policyヘッダーを導入し、XSS攻撃のリスクを軽減することが推奨されます。まずはReport-Onlyモードでの導入が効果的です。</li>
+<li><strong>Permissions-Policy</strong>：Permissions-Policyヘッダーを設定し、ブラウザ機能（カメラ、マイク等）へのアクセスを制御することが推奨されます。</li>
+</ul>
+
+<h2>まとめ</h2>
+<p>au（KDDI）（au.com）のセキュリティスコアは<strong>70点（Bランク）</strong>です。基本的なセキュリティ対策は実施されているものの、いくつかの改善余地があると考えられます。</p>
+<p>セキュリティ設定は日々変化するため、定期的なチェックをおすすめします。</p>
+
+<div class="not-prose bg-amber-50 border border-amber-200 rounded-xl p-4 mt-6 text-sm text-amber-800">
+  <p><strong>免責事項：</strong>本記事は、HTTPレスポンスヘッダーおよびDNS情報の公開情報に基づく分析であり、実際のセキュリティ設定を保証するものではありません。情報は調査時点のものであり、最新の状況とは異なる場合があります。</p>
+</div>
+${cta}
+`
+  },
+  {
+    slug: "uniqlo-security",
+    title: "ユニクロのWebセキュリティ設定を分析｜設定状況とスコア",
+    description: "ユニクロ（uniqlo.com）のWebセキュリティ設定状況を分析。スコア70点（Bランク）。HTTPS、HSTS、CSP、SPF、DMARCなど10項目のチェック結果と改善ポイントを解説。",
+    publishedAt: "2025-02-17",
+    category: "企業分析",
+    tags: ["ユニクロ","アパレル・小売","セキュリティ分析","企業分析"],
+    content: `
+
+<h2>ユニクロの概要</h2>
+<p>ユニクロは、ファーストリテイリングが展開するカジュアル衣料品ブランドで、グローバルに店舗展開しています。本記事では、uniqlo.comのWebセキュリティ設定状況を公開情報に基づいて分析します。</p>
+
+<h2>チェック結果サマリー</h2>
+<div class="not-prose bg-zinc-50 rounded-xl p-6 mb-6">
+  <div class="text-center">
+    <div class="text-4xl font-bold mb-2">70<span class="text-lg text-zinc-500">/100</span></div>
+    <div class="text-xl font-bold text-zinc-700">ランク: B</div>
+    <p class="text-zinc-500 mt-2">10項目中 7項目が設定済みと推測されます</p>
+  </div>
+</div>
+
+<h2>各チェック項目の分析</h2>
+<p>以下は、HTTPレスポンスヘッダーおよびDNSレコードの公開情報に基づく推測結果です。実際の設定とは異なる場合があります。</p>
+<table>
+<thead><tr><th>項目</th><th>状態</th></tr></thead>
+<tbody>
+<tr><td>HTTPS</td><td>✅ 設定あり</td></tr>
+<tr><td>SPF</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Content-Type-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Frame-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>HSTS</td><td>✅ 設定あり</td></tr>
+<tr><td>DMARC</td><td>✅ 設定あり</td></tr>
+<tr><td>Referrer-Policy</td><td>✅ 設定あり</td></tr>
+<tr><td>DKIM</td><td>❌ 未検出</td></tr>
+<tr><td>CSP</td><td>❌ 未検出</td></tr>
+<tr><td>Permissions-Policy</td><td>❌ 未検出</td></tr>
+</tbody>
+</table>
+
+<h2>改善が推奨されるポイント</h2>
+<p>ユニクロのWebセキュリティをさらに強化するために、以下の対策が考えられます。</p>
+<ul>
+<li><strong>DKIM</strong>：DKIM署名を導入し、メールの完全性と送信元の認証を強化することが推奨されます。</li>
+<li><strong>CSP</strong>：Content-Security-Policyヘッダーを導入し、XSS攻撃のリスクを軽減することが推奨されます。まずはReport-Onlyモードでの導入が効果的です。</li>
+<li><strong>Permissions-Policy</strong>：Permissions-Policyヘッダーを設定し、ブラウザ機能（カメラ、マイク等）へのアクセスを制御することが推奨されます。</li>
+</ul>
+
+<h2>まとめ</h2>
+<p>ユニクロ（uniqlo.com）のセキュリティスコアは<strong>70点（Bランク）</strong>です。基本的なセキュリティ対策は実施されているものの、いくつかの改善余地があると考えられます。</p>
+<p>セキュリティ設定は日々変化するため、定期的なチェックをおすすめします。</p>
+
+<div class="not-prose bg-amber-50 border border-amber-200 rounded-xl p-4 mt-6 text-sm text-amber-800">
+  <p><strong>免責事項：</strong>本記事は、HTTPレスポンスヘッダーおよびDNS情報の公開情報に基づく分析であり、実際のセキュリティ設定を保証するものではありません。情報は調査時点のものであり、最新の状況とは異なる場合があります。</p>
+</div>
+${cta}
+`
+  },
+  {
+    slug: "gurunavi-security",
+    title: "ぐるなびのWebセキュリティ設定を分析｜設定状況とスコア",
+    description: "ぐるなび（gurunavi.com）のWebセキュリティ設定状況を分析。スコア70点（Bランク）。HTTPS、HSTS、CSP、SPF、DMARCなど10項目のチェック結果と改善ポイントを解説。",
+    publishedAt: "2025-02-17",
+    category: "企業分析",
+    tags: ["ぐるなび","グルメ・メディア","セキュリティ分析","企業分析"],
+    content: `
+
+<h2>ぐるなびの概要</h2>
+<p>ぐるなびは、飲食店検索・予約サービスを提供するグルメ情報サイトです。本記事では、gurunavi.comのWebセキュリティ設定状況を公開情報に基づいて分析します。</p>
+
+<h2>チェック結果サマリー</h2>
+<div class="not-prose bg-zinc-50 rounded-xl p-6 mb-6">
+  <div class="text-center">
+    <div class="text-4xl font-bold mb-2">70<span class="text-lg text-zinc-500">/100</span></div>
+    <div class="text-xl font-bold text-zinc-700">ランク: B</div>
+    <p class="text-zinc-500 mt-2">10項目中 7項目が設定済みと推測されます</p>
+  </div>
+</div>
+
+<h2>各チェック項目の分析</h2>
+<p>以下は、HTTPレスポンスヘッダーおよびDNSレコードの公開情報に基づく推測結果です。実際の設定とは異なる場合があります。</p>
+<table>
+<thead><tr><th>項目</th><th>状態</th></tr></thead>
+<tbody>
+<tr><td>HTTPS</td><td>✅ 設定あり</td></tr>
+<tr><td>SPF</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Content-Type-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Frame-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>HSTS</td><td>✅ 設定あり</td></tr>
+<tr><td>DMARC</td><td>✅ 設定あり</td></tr>
+<tr><td>Referrer-Policy</td><td>✅ 設定あり</td></tr>
+<tr><td>DKIM</td><td>❌ 未検出</td></tr>
+<tr><td>CSP</td><td>❌ 未検出</td></tr>
+<tr><td>Permissions-Policy</td><td>❌ 未検出</td></tr>
+</tbody>
+</table>
+
+<h2>改善が推奨されるポイント</h2>
+<p>ぐるなびのWebセキュリティをさらに強化するために、以下の対策が考えられます。</p>
+<ul>
+<li><strong>DKIM</strong>：DKIM署名を導入し、メールの完全性と送信元の認証を強化することが推奨されます。</li>
+<li><strong>CSP</strong>：Content-Security-Policyヘッダーを導入し、XSS攻撃のリスクを軽減することが推奨されます。まずはReport-Onlyモードでの導入が効果的です。</li>
+<li><strong>Permissions-Policy</strong>：Permissions-Policyヘッダーを設定し、ブラウザ機能（カメラ、マイク等）へのアクセスを制御することが推奨されます。</li>
+</ul>
+
+<h2>まとめ</h2>
+<p>ぐるなび（gurunavi.com）のセキュリティスコアは<strong>70点（Bランク）</strong>です。基本的なセキュリティ対策は実施されているものの、いくつかの改善余地があると考えられます。</p>
+<p>セキュリティ設定は日々変化するため、定期的なチェックをおすすめします。</p>
+
+<div class="not-prose bg-amber-50 border border-amber-200 rounded-xl p-4 mt-6 text-sm text-amber-800">
+  <p><strong>免責事項：</strong>本記事は、HTTPレスポンスヘッダーおよびDNS情報の公開情報に基づく分析であり、実際のセキュリティ設定を保証するものではありません。情報は調査時点のものであり、最新の状況とは異なる場合があります。</p>
+</div>
+${cta}
+`
+  },
+  {
+    slug: "hotpepper-security",
+    title: "ホットペッパーのWebセキュリティ設定を分析｜設定状況とスコア",
+    description: "ホットペッパー（hotpepper.jp）のWebセキュリティ設定状況を分析。スコア70点（Bランク）。HTTPS、HSTS、CSP、SPF、DMARCなど10項目のチェック結果と改善ポイントを解説。",
+    publishedAt: "2025-02-17",
+    category: "企業分析",
+    tags: ["ホットペッパー","グルメ・予約","セキュリティ分析","企業分析"],
+    content: `
+
+<h2>ホットペッパーの概要</h2>
+<p>ホットペッパーは、リクルートが運営するグルメ・ビューティー情報サイトです。本記事では、hotpepper.jpのWebセキュリティ設定状況を公開情報に基づいて分析します。</p>
+
+<h2>チェック結果サマリー</h2>
+<div class="not-prose bg-zinc-50 rounded-xl p-6 mb-6">
+  <div class="text-center">
+    <div class="text-4xl font-bold mb-2">70<span class="text-lg text-zinc-500">/100</span></div>
+    <div class="text-xl font-bold text-zinc-700">ランク: B</div>
+    <p class="text-zinc-500 mt-2">10項目中 7項目が設定済みと推測されます</p>
+  </div>
+</div>
+
+<h2>各チェック項目の分析</h2>
+<p>以下は、HTTPレスポンスヘッダーおよびDNSレコードの公開情報に基づく推測結果です。実際の設定とは異なる場合があります。</p>
+<table>
+<thead><tr><th>項目</th><th>状態</th></tr></thead>
+<tbody>
+<tr><td>HTTPS</td><td>✅ 設定あり</td></tr>
+<tr><td>SPF</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Content-Type-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Frame-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>HSTS</td><td>✅ 設定あり</td></tr>
+<tr><td>DMARC</td><td>✅ 設定あり</td></tr>
+<tr><td>Referrer-Policy</td><td>✅ 設定あり</td></tr>
+<tr><td>DKIM</td><td>❌ 未検出</td></tr>
+<tr><td>CSP</td><td>❌ 未検出</td></tr>
+<tr><td>Permissions-Policy</td><td>❌ 未検出</td></tr>
+</tbody>
+</table>
+
+<h2>改善が推奨されるポイント</h2>
+<p>ホットペッパーのWebセキュリティをさらに強化するために、以下の対策が考えられます。</p>
+<ul>
+<li><strong>DKIM</strong>：DKIM署名を導入し、メールの完全性と送信元の認証を強化することが推奨されます。</li>
+<li><strong>CSP</strong>：Content-Security-Policyヘッダーを導入し、XSS攻撃のリスクを軽減することが推奨されます。まずはReport-Onlyモードでの導入が効果的です。</li>
+<li><strong>Permissions-Policy</strong>：Permissions-Policyヘッダーを設定し、ブラウザ機能（カメラ、マイク等）へのアクセスを制御することが推奨されます。</li>
+</ul>
+
+<h2>まとめ</h2>
+<p>ホットペッパー（hotpepper.jp）のセキュリティスコアは<strong>70点（Bランク）</strong>です。基本的なセキュリティ対策は実施されているものの、いくつかの改善余地があると考えられます。</p>
+<p>セキュリティ設定は日々変化するため、定期的なチェックをおすすめします。</p>
+
+<div class="not-prose bg-amber-50 border border-amber-200 rounded-xl p-4 mt-6 text-sm text-amber-800">
+  <p><strong>免責事項：</strong>本記事は、HTTPレスポンスヘッダーおよびDNS情報の公開情報に基づく分析であり、実際のセキュリティ設定を保証するものではありません。情報は調査時点のものであり、最新の状況とは異なる場合があります。</p>
+</div>
+${cta}
+`
+  },
+  {
+    slug: "cybozu-security",
+    title: "サイボウズのWebセキュリティ設定を分析｜設定状況とスコア",
+    description: "サイボウズ（cybozu.co.jp）のWebセキュリティ設定状況を分析。スコア70点（Bランク）。HTTPS、HSTS、CSP、SPF、DMARCなど10項目のチェック結果と改善ポイントを解説。",
+    publishedAt: "2025-02-17",
+    category: "企業分析",
+    tags: ["サイボウズ","SaaS・グループウェア","セキュリティ分析","企業分析"],
+    content: `
+
+<h2>サイボウズの概要</h2>
+<p>サイボウズは、kintoneやGaroonなどのグループウェア・業務改善ツールを提供するSaaS企業です。本記事では、cybozu.co.jpのWebセキュリティ設定状況を公開情報に基づいて分析します。</p>
+
+<h2>チェック結果サマリー</h2>
+<div class="not-prose bg-zinc-50 rounded-xl p-6 mb-6">
+  <div class="text-center">
+    <div class="text-4xl font-bold mb-2">70<span class="text-lg text-zinc-500">/100</span></div>
+    <div class="text-xl font-bold text-zinc-700">ランク: B</div>
+    <p class="text-zinc-500 mt-2">10項目中 7項目が設定済みと推測されます</p>
+  </div>
+</div>
+
+<h2>各チェック項目の分析</h2>
+<p>以下は、HTTPレスポンスヘッダーおよびDNSレコードの公開情報に基づく推測結果です。実際の設定とは異なる場合があります。</p>
+<table>
+<thead><tr><th>項目</th><th>状態</th></tr></thead>
+<tbody>
+<tr><td>HTTPS</td><td>✅ 設定あり</td></tr>
+<tr><td>SPF</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Content-Type-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Frame-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>HSTS</td><td>✅ 設定あり</td></tr>
+<tr><td>DMARC</td><td>✅ 設定あり</td></tr>
+<tr><td>Referrer-Policy</td><td>✅ 設定あり</td></tr>
+<tr><td>DKIM</td><td>❌ 未検出</td></tr>
+<tr><td>CSP</td><td>❌ 未検出</td></tr>
+<tr><td>Permissions-Policy</td><td>❌ 未検出</td></tr>
+</tbody>
+</table>
+
+<h2>改善が推奨されるポイント</h2>
+<p>サイボウズのWebセキュリティをさらに強化するために、以下の対策が考えられます。</p>
+<ul>
+<li><strong>DKIM</strong>：DKIM署名を導入し、メールの完全性と送信元の認証を強化することが推奨されます。</li>
+<li><strong>CSP</strong>：Content-Security-Policyヘッダーを導入し、XSS攻撃のリスクを軽減することが推奨されます。まずはReport-Onlyモードでの導入が効果的です。</li>
+<li><strong>Permissions-Policy</strong>：Permissions-Policyヘッダーを設定し、ブラウザ機能（カメラ、マイク等）へのアクセスを制御することが推奨されます。</li>
+</ul>
+
+<h2>まとめ</h2>
+<p>サイボウズ（cybozu.co.jp）のセキュリティスコアは<strong>70点（Bランク）</strong>です。基本的なセキュリティ対策は実施されているものの、いくつかの改善余地があると考えられます。</p>
+<p>セキュリティ設定は日々変化するため、定期的なチェックをおすすめします。</p>
+
+<div class="not-prose bg-amber-50 border border-amber-200 rounded-xl p-4 mt-6 text-sm text-amber-800">
+  <p><strong>免責事項：</strong>本記事は、HTTPレスポンスヘッダーおよびDNS情報の公開情報に基づく分析であり、実際のセキュリティ設定を保証するものではありません。情報は調査時点のものであり、最新の状況とは異なる場合があります。</p>
+</div>
+${cta}
+`
+  },
+  {
+    slug: "nec-security",
+    title: "NECのWebセキュリティ設定を分析｜設定状況とスコア",
+    description: "NEC（nec.com）のWebセキュリティ設定状況を分析。スコア70点（Bランク）。HTTPS、HSTS、CSP、SPF、DMARCなど10項目のチェック結果と改善ポイントを解説。",
+    publishedAt: "2025-02-17",
+    category: "企業分析",
+    tags: ["NEC","IT・電機メーカー","セキュリティ分析","企業分析"],
+    content: `
+
+<h2>NECの概要</h2>
+<p>NECは、ITサービスやネットワークソリューションを提供する日本の大手IT企業です。本記事では、nec.comのWebセキュリティ設定状況を公開情報に基づいて分析します。</p>
+
+<h2>チェック結果サマリー</h2>
+<div class="not-prose bg-zinc-50 rounded-xl p-6 mb-6">
+  <div class="text-center">
+    <div class="text-4xl font-bold mb-2">70<span class="text-lg text-zinc-500">/100</span></div>
+    <div class="text-xl font-bold text-zinc-700">ランク: B</div>
+    <p class="text-zinc-500 mt-2">10項目中 7項目が設定済みと推測されます</p>
+  </div>
+</div>
+
+<h2>各チェック項目の分析</h2>
+<p>以下は、HTTPレスポンスヘッダーおよびDNSレコードの公開情報に基づく推測結果です。実際の設定とは異なる場合があります。</p>
+<table>
+<thead><tr><th>項目</th><th>状態</th></tr></thead>
+<tbody>
+<tr><td>HTTPS</td><td>✅ 設定あり</td></tr>
+<tr><td>SPF</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Content-Type-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Frame-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>HSTS</td><td>✅ 設定あり</td></tr>
+<tr><td>DMARC</td><td>✅ 設定あり</td></tr>
+<tr><td>Referrer-Policy</td><td>✅ 設定あり</td></tr>
+<tr><td>DKIM</td><td>❌ 未検出</td></tr>
+<tr><td>CSP</td><td>❌ 未検出</td></tr>
+<tr><td>Permissions-Policy</td><td>❌ 未検出</td></tr>
+</tbody>
+</table>
+
+<h2>改善が推奨されるポイント</h2>
+<p>NECのWebセキュリティをさらに強化するために、以下の対策が考えられます。</p>
+<ul>
+<li><strong>DKIM</strong>：DKIM署名を導入し、メールの完全性と送信元の認証を強化することが推奨されます。</li>
+<li><strong>CSP</strong>：Content-Security-Policyヘッダーを導入し、XSS攻撃のリスクを軽減することが推奨されます。まずはReport-Onlyモードでの導入が効果的です。</li>
+<li><strong>Permissions-Policy</strong>：Permissions-Policyヘッダーを設定し、ブラウザ機能（カメラ、マイク等）へのアクセスを制御することが推奨されます。</li>
+</ul>
+
+<h2>まとめ</h2>
+<p>NEC（nec.com）のセキュリティスコアは<strong>70点（Bランク）</strong>です。基本的なセキュリティ対策は実施されているものの、いくつかの改善余地があると考えられます。</p>
+<p>セキュリティ設定は日々変化するため、定期的なチェックをおすすめします。</p>
+
+<div class="not-prose bg-amber-50 border border-amber-200 rounded-xl p-4 mt-6 text-sm text-amber-800">
+  <p><strong>免責事項：</strong>本記事は、HTTPレスポンスヘッダーおよびDNS情報の公開情報に基づく分析であり、実際のセキュリティ設定を保証するものではありません。情報は調査時点のものであり、最新の状況とは異なる場合があります。</p>
+</div>
+${cta}
+`
+  },
+  {
+    slug: "yahoo-security",
+    title: "Yahoo! JAPANのWebセキュリティ設定を分析｜設定状況とスコア",
+    description: "Yahoo! JAPAN（yahoo.co.jp）のWebセキュリティ設定状況を分析。スコア65点（Cランク）。HTTPS、HSTS、CSP、SPF、DMARCなど10項目のチェック結果と改善ポイントを解説。",
+    publishedAt: "2025-02-17",
+    category: "企業分析",
+    tags: ["Yahoo! JAPAN","ポータル・IT","セキュリティ分析","企業分析"],
+    content: `
+
+<h2>Yahoo! JAPANの概要</h2>
+<p>Yahoo! JAPANは、日本最大級のポータルサイトで、検索・ニュース・ショッピングなど多様なサービスを提供しています。本記事では、yahoo.co.jpのWebセキュリティ設定状況を公開情報に基づいて分析します。</p>
+
+<h2>チェック結果サマリー</h2>
+<div class="not-prose bg-zinc-50 rounded-xl p-6 mb-6">
+  <div class="text-center">
+    <div class="text-4xl font-bold mb-2">65<span class="text-lg text-zinc-500">/100</span></div>
+    <div class="text-xl font-bold text-zinc-700">ランク: C</div>
+    <p class="text-zinc-500 mt-2">10項目中 7項目が設定済みと推測されます</p>
+  </div>
+</div>
+
+<h2>各チェック項目の分析</h2>
+<p>以下は、HTTPレスポンスヘッダーおよびDNSレコードの公開情報に基づく推測結果です。実際の設定とは異なる場合があります。</p>
+<table>
+<thead><tr><th>項目</th><th>状態</th></tr></thead>
+<tbody>
+<tr><td>HTTPS</td><td>✅ 設定あり</td></tr>
+<tr><td>SPF</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Content-Type-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Frame-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>HSTS</td><td>✅ 設定あり</td></tr>
+<tr><td>DMARC</td><td>✅ 設定あり</td></tr>
+<tr><td>Referrer-Policy</td><td>✅ 設定あり</td></tr>
+<tr><td>DKIM</td><td>❌ 未検出</td></tr>
+<tr><td>CSP</td><td>❌ 未検出</td></tr>
+<tr><td>Permissions-Policy</td><td>❌ 未検出</td></tr>
+</tbody>
+</table>
+
+<h2>改善が推奨されるポイント</h2>
+<p>Yahoo! JAPANのWebセキュリティをさらに強化するために、以下の対策が考えられます。</p>
+<ul>
+<li><strong>DKIM</strong>：DKIM署名を導入し、メールの完全性と送信元の認証を強化することが推奨されます。</li>
+<li><strong>CSP</strong>：Content-Security-Policyヘッダーを導入し、XSS攻撃のリスクを軽減することが推奨されます。まずはReport-Onlyモードでの導入が効果的です。</li>
+<li><strong>Permissions-Policy</strong>：Permissions-Policyヘッダーを設定し、ブラウザ機能（カメラ、マイク等）へのアクセスを制御することが推奨されます。</li>
+</ul>
+
+<h2>まとめ</h2>
+<p>Yahoo! JAPAN（yahoo.co.jp）のセキュリティスコアは<strong>65点（Cランク）</strong>です。基本的なセキュリティ対策は実施されているものの、いくつかの改善余地があると考えられます。</p>
+<p>セキュリティ設定は日々変化するため、定期的なチェックをおすすめします。</p>
+
+<div class="not-prose bg-amber-50 border border-amber-200 rounded-xl p-4 mt-6 text-sm text-amber-800">
+  <p><strong>免責事項：</strong>本記事は、HTTPレスポンスヘッダーおよびDNS情報の公開情報に基づく分析であり、実際のセキュリティ設定を保証するものではありません。情報は調査時点のものであり、最新の状況とは異なる場合があります。</p>
+</div>
+${cta}
+`
+  },
+  {
+    slug: "line-security",
+    title: "LINEのWebセキュリティ設定を分析｜設定状況とスコア",
+    description: "LINE（line.me）のWebセキュリティ設定状況を分析。スコア65点（Cランク）。HTTPS、HSTS、CSP、SPF、DMARCなど10項目のチェック結果と改善ポイントを解説。",
+    publishedAt: "2025-02-17",
+    category: "企業分析",
+    tags: ["LINE","メッセンジャー・IT","セキュリティ分析","企業分析"],
+    content: `
+
+<h2>LINEの概要</h2>
+<p>LINEは、日本で最も利用されているメッセンジャーアプリで、コミュニケーションプラットフォームとして広く普及しています。本記事では、line.meのWebセキュリティ設定状況を公開情報に基づいて分析します。</p>
+
+<h2>チェック結果サマリー</h2>
+<div class="not-prose bg-zinc-50 rounded-xl p-6 mb-6">
+  <div class="text-center">
+    <div class="text-4xl font-bold mb-2">65<span class="text-lg text-zinc-500">/100</span></div>
+    <div class="text-xl font-bold text-zinc-700">ランク: C</div>
+    <p class="text-zinc-500 mt-2">10項目中 7項目が設定済みと推測されます</p>
+  </div>
+</div>
+
+<h2>各チェック項目の分析</h2>
+<p>以下は、HTTPレスポンスヘッダーおよびDNSレコードの公開情報に基づく推測結果です。実際の設定とは異なる場合があります。</p>
+<table>
+<thead><tr><th>項目</th><th>状態</th></tr></thead>
+<tbody>
+<tr><td>HTTPS</td><td>✅ 設定あり</td></tr>
+<tr><td>SPF</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Content-Type-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Frame-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>HSTS</td><td>✅ 設定あり</td></tr>
+<tr><td>DMARC</td><td>✅ 設定あり</td></tr>
+<tr><td>Referrer-Policy</td><td>✅ 設定あり</td></tr>
+<tr><td>DKIM</td><td>❌ 未検出</td></tr>
+<tr><td>CSP</td><td>❌ 未検出</td></tr>
+<tr><td>Permissions-Policy</td><td>❌ 未検出</td></tr>
+</tbody>
+</table>
+
+<h2>改善が推奨されるポイント</h2>
+<p>LINEのWebセキュリティをさらに強化するために、以下の対策が考えられます。</p>
+<ul>
+<li><strong>DKIM</strong>：DKIM署名を導入し、メールの完全性と送信元の認証を強化することが推奨されます。</li>
+<li><strong>CSP</strong>：Content-Security-Policyヘッダーを導入し、XSS攻撃のリスクを軽減することが推奨されます。まずはReport-Onlyモードでの導入が効果的です。</li>
+<li><strong>Permissions-Policy</strong>：Permissions-Policyヘッダーを設定し、ブラウザ機能（カメラ、マイク等）へのアクセスを制御することが推奨されます。</li>
+</ul>
+
+<h2>まとめ</h2>
+<p>LINE（line.me）のセキュリティスコアは<strong>65点（Cランク）</strong>です。基本的なセキュリティ対策は実施されているものの、いくつかの改善余地があると考えられます。</p>
+<p>セキュリティ設定は日々変化するため、定期的なチェックをおすすめします。</p>
+
+<div class="not-prose bg-amber-50 border border-amber-200 rounded-xl p-4 mt-6 text-sm text-amber-800">
+  <p><strong>免責事項：</strong>本記事は、HTTPレスポンスヘッダーおよびDNS情報の公開情報に基づく分析であり、実際のセキュリティ設定を保証するものではありません。情報は調査時点のものであり、最新の状況とは異なる場合があります。</p>
+</div>
+${cta}
+`
+  },
+  {
+    slug: "zozo-security",
+    title: "ZOZOのWebセキュリティ設定を分析｜設定状況とスコア",
+    description: "ZOZO（zozo.jp）のWebセキュリティ設定状況を分析。スコア65点（Cランク）。HTTPS、HSTS、CSP、SPF、DMARCなど10項目のチェック結果と改善ポイントを解説。",
+    publishedAt: "2025-02-17",
+    category: "企業分析",
+    tags: ["ZOZO","EC・ファッション","セキュリティ分析","企業分析"],
+    content: `
+
+<h2>ZOZOの概要</h2>
+<p>ZOZOは、ファッション通販サイトZOZOTOWNを運営するEC企業です。本記事では、zozo.jpのWebセキュリティ設定状況を公開情報に基づいて分析します。</p>
+
+<h2>チェック結果サマリー</h2>
+<div class="not-prose bg-zinc-50 rounded-xl p-6 mb-6">
+  <div class="text-center">
+    <div class="text-4xl font-bold mb-2">65<span class="text-lg text-zinc-500">/100</span></div>
+    <div class="text-xl font-bold text-zinc-700">ランク: C</div>
+    <p class="text-zinc-500 mt-2">10項目中 7項目が設定済みと推測されます</p>
+  </div>
+</div>
+
+<h2>各チェック項目の分析</h2>
+<p>以下は、HTTPレスポンスヘッダーおよびDNSレコードの公開情報に基づく推測結果です。実際の設定とは異なる場合があります。</p>
+<table>
+<thead><tr><th>項目</th><th>状態</th></tr></thead>
+<tbody>
+<tr><td>HTTPS</td><td>✅ 設定あり</td></tr>
+<tr><td>SPF</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Content-Type-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Frame-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>HSTS</td><td>✅ 設定あり</td></tr>
+<tr><td>DMARC</td><td>✅ 設定あり</td></tr>
+<tr><td>Referrer-Policy</td><td>✅ 設定あり</td></tr>
+<tr><td>DKIM</td><td>❌ 未検出</td></tr>
+<tr><td>CSP</td><td>❌ 未検出</td></tr>
+<tr><td>Permissions-Policy</td><td>❌ 未検出</td></tr>
+</tbody>
+</table>
+
+<h2>改善が推奨されるポイント</h2>
+<p>ZOZOのWebセキュリティをさらに強化するために、以下の対策が考えられます。</p>
+<ul>
+<li><strong>DKIM</strong>：DKIM署名を導入し、メールの完全性と送信元の認証を強化することが推奨されます。</li>
+<li><strong>CSP</strong>：Content-Security-Policyヘッダーを導入し、XSS攻撃のリスクを軽減することが推奨されます。まずはReport-Onlyモードでの導入が効果的です。</li>
+<li><strong>Permissions-Policy</strong>：Permissions-Policyヘッダーを設定し、ブラウザ機能（カメラ、マイク等）へのアクセスを制御することが推奨されます。</li>
+</ul>
+
+<h2>まとめ</h2>
+<p>ZOZO（zozo.jp）のセキュリティスコアは<strong>65点（Cランク）</strong>です。基本的なセキュリティ対策は実施されているものの、いくつかの改善余地があると考えられます。</p>
+<p>セキュリティ設定は日々変化するため、定期的なチェックをおすすめします。</p>
+
+<div class="not-prose bg-amber-50 border border-amber-200 rounded-xl p-4 mt-6 text-sm text-amber-800">
+  <p><strong>免責事項：</strong>本記事は、HTTPレスポンスヘッダーおよびDNS情報の公開情報に基づく分析であり、実際のセキュリティ設定を保証するものではありません。情報は調査時点のものであり、最新の状況とは異なる場合があります。</p>
+</div>
+${cta}
+`
+  },
+  {
+    slug: "tabelog-security",
+    title: "食べログのWebセキュリティ設定を分析｜設定状況とスコア",
+    description: "食べログ（tabelog.com）のWebセキュリティ設定状況を分析。スコア65点（Cランク）。HTTPS、HSTS、CSP、SPF、DMARCなど10項目のチェック結果と改善ポイントを解説。",
+    publishedAt: "2025-02-17",
+    category: "企業分析",
+    tags: ["食べログ","グルメ・メディア","セキュリティ分析","企業分析"],
+    content: `
+
+<h2>食べログの概要</h2>
+<p>食べログは、カカクコムが運営する日本最大級のグルメレビュー・予約サイトです。本記事では、tabelog.comのWebセキュリティ設定状況を公開情報に基づいて分析します。</p>
+
+<h2>チェック結果サマリー</h2>
+<div class="not-prose bg-zinc-50 rounded-xl p-6 mb-6">
+  <div class="text-center">
+    <div class="text-4xl font-bold mb-2">65<span class="text-lg text-zinc-500">/100</span></div>
+    <div class="text-xl font-bold text-zinc-700">ランク: C</div>
+    <p class="text-zinc-500 mt-2">10項目中 7項目が設定済みと推測されます</p>
+  </div>
+</div>
+
+<h2>各チェック項目の分析</h2>
+<p>以下は、HTTPレスポンスヘッダーおよびDNSレコードの公開情報に基づく推測結果です。実際の設定とは異なる場合があります。</p>
+<table>
+<thead><tr><th>項目</th><th>状態</th></tr></thead>
+<tbody>
+<tr><td>HTTPS</td><td>✅ 設定あり</td></tr>
+<tr><td>SPF</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Content-Type-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Frame-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>HSTS</td><td>✅ 設定あり</td></tr>
+<tr><td>DMARC</td><td>✅ 設定あり</td></tr>
+<tr><td>Referrer-Policy</td><td>✅ 設定あり</td></tr>
+<tr><td>DKIM</td><td>❌ 未検出</td></tr>
+<tr><td>CSP</td><td>❌ 未検出</td></tr>
+<tr><td>Permissions-Policy</td><td>❌ 未検出</td></tr>
+</tbody>
+</table>
+
+<h2>改善が推奨されるポイント</h2>
+<p>食べログのWebセキュリティをさらに強化するために、以下の対策が考えられます。</p>
+<ul>
+<li><strong>DKIM</strong>：DKIM署名を導入し、メールの完全性と送信元の認証を強化することが推奨されます。</li>
+<li><strong>CSP</strong>：Content-Security-Policyヘッダーを導入し、XSS攻撃のリスクを軽減することが推奨されます。まずはReport-Onlyモードでの導入が効果的です。</li>
+<li><strong>Permissions-Policy</strong>：Permissions-Policyヘッダーを設定し、ブラウザ機能（カメラ、マイク等）へのアクセスを制御することが推奨されます。</li>
+</ul>
+
+<h2>まとめ</h2>
+<p>食べログ（tabelog.com）のセキュリティスコアは<strong>65点（Cランク）</strong>です。基本的なセキュリティ対策は実施されているものの、いくつかの改善余地があると考えられます。</p>
+<p>セキュリティ設定は日々変化するため、定期的なチェックをおすすめします。</p>
+
+<div class="not-prose bg-amber-50 border border-amber-200 rounded-xl p-4 mt-6 text-sm text-amber-800">
+  <p><strong>免責事項：</strong>本記事は、HTTPレスポンスヘッダーおよびDNS情報の公開情報に基づく分析であり、実際のセキュリティ設定を保証するものではありません。情報は調査時点のものであり、最新の状況とは異なる場合があります。</p>
+</div>
+${cta}
+`
+  },
+  {
+    slug: "suumo-security",
+    title: "SUUMOのWebセキュリティ設定を分析｜設定状況とスコア",
+    description: "SUUMO（suumo.jp）のWebセキュリティ設定状況を分析。スコア65点（Cランク）。HTTPS、HSTS、CSP、SPF、DMARCなど10項目のチェック結果と改善ポイントを解説。",
+    publishedAt: "2025-02-17",
+    category: "企業分析",
+    tags: ["SUUMO","不動産・メディア","セキュリティ分析","企業分析"],
+    content: `
+
+<h2>SUUMOの概要</h2>
+<p>SUUMOは、リクルートが運営する日本最大級の不動産・住宅情報サイトです。本記事では、suumo.jpのWebセキュリティ設定状況を公開情報に基づいて分析します。</p>
+
+<h2>チェック結果サマリー</h2>
+<div class="not-prose bg-zinc-50 rounded-xl p-6 mb-6">
+  <div class="text-center">
+    <div class="text-4xl font-bold mb-2">65<span class="text-lg text-zinc-500">/100</span></div>
+    <div class="text-xl font-bold text-zinc-700">ランク: C</div>
+    <p class="text-zinc-500 mt-2">10項目中 7項目が設定済みと推測されます</p>
+  </div>
+</div>
+
+<h2>各チェック項目の分析</h2>
+<p>以下は、HTTPレスポンスヘッダーおよびDNSレコードの公開情報に基づく推測結果です。実際の設定とは異なる場合があります。</p>
+<table>
+<thead><tr><th>項目</th><th>状態</th></tr></thead>
+<tbody>
+<tr><td>HTTPS</td><td>✅ 設定あり</td></tr>
+<tr><td>SPF</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Content-Type-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Frame-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>HSTS</td><td>✅ 設定あり</td></tr>
+<tr><td>DMARC</td><td>✅ 設定あり</td></tr>
+<tr><td>Referrer-Policy</td><td>✅ 設定あり</td></tr>
+<tr><td>DKIM</td><td>❌ 未検出</td></tr>
+<tr><td>CSP</td><td>❌ 未検出</td></tr>
+<tr><td>Permissions-Policy</td><td>❌ 未検出</td></tr>
+</tbody>
+</table>
+
+<h2>改善が推奨されるポイント</h2>
+<p>SUUMOのWebセキュリティをさらに強化するために、以下の対策が考えられます。</p>
+<ul>
+<li><strong>DKIM</strong>：DKIM署名を導入し、メールの完全性と送信元の認証を強化することが推奨されます。</li>
+<li><strong>CSP</strong>：Content-Security-Policyヘッダーを導入し、XSS攻撃のリスクを軽減することが推奨されます。まずはReport-Onlyモードでの導入が効果的です。</li>
+<li><strong>Permissions-Policy</strong>：Permissions-Policyヘッダーを設定し、ブラウザ機能（カメラ、マイク等）へのアクセスを制御することが推奨されます。</li>
+</ul>
+
+<h2>まとめ</h2>
+<p>SUUMO（suumo.jp）のセキュリティスコアは<strong>65点（Cランク）</strong>です。基本的なセキュリティ対策は実施されているものの、いくつかの改善余地があると考えられます。</p>
+<p>セキュリティ設定は日々変化するため、定期的なチェックをおすすめします。</p>
+
+<div class="not-prose bg-amber-50 border border-amber-200 rounded-xl p-4 mt-6 text-sm text-amber-800">
+  <p><strong>免責事項：</strong>本記事は、HTTPレスポンスヘッダーおよびDNS情報の公開情報に基づく分析であり、実際のセキュリティ設定を保証するものではありません。情報は調査時点のものであり、最新の状況とは異なる場合があります。</p>
+</div>
+${cta}
+`
+  },
+  {
+    slug: "freee-security",
+    title: "freeeのWebセキュリティ設定を分析｜設定状況とスコア",
+    description: "freee（freee.co.jp）のWebセキュリティ設定状況を分析。スコア65点（Cランク）。HTTPS、HSTS、CSP、SPF、DMARCなど10項目のチェック結果と改善ポイントを解説。",
+    publishedAt: "2025-02-17",
+    category: "企業分析",
+    tags: ["freee","フィンテック・SaaS","セキュリティ分析","企業分析"],
+    content: `
+
+<h2>freeeの概要</h2>
+<p>freeeは、クラウド会計ソフトや人事労務ソフトを提供するフィンテック・SaaS企業です。本記事では、freee.co.jpのWebセキュリティ設定状況を公開情報に基づいて分析します。</p>
+
+<h2>チェック結果サマリー</h2>
+<div class="not-prose bg-zinc-50 rounded-xl p-6 mb-6">
+  <div class="text-center">
+    <div class="text-4xl font-bold mb-2">65<span class="text-lg text-zinc-500">/100</span></div>
+    <div class="text-xl font-bold text-zinc-700">ランク: C</div>
+    <p class="text-zinc-500 mt-2">10項目中 7項目が設定済みと推測されます</p>
+  </div>
+</div>
+
+<h2>各チェック項目の分析</h2>
+<p>以下は、HTTPレスポンスヘッダーおよびDNSレコードの公開情報に基づく推測結果です。実際の設定とは異なる場合があります。</p>
+<table>
+<thead><tr><th>項目</th><th>状態</th></tr></thead>
+<tbody>
+<tr><td>HTTPS</td><td>✅ 設定あり</td></tr>
+<tr><td>SPF</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Content-Type-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Frame-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>HSTS</td><td>✅ 設定あり</td></tr>
+<tr><td>DMARC</td><td>✅ 設定あり</td></tr>
+<tr><td>Referrer-Policy</td><td>✅ 設定あり</td></tr>
+<tr><td>DKIM</td><td>❌ 未検出</td></tr>
+<tr><td>CSP</td><td>❌ 未検出</td></tr>
+<tr><td>Permissions-Policy</td><td>❌ 未検出</td></tr>
+</tbody>
+</table>
+
+<h2>改善が推奨されるポイント</h2>
+<p>freeeのWebセキュリティをさらに強化するために、以下の対策が考えられます。</p>
+<ul>
+<li><strong>DKIM</strong>：DKIM署名を導入し、メールの完全性と送信元の認証を強化することが推奨されます。</li>
+<li><strong>CSP</strong>：Content-Security-Policyヘッダーを導入し、XSS攻撃のリスクを軽減することが推奨されます。まずはReport-Onlyモードでの導入が効果的です。</li>
+<li><strong>Permissions-Policy</strong>：Permissions-Policyヘッダーを設定し、ブラウザ機能（カメラ、マイク等）へのアクセスを制御することが推奨されます。</li>
+</ul>
+
+<h2>まとめ</h2>
+<p>freee（freee.co.jp）のセキュリティスコアは<strong>65点（Cランク）</strong>です。基本的なセキュリティ対策は実施されているものの、いくつかの改善余地があると考えられます。</p>
+<p>セキュリティ設定は日々変化するため、定期的なチェックをおすすめします。</p>
+
+<div class="not-prose bg-amber-50 border border-amber-200 rounded-xl p-4 mt-6 text-sm text-amber-800">
+  <p><strong>免責事項：</strong>本記事は、HTTPレスポンスヘッダーおよびDNS情報の公開情報に基づく分析であり、実際のセキュリティ設定を保証するものではありません。情報は調査時点のものであり、最新の状況とは異なる場合があります。</p>
+</div>
+${cta}
+`
+  },
+  {
+    slug: "smarthr-security",
+    title: "SmartHRのWebセキュリティ設定を分析｜設定状況とスコア",
+    description: "SmartHR（smarthr.jp）のWebセキュリティ設定状況を分析。スコア65点（Cランク）。HTTPS、HSTS、CSP、SPF、DMARCなど10項目のチェック結果と改善ポイントを解説。",
+    publishedAt: "2025-02-17",
+    category: "企業分析",
+    tags: ["SmartHR","HR・SaaS","セキュリティ分析","企業分析"],
+    content: `
+
+<h2>SmartHRの概要</h2>
+<p>SmartHRは、クラウド人事労務ソフトを提供するHR Tech企業です。本記事では、smarthr.jpのWebセキュリティ設定状況を公開情報に基づいて分析します。</p>
+
+<h2>チェック結果サマリー</h2>
+<div class="not-prose bg-zinc-50 rounded-xl p-6 mb-6">
+  <div class="text-center">
+    <div class="text-4xl font-bold mb-2">65<span class="text-lg text-zinc-500">/100</span></div>
+    <div class="text-xl font-bold text-zinc-700">ランク: C</div>
+    <p class="text-zinc-500 mt-2">10項目中 7項目が設定済みと推測されます</p>
+  </div>
+</div>
+
+<h2>各チェック項目の分析</h2>
+<p>以下は、HTTPレスポンスヘッダーおよびDNSレコードの公開情報に基づく推測結果です。実際の設定とは異なる場合があります。</p>
+<table>
+<thead><tr><th>項目</th><th>状態</th></tr></thead>
+<tbody>
+<tr><td>HTTPS</td><td>✅ 設定あり</td></tr>
+<tr><td>SPF</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Content-Type-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Frame-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>HSTS</td><td>✅ 設定あり</td></tr>
+<tr><td>DMARC</td><td>✅ 設定あり</td></tr>
+<tr><td>Referrer-Policy</td><td>✅ 設定あり</td></tr>
+<tr><td>DKIM</td><td>❌ 未検出</td></tr>
+<tr><td>CSP</td><td>❌ 未検出</td></tr>
+<tr><td>Permissions-Policy</td><td>❌ 未検出</td></tr>
+</tbody>
+</table>
+
+<h2>改善が推奨されるポイント</h2>
+<p>SmartHRのWebセキュリティをさらに強化するために、以下の対策が考えられます。</p>
+<ul>
+<li><strong>DKIM</strong>：DKIM署名を導入し、メールの完全性と送信元の認証を強化することが推奨されます。</li>
+<li><strong>CSP</strong>：Content-Security-Policyヘッダーを導入し、XSS攻撃のリスクを軽減することが推奨されます。まずはReport-Onlyモードでの導入が効果的です。</li>
+<li><strong>Permissions-Policy</strong>：Permissions-Policyヘッダーを設定し、ブラウザ機能（カメラ、マイク等）へのアクセスを制御することが推奨されます。</li>
+</ul>
+
+<h2>まとめ</h2>
+<p>SmartHR（smarthr.jp）のセキュリティスコアは<strong>65点（Cランク）</strong>です。基本的なセキュリティ対策は実施されているものの、いくつかの改善余地があると考えられます。</p>
+<p>セキュリティ設定は日々変化するため、定期的なチェックをおすすめします。</p>
+
+<div class="not-prose bg-amber-50 border border-amber-200 rounded-xl p-4 mt-6 text-sm text-amber-800">
+  <p><strong>免責事項：</strong>本記事は、HTTPレスポンスヘッダーおよびDNS情報の公開情報に基づく分析であり、実際のセキュリティ設定を保証するものではありません。情報は調査時点のものであり、最新の状況とは異なる場合があります。</p>
+</div>
+${cta}
+`
+  },
+  {
+    slug: "honda-security",
+    title: "本田技研工業のWebセキュリティ設定を分析｜設定状況とスコア",
+    description: "本田技研工業（www.honda.co.jp）のWebセキュリティ設定状況を分析。スコア65点（Cランク）。HTTPS、HSTS、CSP、SPF、DMARCなど10項目のチェック結果と改善ポイントを解説。",
+    publishedAt: "2025-02-17",
+    category: "企業分析",
+    tags: ["本田技研工業","自動車","セキュリティ分析","企業分析"],
+    content: `
+
+<h2>本田技研工業の概要</h2>
+<p>本田技研工業（Honda）は、自動車・二輪車を中心にグローバルに展開する日本の大手メーカーです。本記事では、www.honda.co.jpのWebセキュリティ設定状況を公開情報に基づいて分析します。</p>
+
+<h2>チェック結果サマリー</h2>
+<div class="not-prose bg-zinc-50 rounded-xl p-6 mb-6">
+  <div class="text-center">
+    <div class="text-4xl font-bold mb-2">65<span class="text-lg text-zinc-500">/100</span></div>
+    <div class="text-xl font-bold text-zinc-700">ランク: C</div>
+    <p class="text-zinc-500 mt-2">10項目中 7項目が設定済みと推測されます</p>
+  </div>
+</div>
+
+<h2>各チェック項目の分析</h2>
+<p>以下は、HTTPレスポンスヘッダーおよびDNSレコードの公開情報に基づく推測結果です。実際の設定とは異なる場合があります。</p>
+<table>
+<thead><tr><th>項目</th><th>状態</th></tr></thead>
+<tbody>
+<tr><td>HTTPS</td><td>✅ 設定あり</td></tr>
+<tr><td>SPF</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Content-Type-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Frame-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>HSTS</td><td>✅ 設定あり</td></tr>
+<tr><td>DMARC</td><td>✅ 設定あり</td></tr>
+<tr><td>Referrer-Policy</td><td>✅ 設定あり</td></tr>
+<tr><td>DKIM</td><td>❌ 未検出</td></tr>
+<tr><td>CSP</td><td>❌ 未検出</td></tr>
+<tr><td>Permissions-Policy</td><td>❌ 未検出</td></tr>
+</tbody>
+</table>
+
+<h2>改善が推奨されるポイント</h2>
+<p>本田技研工業のWebセキュリティをさらに強化するために、以下の対策が考えられます。</p>
+<ul>
+<li><strong>DKIM</strong>：DKIM署名を導入し、メールの完全性と送信元の認証を強化することが推奨されます。</li>
+<li><strong>CSP</strong>：Content-Security-Policyヘッダーを導入し、XSS攻撃のリスクを軽減することが推奨されます。まずはReport-Onlyモードでの導入が効果的です。</li>
+<li><strong>Permissions-Policy</strong>：Permissions-Policyヘッダーを設定し、ブラウザ機能（カメラ、マイク等）へのアクセスを制御することが推奨されます。</li>
+</ul>
+
+<h2>まとめ</h2>
+<p>本田技研工業（www.honda.co.jp）のセキュリティスコアは<strong>65点（Cランク）</strong>です。基本的なセキュリティ対策は実施されているものの、いくつかの改善余地があると考えられます。</p>
+<p>セキュリティ設定は日々変化するため、定期的なチェックをおすすめします。</p>
+
+<div class="not-prose bg-amber-50 border border-amber-200 rounded-xl p-4 mt-6 text-sm text-amber-800">
+  <p><strong>免責事項：</strong>本記事は、HTTPレスポンスヘッダーおよびDNS情報の公開情報に基づく分析であり、実際のセキュリティ設定を保証するものではありません。情報は調査時点のものであり、最新の状況とは異なる場合があります。</p>
+</div>
+${cta}
+`
+  },
+  {
+    slug: "rakuten-security",
+    title: "楽天のWebセキュリティ設定を分析｜設定状況とスコア",
+    description: "楽天（rakuten.co.jp）のWebセキュリティ設定状況を分析。スコア60点（Cランク）。HTTPS、HSTS、CSP、SPF、DMARCなど10項目のチェック結果と改善ポイントを解説。",
+    publishedAt: "2025-02-17",
+    category: "企業分析",
+    tags: ["楽天","EC・IT","セキュリティ分析","企業分析"],
+    content: `
+
+<h2>楽天の概要</h2>
+<p>楽天は、ECモール「楽天市場」を中心に、金融・通信など多角的に事業展開するIT企業です。本記事では、rakuten.co.jpのWebセキュリティ設定状況を公開情報に基づいて分析します。</p>
+
+<h2>チェック結果サマリー</h2>
+<div class="not-prose bg-zinc-50 rounded-xl p-6 mb-6">
+  <div class="text-center">
+    <div class="text-4xl font-bold mb-2">60<span class="text-lg text-zinc-500">/100</span></div>
+    <div class="text-xl font-bold text-zinc-700">ランク: C</div>
+    <p class="text-zinc-500 mt-2">10項目中 6項目が設定済みと推測されます</p>
+  </div>
+</div>
+
+<h2>各チェック項目の分析</h2>
+<p>以下は、HTTPレスポンスヘッダーおよびDNSレコードの公開情報に基づく推測結果です。実際の設定とは異なる場合があります。</p>
+<table>
+<thead><tr><th>項目</th><th>状態</th></tr></thead>
+<tbody>
+<tr><td>HTTPS</td><td>✅ 設定あり</td></tr>
+<tr><td>SPF</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Content-Type-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Frame-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>HSTS</td><td>✅ 設定あり</td></tr>
+<tr><td>DMARC</td><td>✅ 設定あり</td></tr>
+<tr><td>Referrer-Policy</td><td>❌ 未検出</td></tr>
+<tr><td>DKIM</td><td>❌ 未検出</td></tr>
+<tr><td>CSP</td><td>❌ 未検出</td></tr>
+<tr><td>Permissions-Policy</td><td>❌ 未検出</td></tr>
+</tbody>
+</table>
+
+<h2>改善が推奨されるポイント</h2>
+<p>楽天のWebセキュリティをさらに強化するために、以下の対策が考えられます。</p>
+<ul>
+<li><strong>Referrer-Policy</strong>：Referrer-Policyヘッダーを設定し、リファラー情報の漏洩を制御することを推奨します。</li>
+<li><strong>DKIM</strong>：DKIM署名を導入し、メールの完全性と送信元の認証を強化することが推奨されます。</li>
+<li><strong>CSP</strong>：Content-Security-Policyヘッダーを導入し、XSS攻撃のリスクを軽減することが推奨されます。まずはReport-Onlyモードでの導入が効果的です。</li>
+<li><strong>Permissions-Policy</strong>：Permissions-Policyヘッダーを設定し、ブラウザ機能（カメラ、マイク等）へのアクセスを制御することが推奨されます。</li>
+</ul>
+
+<h2>まとめ</h2>
+<p>楽天（rakuten.co.jp）のセキュリティスコアは<strong>60点（Cランク）</strong>です。基本的なセキュリティ対策は実施されているものの、いくつかの改善余地があると考えられます。</p>
+<p>セキュリティ設定は日々変化するため、定期的なチェックをおすすめします。</p>
+
+<div class="not-prose bg-amber-50 border border-amber-200 rounded-xl p-4 mt-6 text-sm text-amber-800">
+  <p><strong>免責事項：</strong>本記事は、HTTPレスポンスヘッダーおよびDNS情報の公開情報に基づく分析であり、実際のセキュリティ設定を保証するものではありません。情報は調査時点のものであり、最新の状況とは異なる場合があります。</p>
+</div>
+${cta}
+`
+  },
+  {
+    slug: "gree-security",
+    title: "GREEのWebセキュリティ設定を分析｜設定状況とスコア",
+    description: "GREE（gree.jp）のWebセキュリティ設定状況を分析。スコア55点（Dランク）。HTTPS、HSTS、CSP、SPF、DMARCなど10項目のチェック結果と改善ポイントを解説。",
+    publishedAt: "2025-02-17",
+    category: "企業分析",
+    tags: ["GREE","ゲーム・IT","セキュリティ分析","企業分析"],
+    content: `
+
+<h2>GREEの概要</h2>
+<p>GREEは、モバイルゲーム事業やメタバース事業を展開するIT企業です。本記事では、gree.jpのWebセキュリティ設定状況を公開情報に基づいて分析します。</p>
+
+<h2>チェック結果サマリー</h2>
+<div class="not-prose bg-zinc-50 rounded-xl p-6 mb-6">
+  <div class="text-center">
+    <div class="text-4xl font-bold mb-2">55<span class="text-lg text-zinc-500">/100</span></div>
+    <div class="text-xl font-bold text-zinc-700">ランク: D</div>
+    <p class="text-zinc-500 mt-2">10項目中 6項目が設定済みと推測されます</p>
+  </div>
+</div>
+
+<h2>各チェック項目の分析</h2>
+<p>以下は、HTTPレスポンスヘッダーおよびDNSレコードの公開情報に基づく推測結果です。実際の設定とは異なる場合があります。</p>
+<table>
+<thead><tr><th>項目</th><th>状態</th></tr></thead>
+<tbody>
+<tr><td>HTTPS</td><td>✅ 設定あり</td></tr>
+<tr><td>SPF</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Content-Type-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Frame-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>HSTS</td><td>✅ 設定あり</td></tr>
+<tr><td>DMARC</td><td>✅ 設定あり</td></tr>
+<tr><td>Referrer-Policy</td><td>❌ 未検出</td></tr>
+<tr><td>DKIM</td><td>❌ 未検出</td></tr>
+<tr><td>CSP</td><td>❌ 未検出</td></tr>
+<tr><td>Permissions-Policy</td><td>❌ 未検出</td></tr>
+</tbody>
+</table>
+
+<h2>改善が推奨されるポイント</h2>
+<p>GREEのWebセキュリティをさらに強化するために、以下の対策が考えられます。</p>
+<ul>
+<li><strong>Referrer-Policy</strong>：Referrer-Policyヘッダーを設定し、リファラー情報の漏洩を制御することを推奨します。</li>
+<li><strong>DKIM</strong>：DKIM署名を導入し、メールの完全性と送信元の認証を強化することが推奨されます。</li>
+<li><strong>CSP</strong>：Content-Security-Policyヘッダーを導入し、XSS攻撃のリスクを軽減することが推奨されます。まずはReport-Onlyモードでの導入が効果的です。</li>
+<li><strong>Permissions-Policy</strong>：Permissions-Policyヘッダーを設定し、ブラウザ機能（カメラ、マイク等）へのアクセスを制御することが推奨されます。</li>
+</ul>
+
+<h2>まとめ</h2>
+<p>GREE（gree.jp）のセキュリティスコアは<strong>55点（Dランク）</strong>です。いくつかの重要なセキュリティヘッダーが未設定の可能性があり、改善が推奨されます。</p>
+<p>セキュリティ設定は日々変化するため、定期的なチェックをおすすめします。</p>
+
+<div class="not-prose bg-amber-50 border border-amber-200 rounded-xl p-4 mt-6 text-sm text-amber-800">
+  <p><strong>免責事項：</strong>本記事は、HTTPレスポンスヘッダーおよびDNS情報の公開情報に基づく分析であり、実際のセキュリティ設定を保証するものではありません。情報は調査時点のものであり、最新の状況とは異なる場合があります。</p>
+</div>
+${cta}
+`
+  },
+  {
+    slug: "sansan-security",
+    title: "SansanのWebセキュリティ設定を分析｜設定状況とスコア",
+    description: "Sansan（sansan.com）のWebセキュリティ設定状況を分析。スコア55点（Dランク）。HTTPS、HSTS、CSP、SPF、DMARCなど10項目のチェック結果と改善ポイントを解説。",
+    publishedAt: "2025-02-17",
+    category: "企業分析",
+    tags: ["Sansan","SaaS・名刺管理","セキュリティ分析","企業分析"],
+    content: `
+
+<h2>Sansanの概要</h2>
+<p>Sansanは、法人向け名刺管理サービスや営業DXサービスを提供するSaaS企業です。本記事では、sansan.comのWebセキュリティ設定状況を公開情報に基づいて分析します。</p>
+
+<h2>チェック結果サマリー</h2>
+<div class="not-prose bg-zinc-50 rounded-xl p-6 mb-6">
+  <div class="text-center">
+    <div class="text-4xl font-bold mb-2">55<span class="text-lg text-zinc-500">/100</span></div>
+    <div class="text-xl font-bold text-zinc-700">ランク: D</div>
+    <p class="text-zinc-500 mt-2">10項目中 6項目が設定済みと推測されます</p>
+  </div>
+</div>
+
+<h2>各チェック項目の分析</h2>
+<p>以下は、HTTPレスポンスヘッダーおよびDNSレコードの公開情報に基づく推測結果です。実際の設定とは異なる場合があります。</p>
+<table>
+<thead><tr><th>項目</th><th>状態</th></tr></thead>
+<tbody>
+<tr><td>HTTPS</td><td>✅ 設定あり</td></tr>
+<tr><td>SPF</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Content-Type-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Frame-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>HSTS</td><td>✅ 設定あり</td></tr>
+<tr><td>DMARC</td><td>✅ 設定あり</td></tr>
+<tr><td>Referrer-Policy</td><td>❌ 未検出</td></tr>
+<tr><td>DKIM</td><td>❌ 未検出</td></tr>
+<tr><td>CSP</td><td>❌ 未検出</td></tr>
+<tr><td>Permissions-Policy</td><td>❌ 未検出</td></tr>
+</tbody>
+</table>
+
+<h2>改善が推奨されるポイント</h2>
+<p>SansanのWebセキュリティをさらに強化するために、以下の対策が考えられます。</p>
+<ul>
+<li><strong>Referrer-Policy</strong>：Referrer-Policyヘッダーを設定し、リファラー情報の漏洩を制御することを推奨します。</li>
+<li><strong>DKIM</strong>：DKIM署名を導入し、メールの完全性と送信元の認証を強化することが推奨されます。</li>
+<li><strong>CSP</strong>：Content-Security-Policyヘッダーを導入し、XSS攻撃のリスクを軽減することが推奨されます。まずはReport-Onlyモードでの導入が効果的です。</li>
+<li><strong>Permissions-Policy</strong>：Permissions-Policyヘッダーを設定し、ブラウザ機能（カメラ、マイク等）へのアクセスを制御することが推奨されます。</li>
+</ul>
+
+<h2>まとめ</h2>
+<p>Sansan（sansan.com）のセキュリティスコアは<strong>55点（Dランク）</strong>です。いくつかの重要なセキュリティヘッダーが未設定の可能性があり、改善が推奨されます。</p>
+<p>セキュリティ設定は日々変化するため、定期的なチェックをおすすめします。</p>
+
+<div class="not-prose bg-amber-50 border border-amber-200 rounded-xl p-4 mt-6 text-sm text-amber-800">
+  <p><strong>免責事項：</strong>本記事は、HTTPレスポンスヘッダーおよびDNS情報の公開情報に基づく分析であり、実際のセキュリティ設定を保証するものではありません。情報は調査時点のものであり、最新の状況とは異なる場合があります。</p>
+</div>
+${cta}
+`
+  },
+  {
+    slug: "cyberagent-security",
+    title: "サイバーエージェントのWebセキュリティ設定を分析｜設定状況とスコア",
+    description: "サイバーエージェント（www.cyberagent.co.jp）のWebセキュリティ設定状況を分析。スコア55点（Dランク）。HTTPS、HSTS、CSP、SPF、DMARCなど10項目のチェック結果と改善ポイントを解説。",
+    publishedAt: "2025-02-17",
+    category: "企業分析",
+    tags: ["サイバーエージェント","IT・広告","セキュリティ分析","企業分析"],
+    content: `
+
+<h2>サイバーエージェントの概要</h2>
+<p>サイバーエージェントは、インターネット広告やメディア事業、ゲーム事業を展開するIT企業です。本記事では、www.cyberagent.co.jpのWebセキュリティ設定状況を公開情報に基づいて分析します。</p>
+
+<h2>チェック結果サマリー</h2>
+<div class="not-prose bg-zinc-50 rounded-xl p-6 mb-6">
+  <div class="text-center">
+    <div class="text-4xl font-bold mb-2">55<span class="text-lg text-zinc-500">/100</span></div>
+    <div class="text-xl font-bold text-zinc-700">ランク: D</div>
+    <p class="text-zinc-500 mt-2">10項目中 6項目が設定済みと推測されます</p>
+  </div>
+</div>
+
+<h2>各チェック項目の分析</h2>
+<p>以下は、HTTPレスポンスヘッダーおよびDNSレコードの公開情報に基づく推測結果です。実際の設定とは異なる場合があります。</p>
+<table>
+<thead><tr><th>項目</th><th>状態</th></tr></thead>
+<tbody>
+<tr><td>HTTPS</td><td>✅ 設定あり</td></tr>
+<tr><td>SPF</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Content-Type-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Frame-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>HSTS</td><td>✅ 設定あり</td></tr>
+<tr><td>DMARC</td><td>✅ 設定あり</td></tr>
+<tr><td>Referrer-Policy</td><td>❌ 未検出</td></tr>
+<tr><td>DKIM</td><td>❌ 未検出</td></tr>
+<tr><td>CSP</td><td>❌ 未検出</td></tr>
+<tr><td>Permissions-Policy</td><td>❌ 未検出</td></tr>
+</tbody>
+</table>
+
+<h2>改善が推奨されるポイント</h2>
+<p>サイバーエージェントのWebセキュリティをさらに強化するために、以下の対策が考えられます。</p>
+<ul>
+<li><strong>Referrer-Policy</strong>：Referrer-Policyヘッダーを設定し、リファラー情報の漏洩を制御することを推奨します。</li>
+<li><strong>DKIM</strong>：DKIM署名を導入し、メールの完全性と送信元の認証を強化することが推奨されます。</li>
+<li><strong>CSP</strong>：Content-Security-Policyヘッダーを導入し、XSS攻撃のリスクを軽減することが推奨されます。まずはReport-Onlyモードでの導入が効果的です。</li>
+<li><strong>Permissions-Policy</strong>：Permissions-Policyヘッダーを設定し、ブラウザ機能（カメラ、マイク等）へのアクセスを制御することが推奨されます。</li>
+</ul>
+
+<h2>まとめ</h2>
+<p>サイバーエージェント（www.cyberagent.co.jp）のセキュリティスコアは<strong>55点（Dランク）</strong>です。いくつかの重要なセキュリティヘッダーが未設定の可能性があり、改善が推奨されます。</p>
+<p>セキュリティ設定は日々変化するため、定期的なチェックをおすすめします。</p>
+
+<div class="not-prose bg-amber-50 border border-amber-200 rounded-xl p-4 mt-6 text-sm text-amber-800">
+  <p><strong>免責事項：</strong>本記事は、HTTPレスポンスヘッダーおよびDNS情報の公開情報に基づく分析であり、実際のセキュリティ設定を保証するものではありません。情報は調査時点のものであり、最新の状況とは異なる場合があります。</p>
+</div>
+${cta}
+`
+  },
+  {
+    slug: "smbc-security",
+    title: "三井住友銀行のWebセキュリティ設定を分析｜設定状況とスコア",
+    description: "三井住友銀行（www.smbc.co.jp）のWebセキュリティ設定状況を分析。スコア55点（Dランク）。HTTPS、HSTS、CSP、SPF、DMARCなど10項目のチェック結果と改善ポイントを解説。",
+    publishedAt: "2025-02-17",
+    category: "企業分析",
+    tags: ["三井住友銀行","銀行・金融","セキュリティ分析","企業分析"],
+    content: `
+
+<h2>三井住友銀行の概要</h2>
+<p>三井住友銀行は、日本三大メガバンクの一つで、個人・法人向けの幅広い金融サービスを提供しています。本記事では、www.smbc.co.jpのWebセキュリティ設定状況を公開情報に基づいて分析します。</p>
+
+<h2>チェック結果サマリー</h2>
+<div class="not-prose bg-zinc-50 rounded-xl p-6 mb-6">
+  <div class="text-center">
+    <div class="text-4xl font-bold mb-2">55<span class="text-lg text-zinc-500">/100</span></div>
+    <div class="text-xl font-bold text-zinc-700">ランク: D</div>
+    <p class="text-zinc-500 mt-2">10項目中 6項目が設定済みと推測されます</p>
+  </div>
+</div>
+
+<h2>各チェック項目の分析</h2>
+<p>以下は、HTTPレスポンスヘッダーおよびDNSレコードの公開情報に基づく推測結果です。実際の設定とは異なる場合があります。</p>
+<table>
+<thead><tr><th>項目</th><th>状態</th></tr></thead>
+<tbody>
+<tr><td>HTTPS</td><td>✅ 設定あり</td></tr>
+<tr><td>SPF</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Content-Type-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Frame-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>HSTS</td><td>✅ 設定あり</td></tr>
+<tr><td>DMARC</td><td>✅ 設定あり</td></tr>
+<tr><td>Referrer-Policy</td><td>❌ 未検出</td></tr>
+<tr><td>DKIM</td><td>❌ 未検出</td></tr>
+<tr><td>CSP</td><td>❌ 未検出</td></tr>
+<tr><td>Permissions-Policy</td><td>❌ 未検出</td></tr>
+</tbody>
+</table>
+
+<h2>改善が推奨されるポイント</h2>
+<p>三井住友銀行のWebセキュリティをさらに強化するために、以下の対策が考えられます。</p>
+<ul>
+<li><strong>Referrer-Policy</strong>：Referrer-Policyヘッダーを設定し、リファラー情報の漏洩を制御することを推奨します。</li>
+<li><strong>DKIM</strong>：DKIM署名を導入し、メールの完全性と送信元の認証を強化することが推奨されます。</li>
+<li><strong>CSP</strong>：Content-Security-Policyヘッダーを導入し、XSS攻撃のリスクを軽減することが推奨されます。まずはReport-Onlyモードでの導入が効果的です。</li>
+<li><strong>Permissions-Policy</strong>：Permissions-Policyヘッダーを設定し、ブラウザ機能（カメラ、マイク等）へのアクセスを制御することが推奨されます。</li>
+</ul>
+
+<h2>まとめ</h2>
+<p>三井住友銀行（www.smbc.co.jp）のセキュリティスコアは<strong>55点（Dランク）</strong>です。いくつかの重要なセキュリティヘッダーが未設定の可能性があり、改善が推奨されます。</p>
+<p>セキュリティ設定は日々変化するため、定期的なチェックをおすすめします。</p>
+
+<div class="not-prose bg-amber-50 border border-amber-200 rounded-xl p-4 mt-6 text-sm text-amber-800">
+  <p><strong>免責事項：</strong>本記事は、HTTPレスポンスヘッダーおよびDNS情報の公開情報に基づく分析であり、実際のセキュリティ設定を保証するものではありません。情報は調査時点のものであり、最新の状況とは異なる場合があります。</p>
+</div>
+${cta}
+`
+  },
+  {
+    slug: "hitachi-security",
+    title: "日立製作所のWebセキュリティ設定を分析｜設定状況とスコア",
+    description: "日立製作所（www.hitachi.co.jp）のWebセキュリティ設定状況を分析。スコア55点（Dランク）。HTTPS、HSTS、CSP、SPF、DMARCなど10項目のチェック結果と改善ポイントを解説。",
+    publishedAt: "2025-02-17",
+    category: "企業分析",
+    tags: ["日立製作所","IT・電機メーカー","セキュリティ分析","企業分析"],
+    content: `
+
+<h2>日立製作所の概要</h2>
+<p>日立製作所は、ITサービスからインフラまで幅広い事業を展開する日本最大級の総合電機メーカーです。本記事では、www.hitachi.co.jpのWebセキュリティ設定状況を公開情報に基づいて分析します。</p>
+
+<h2>チェック結果サマリー</h2>
+<div class="not-prose bg-zinc-50 rounded-xl p-6 mb-6">
+  <div class="text-center">
+    <div class="text-4xl font-bold mb-2">55<span class="text-lg text-zinc-500">/100</span></div>
+    <div class="text-xl font-bold text-zinc-700">ランク: D</div>
+    <p class="text-zinc-500 mt-2">10項目中 6項目が設定済みと推測されます</p>
+  </div>
+</div>
+
+<h2>各チェック項目の分析</h2>
+<p>以下は、HTTPレスポンスヘッダーおよびDNSレコードの公開情報に基づく推測結果です。実際の設定とは異なる場合があります。</p>
+<table>
+<thead><tr><th>項目</th><th>状態</th></tr></thead>
+<tbody>
+<tr><td>HTTPS</td><td>✅ 設定あり</td></tr>
+<tr><td>SPF</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Content-Type-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Frame-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>HSTS</td><td>✅ 設定あり</td></tr>
+<tr><td>DMARC</td><td>✅ 設定あり</td></tr>
+<tr><td>Referrer-Policy</td><td>❌ 未検出</td></tr>
+<tr><td>DKIM</td><td>❌ 未検出</td></tr>
+<tr><td>CSP</td><td>❌ 未検出</td></tr>
+<tr><td>Permissions-Policy</td><td>❌ 未検出</td></tr>
+</tbody>
+</table>
+
+<h2>改善が推奨されるポイント</h2>
+<p>日立製作所のWebセキュリティをさらに強化するために、以下の対策が考えられます。</p>
+<ul>
+<li><strong>Referrer-Policy</strong>：Referrer-Policyヘッダーを設定し、リファラー情報の漏洩を制御することを推奨します。</li>
+<li><strong>DKIM</strong>：DKIM署名を導入し、メールの完全性と送信元の認証を強化することが推奨されます。</li>
+<li><strong>CSP</strong>：Content-Security-Policyヘッダーを導入し、XSS攻撃のリスクを軽減することが推奨されます。まずはReport-Onlyモードでの導入が効果的です。</li>
+<li><strong>Permissions-Policy</strong>：Permissions-Policyヘッダーを設定し、ブラウザ機能（カメラ、マイク等）へのアクセスを制御することが推奨されます。</li>
+</ul>
+
+<h2>まとめ</h2>
+<p>日立製作所（www.hitachi.co.jp）のセキュリティスコアは<strong>55点（Dランク）</strong>です。いくつかの重要なセキュリティヘッダーが未設定の可能性があり、改善が推奨されます。</p>
+<p>セキュリティ設定は日々変化するため、定期的なチェックをおすすめします。</p>
+
+<div class="not-prose bg-amber-50 border border-amber-200 rounded-xl p-4 mt-6 text-sm text-amber-800">
+  <p><strong>免責事項：</strong>本記事は、HTTPレスポンスヘッダーおよびDNS情報の公開情報に基づく分析であり、実際のセキュリティ設定を保証するものではありません。情報は調査時点のものであり、最新の状況とは異なる場合があります。</p>
+</div>
+${cta}
+`
+  },
+  {
+    slug: "7andi-security",
+    title: "セブン&アイ・ホールディングスのWebセキュリティ設定を分析｜設定状況とスコア",
+    description: "セブン&アイ・ホールディングス（www.7andi.com）のWebセキュリティ設定状況を分析。スコア55点（Dランク）。HTTPS、HSTS、CSP、SPF、DMARCなど10項目のチェック結果と改善ポイントを解説。",
+    publishedAt: "2025-02-17",
+    category: "企業分析",
+    tags: ["セブン&アイ・ホールディングス","小売・流通","セキュリティ分析","企業分析"],
+    content: `
+
+<h2>セブン&アイ・ホールディングスの概要</h2>
+<p>セブン&アイ・ホールディングスは、セブン-イレブンやイトーヨーカドーなどを展開する大手流通グループです。本記事では、www.7andi.comのWebセキュリティ設定状況を公開情報に基づいて分析します。</p>
+
+<h2>チェック結果サマリー</h2>
+<div class="not-prose bg-zinc-50 rounded-xl p-6 mb-6">
+  <div class="text-center">
+    <div class="text-4xl font-bold mb-2">55<span class="text-lg text-zinc-500">/100</span></div>
+    <div class="text-xl font-bold text-zinc-700">ランク: D</div>
+    <p class="text-zinc-500 mt-2">10項目中 6項目が設定済みと推測されます</p>
+  </div>
+</div>
+
+<h2>各チェック項目の分析</h2>
+<p>以下は、HTTPレスポンスヘッダーおよびDNSレコードの公開情報に基づく推測結果です。実際の設定とは異なる場合があります。</p>
+<table>
+<thead><tr><th>項目</th><th>状態</th></tr></thead>
+<tbody>
+<tr><td>HTTPS</td><td>✅ 設定あり</td></tr>
+<tr><td>SPF</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Content-Type-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Frame-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>HSTS</td><td>✅ 設定あり</td></tr>
+<tr><td>DMARC</td><td>✅ 設定あり</td></tr>
+<tr><td>Referrer-Policy</td><td>❌ 未検出</td></tr>
+<tr><td>DKIM</td><td>❌ 未検出</td></tr>
+<tr><td>CSP</td><td>❌ 未検出</td></tr>
+<tr><td>Permissions-Policy</td><td>❌ 未検出</td></tr>
+</tbody>
+</table>
+
+<h2>改善が推奨されるポイント</h2>
+<p>セブン&アイ・ホールディングスのWebセキュリティをさらに強化するために、以下の対策が考えられます。</p>
+<ul>
+<li><strong>Referrer-Policy</strong>：Referrer-Policyヘッダーを設定し、リファラー情報の漏洩を制御することを推奨します。</li>
+<li><strong>DKIM</strong>：DKIM署名を導入し、メールの完全性と送信元の認証を強化することが推奨されます。</li>
+<li><strong>CSP</strong>：Content-Security-Policyヘッダーを導入し、XSS攻撃のリスクを軽減することが推奨されます。まずはReport-Onlyモードでの導入が効果的です。</li>
+<li><strong>Permissions-Policy</strong>：Permissions-Policyヘッダーを設定し、ブラウザ機能（カメラ、マイク等）へのアクセスを制御することが推奨されます。</li>
+</ul>
+
+<h2>まとめ</h2>
+<p>セブン&アイ・ホールディングス（www.7andi.com）のセキュリティスコアは<strong>55点（Dランク）</strong>です。いくつかの重要なセキュリティヘッダーが未設定の可能性があり、改善が推奨されます。</p>
+<p>セキュリティ設定は日々変化するため、定期的なチェックをおすすめします。</p>
+
+<div class="not-prose bg-amber-50 border border-amber-200 rounded-xl p-4 mt-6 text-sm text-amber-800">
+  <p><strong>免責事項：</strong>本記事は、HTTPレスポンスヘッダーおよびDNS情報の公開情報に基づく分析であり、実際のセキュリティ設定を保証するものではありません。情報は調査時点のものであり、最新の状況とは異なる場合があります。</p>
+</div>
+${cta}
+`
+  },
+  {
+    slug: "docomo-security",
+    title: "NTTドコモのWebセキュリティ設定を分析｜設定状況とスコア",
+    description: "NTTドコモ（docomo.ne.jp）のWebセキュリティ設定状況を分析。スコア50点（Dランク）。HTTPS、HSTS、CSP、SPF、DMARCなど10項目のチェック結果と改善ポイントを解説。",
+    publishedAt: "2025-02-17",
+    category: "企業分析",
+    tags: ["NTTドコモ","通信","セキュリティ分析","企業分析"],
+    content: `
+
+<h2>NTTドコモの概要</h2>
+<p>NTTドコモは、日本最大手の携帯電話キャリアで、通信インフラやデジタルサービスを提供しています。本記事では、docomo.ne.jpのWebセキュリティ設定状況を公開情報に基づいて分析します。</p>
+
+<h2>チェック結果サマリー</h2>
+<div class="not-prose bg-zinc-50 rounded-xl p-6 mb-6">
+  <div class="text-center">
+    <div class="text-4xl font-bold mb-2">50<span class="text-lg text-zinc-500">/100</span></div>
+    <div class="text-xl font-bold text-zinc-700">ランク: D</div>
+    <p class="text-zinc-500 mt-2">10項目中 5項目が設定済みと推測されます</p>
+  </div>
+</div>
+
+<h2>各チェック項目の分析</h2>
+<p>以下は、HTTPレスポンスヘッダーおよびDNSレコードの公開情報に基づく推測結果です。実際の設定とは異なる場合があります。</p>
+<table>
+<thead><tr><th>項目</th><th>状態</th></tr></thead>
+<tbody>
+<tr><td>HTTPS</td><td>✅ 設定あり</td></tr>
+<tr><td>SPF</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Content-Type-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Frame-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>HSTS</td><td>✅ 設定あり</td></tr>
+<tr><td>DMARC</td><td>❌ 未検出</td></tr>
+<tr><td>Referrer-Policy</td><td>❌ 未検出</td></tr>
+<tr><td>DKIM</td><td>❌ 未検出</td></tr>
+<tr><td>CSP</td><td>❌ 未検出</td></tr>
+<tr><td>Permissions-Policy</td><td>❌ 未検出</td></tr>
+</tbody>
+</table>
+
+<h2>改善が推奨されるポイント</h2>
+<p>NTTドコモのWebセキュリティをさらに強化するために、以下の対策が考えられます。</p>
+<ul>
+<li><strong>DMARC</strong>：DMARCレコードを設定し、SPF・DKIMと組み合わせたメール認証ポリシーを導入することが推奨されます。</li>
+<li><strong>Referrer-Policy</strong>：Referrer-Policyヘッダーを設定し、リファラー情報の漏洩を制御することを推奨します。</li>
+<li><strong>DKIM</strong>：DKIM署名を導入し、メールの完全性と送信元の認証を強化することが推奨されます。</li>
+<li><strong>CSP</strong>：Content-Security-Policyヘッダーを導入し、XSS攻撃のリスクを軽減することが推奨されます。まずはReport-Onlyモードでの導入が効果的です。</li>
+<li><strong>Permissions-Policy</strong>：Permissions-Policyヘッダーを設定し、ブラウザ機能（カメラ、マイク等）へのアクセスを制御することが推奨されます。</li>
+</ul>
+
+<h2>まとめ</h2>
+<p>NTTドコモ（docomo.ne.jp）のセキュリティスコアは<strong>50点（Dランク）</strong>です。いくつかの重要なセキュリティヘッダーが未設定の可能性があり、改善が推奨されます。</p>
+<p>セキュリティ設定は日々変化するため、定期的なチェックをおすすめします。</p>
+
+<div class="not-prose bg-amber-50 border border-amber-200 rounded-xl p-4 mt-6 text-sm text-amber-800">
+  <p><strong>免責事項：</strong>本記事は、HTTPレスポンスヘッダーおよびDNS情報の公開情報に基づく分析であり、実際のセキュリティ設定を保証するものではありません。情報は調査時点のものであり、最新の状況とは異なる場合があります。</p>
+</div>
+${cta}
+`
+  },
+  {
+    slug: "dena-security",
+    title: "DeNAのWebセキュリティ設定を分析｜設定状況とスコア",
+    description: "DeNA（dena.com）のWebセキュリティ設定状況を分析。スコア50点（Dランク）。HTTPS、HSTS、CSP、SPF、DMARCなど10項目のチェック結果と改善ポイントを解説。",
+    publishedAt: "2025-02-17",
+    category: "企業分析",
+    tags: ["DeNA","IT・ゲーム","セキュリティ分析","企業分析"],
+    content: `
+
+<h2>DeNAの概要</h2>
+<p>DeNAは、ゲーム事業やスポーツ事業、ヘルスケア事業などを展開するIT企業です。本記事では、dena.comのWebセキュリティ設定状況を公開情報に基づいて分析します。</p>
+
+<h2>チェック結果サマリー</h2>
+<div class="not-prose bg-zinc-50 rounded-xl p-6 mb-6">
+  <div class="text-center">
+    <div class="text-4xl font-bold mb-2">50<span class="text-lg text-zinc-500">/100</span></div>
+    <div class="text-xl font-bold text-zinc-700">ランク: D</div>
+    <p class="text-zinc-500 mt-2">10項目中 5項目が設定済みと推測されます</p>
+  </div>
+</div>
+
+<h2>各チェック項目の分析</h2>
+<p>以下は、HTTPレスポンスヘッダーおよびDNSレコードの公開情報に基づく推測結果です。実際の設定とは異なる場合があります。</p>
+<table>
+<thead><tr><th>項目</th><th>状態</th></tr></thead>
+<tbody>
+<tr><td>HTTPS</td><td>✅ 設定あり</td></tr>
+<tr><td>SPF</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Content-Type-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Frame-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>HSTS</td><td>✅ 設定あり</td></tr>
+<tr><td>DMARC</td><td>❌ 未検出</td></tr>
+<tr><td>Referrer-Policy</td><td>❌ 未検出</td></tr>
+<tr><td>DKIM</td><td>❌ 未検出</td></tr>
+<tr><td>CSP</td><td>❌ 未検出</td></tr>
+<tr><td>Permissions-Policy</td><td>❌ 未検出</td></tr>
+</tbody>
+</table>
+
+<h2>改善が推奨されるポイント</h2>
+<p>DeNAのWebセキュリティをさらに強化するために、以下の対策が考えられます。</p>
+<ul>
+<li><strong>DMARC</strong>：DMARCレコードを設定し、SPF・DKIMと組み合わせたメール認証ポリシーを導入することが推奨されます。</li>
+<li><strong>Referrer-Policy</strong>：Referrer-Policyヘッダーを設定し、リファラー情報の漏洩を制御することを推奨します。</li>
+<li><strong>DKIM</strong>：DKIM署名を導入し、メールの完全性と送信元の認証を強化することが推奨されます。</li>
+<li><strong>CSP</strong>：Content-Security-Policyヘッダーを導入し、XSS攻撃のリスクを軽減することが推奨されます。まずはReport-Onlyモードでの導入が効果的です。</li>
+<li><strong>Permissions-Policy</strong>：Permissions-Policyヘッダーを設定し、ブラウザ機能（カメラ、マイク等）へのアクセスを制御することが推奨されます。</li>
+</ul>
+
+<h2>まとめ</h2>
+<p>DeNA（dena.com）のセキュリティスコアは<strong>50点（Dランク）</strong>です。いくつかの重要なセキュリティヘッダーが未設定の可能性があり、改善が推奨されます。</p>
+<p>セキュリティ設定は日々変化するため、定期的なチェックをおすすめします。</p>
+
+<div class="not-prose bg-amber-50 border border-amber-200 rounded-xl p-4 mt-6 text-sm text-amber-800">
+  <p><strong>免責事項：</strong>本記事は、HTTPレスポンスヘッダーおよびDNS情報の公開情報に基づく分析であり、実際のセキュリティ設定を保証するものではありません。情報は調査時点のものであり、最新の状況とは異なる場合があります。</p>
+</div>
+${cta}
+`
+  },
+  {
+    slug: "mixi-security",
+    title: "MIXIのWebセキュリティ設定を分析｜設定状況とスコア",
+    description: "MIXI（mixi.co.jp）のWebセキュリティ設定状況を分析。スコア50点（Dランク）。HTTPS、HSTS、CSP、SPF、DMARCなど10項目のチェック結果と改善ポイントを解説。",
+    publishedAt: "2025-02-17",
+    category: "企業分析",
+    tags: ["MIXI","IT・SNS","セキュリティ分析","企業分析"],
+    content: `
+
+<h2>MIXIの概要</h2>
+<p>MIXIは、「モンスターストライク」などのゲーム事業やSNS事業を展開するIT企業です。本記事では、mixi.co.jpのWebセキュリティ設定状況を公開情報に基づいて分析します。</p>
+
+<h2>チェック結果サマリー</h2>
+<div class="not-prose bg-zinc-50 rounded-xl p-6 mb-6">
+  <div class="text-center">
+    <div class="text-4xl font-bold mb-2">50<span class="text-lg text-zinc-500">/100</span></div>
+    <div class="text-xl font-bold text-zinc-700">ランク: D</div>
+    <p class="text-zinc-500 mt-2">10項目中 5項目が設定済みと推測されます</p>
+  </div>
+</div>
+
+<h2>各チェック項目の分析</h2>
+<p>以下は、HTTPレスポンスヘッダーおよびDNSレコードの公開情報に基づく推測結果です。実際の設定とは異なる場合があります。</p>
+<table>
+<thead><tr><th>項目</th><th>状態</th></tr></thead>
+<tbody>
+<tr><td>HTTPS</td><td>✅ 設定あり</td></tr>
+<tr><td>SPF</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Content-Type-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Frame-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>HSTS</td><td>✅ 設定あり</td></tr>
+<tr><td>DMARC</td><td>❌ 未検出</td></tr>
+<tr><td>Referrer-Policy</td><td>❌ 未検出</td></tr>
+<tr><td>DKIM</td><td>❌ 未検出</td></tr>
+<tr><td>CSP</td><td>❌ 未検出</td></tr>
+<tr><td>Permissions-Policy</td><td>❌ 未検出</td></tr>
+</tbody>
+</table>
+
+<h2>改善が推奨されるポイント</h2>
+<p>MIXIのWebセキュリティをさらに強化するために、以下の対策が考えられます。</p>
+<ul>
+<li><strong>DMARC</strong>：DMARCレコードを設定し、SPF・DKIMと組み合わせたメール認証ポリシーを導入することが推奨されます。</li>
+<li><strong>Referrer-Policy</strong>：Referrer-Policyヘッダーを設定し、リファラー情報の漏洩を制御することを推奨します。</li>
+<li><strong>DKIM</strong>：DKIM署名を導入し、メールの完全性と送信元の認証を強化することが推奨されます。</li>
+<li><strong>CSP</strong>：Content-Security-Policyヘッダーを導入し、XSS攻撃のリスクを軽減することが推奨されます。まずはReport-Onlyモードでの導入が効果的です。</li>
+<li><strong>Permissions-Policy</strong>：Permissions-Policyヘッダーを設定し、ブラウザ機能（カメラ、マイク等）へのアクセスを制御することが推奨されます。</li>
+</ul>
+
+<h2>まとめ</h2>
+<p>MIXI（mixi.co.jp）のセキュリティスコアは<strong>50点（Dランク）</strong>です。いくつかの重要なセキュリティヘッダーが未設定の可能性があり、改善が推奨されます。</p>
+<p>セキュリティ設定は日々変化するため、定期的なチェックをおすすめします。</p>
+
+<div class="not-prose bg-amber-50 border border-amber-200 rounded-xl p-4 mt-6 text-sm text-amber-800">
+  <p><strong>免責事項：</strong>本記事は、HTTPレスポンスヘッダーおよびDNS情報の公開情報に基づく分析であり、実際のセキュリティ設定を保証するものではありません。情報は調査時点のものであり、最新の状況とは異なる場合があります。</p>
+</div>
+${cta}
+`
+  },
+  {
+    slug: "kddi-security",
+    title: "KDDIのWebセキュリティ設定を分析｜設定状況とスコア",
+    description: "KDDI（kddi.com）のWebセキュリティ設定状況を分析。スコア50点（Dランク）。HTTPS、HSTS、CSP、SPF、DMARCなど10項目のチェック結果と改善ポイントを解説。",
+    publishedAt: "2025-02-17",
+    category: "企業分析",
+    tags: ["KDDI","通信","セキュリティ分析","企業分析"],
+    content: `
+
+<h2>KDDIの概要</h2>
+<p>KDDIは、auブランドの通信事業を中心に、金融やエネルギーなど多角的に事業展開する通信大手です。本記事では、kddi.comのWebセキュリティ設定状況を公開情報に基づいて分析します。</p>
+
+<h2>チェック結果サマリー</h2>
+<div class="not-prose bg-zinc-50 rounded-xl p-6 mb-6">
+  <div class="text-center">
+    <div class="text-4xl font-bold mb-2">50<span class="text-lg text-zinc-500">/100</span></div>
+    <div class="text-xl font-bold text-zinc-700">ランク: D</div>
+    <p class="text-zinc-500 mt-2">10項目中 5項目が設定済みと推測されます</p>
+  </div>
+</div>
+
+<h2>各チェック項目の分析</h2>
+<p>以下は、HTTPレスポンスヘッダーおよびDNSレコードの公開情報に基づく推測結果です。実際の設定とは異なる場合があります。</p>
+<table>
+<thead><tr><th>項目</th><th>状態</th></tr></thead>
+<tbody>
+<tr><td>HTTPS</td><td>✅ 設定あり</td></tr>
+<tr><td>SPF</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Content-Type-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Frame-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>HSTS</td><td>✅ 設定あり</td></tr>
+<tr><td>DMARC</td><td>❌ 未検出</td></tr>
+<tr><td>Referrer-Policy</td><td>❌ 未検出</td></tr>
+<tr><td>DKIM</td><td>❌ 未検出</td></tr>
+<tr><td>CSP</td><td>❌ 未検出</td></tr>
+<tr><td>Permissions-Policy</td><td>❌ 未検出</td></tr>
+</tbody>
+</table>
+
+<h2>改善が推奨されるポイント</h2>
+<p>KDDIのWebセキュリティをさらに強化するために、以下の対策が考えられます。</p>
+<ul>
+<li><strong>DMARC</strong>：DMARCレコードを設定し、SPF・DKIMと組み合わせたメール認証ポリシーを導入することが推奨されます。</li>
+<li><strong>Referrer-Policy</strong>：Referrer-Policyヘッダーを設定し、リファラー情報の漏洩を制御することを推奨します。</li>
+<li><strong>DKIM</strong>：DKIM署名を導入し、メールの完全性と送信元の認証を強化することが推奨されます。</li>
+<li><strong>CSP</strong>：Content-Security-Policyヘッダーを導入し、XSS攻撃のリスクを軽減することが推奨されます。まずはReport-Onlyモードでの導入が効果的です。</li>
+<li><strong>Permissions-Policy</strong>：Permissions-Policyヘッダーを設定し、ブラウザ機能（カメラ、マイク等）へのアクセスを制御することが推奨されます。</li>
+</ul>
+
+<h2>まとめ</h2>
+<p>KDDI（kddi.com）のセキュリティスコアは<strong>50点（Dランク）</strong>です。いくつかの重要なセキュリティヘッダーが未設定の可能性があり、改善が推奨されます。</p>
+<p>セキュリティ設定は日々変化するため、定期的なチェックをおすすめします。</p>
+
+<div class="not-prose bg-amber-50 border border-amber-200 rounded-xl p-4 mt-6 text-sm text-amber-800">
+  <p><strong>免責事項：</strong>本記事は、HTTPレスポンスヘッダーおよびDNS情報の公開情報に基づく分析であり、実際のセキュリティ設定を保証するものではありません。情報は調査時点のものであり、最新の状況とは異なる場合があります。</p>
+</div>
+${cta}
+`
+  },
+  {
+    slug: "aeon-security",
+    title: "イオンのWebセキュリティ設定を分析｜設定状況とスコア",
+    description: "イオン（aeon.co.jp）のWebセキュリティ設定状況を分析。スコア50点（Dランク）。HTTPS、HSTS、CSP、SPF、DMARCなど10項目のチェック結果と改善ポイントを解説。",
+    publishedAt: "2025-02-17",
+    category: "企業分析",
+    tags: ["イオン","小売・流通","セキュリティ分析","企業分析"],
+    content: `
+
+<h2>イオンの概要</h2>
+<p>イオンは、総合スーパーやショッピングモールを展開する日本最大級の流通グループです。本記事では、aeon.co.jpのWebセキュリティ設定状況を公開情報に基づいて分析します。</p>
+
+<h2>チェック結果サマリー</h2>
+<div class="not-prose bg-zinc-50 rounded-xl p-6 mb-6">
+  <div class="text-center">
+    <div class="text-4xl font-bold mb-2">50<span class="text-lg text-zinc-500">/100</span></div>
+    <div class="text-xl font-bold text-zinc-700">ランク: D</div>
+    <p class="text-zinc-500 mt-2">10項目中 5項目が設定済みと推測されます</p>
+  </div>
+</div>
+
+<h2>各チェック項目の分析</h2>
+<p>以下は、HTTPレスポンスヘッダーおよびDNSレコードの公開情報に基づく推測結果です。実際の設定とは異なる場合があります。</p>
+<table>
+<thead><tr><th>項目</th><th>状態</th></tr></thead>
+<tbody>
+<tr><td>HTTPS</td><td>✅ 設定あり</td></tr>
+<tr><td>SPF</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Content-Type-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Frame-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>HSTS</td><td>✅ 設定あり</td></tr>
+<tr><td>DMARC</td><td>❌ 未検出</td></tr>
+<tr><td>Referrer-Policy</td><td>❌ 未検出</td></tr>
+<tr><td>DKIM</td><td>❌ 未検出</td></tr>
+<tr><td>CSP</td><td>❌ 未検出</td></tr>
+<tr><td>Permissions-Policy</td><td>❌ 未検出</td></tr>
+</tbody>
+</table>
+
+<h2>改善が推奨されるポイント</h2>
+<p>イオンのWebセキュリティをさらに強化するために、以下の対策が考えられます。</p>
+<ul>
+<li><strong>DMARC</strong>：DMARCレコードを設定し、SPF・DKIMと組み合わせたメール認証ポリシーを導入することが推奨されます。</li>
+<li><strong>Referrer-Policy</strong>：Referrer-Policyヘッダーを設定し、リファラー情報の漏洩を制御することを推奨します。</li>
+<li><strong>DKIM</strong>：DKIM署名を導入し、メールの完全性と送信元の認証を強化することが推奨されます。</li>
+<li><strong>CSP</strong>：Content-Security-Policyヘッダーを導入し、XSS攻撃のリスクを軽減することが推奨されます。まずはReport-Onlyモードでの導入が効果的です。</li>
+<li><strong>Permissions-Policy</strong>：Permissions-Policyヘッダーを設定し、ブラウザ機能（カメラ、マイク等）へのアクセスを制御することが推奨されます。</li>
+</ul>
+
+<h2>まとめ</h2>
+<p>イオン（aeon.co.jp）のセキュリティスコアは<strong>50点（Dランク）</strong>です。いくつかの重要なセキュリティヘッダーが未設定の可能性があり、改善が推奨されます。</p>
+<p>セキュリティ設定は日々変化するため、定期的なチェックをおすすめします。</p>
+
+<div class="not-prose bg-amber-50 border border-amber-200 rounded-xl p-4 mt-6 text-sm text-amber-800">
+  <p><strong>免責事項：</strong>本記事は、HTTPレスポンスヘッダーおよびDNS情報の公開情報に基づく分析であり、実際のセキュリティ設定を保証するものではありません。情報は調査時点のものであり、最新の状況とは異なる場合があります。</p>
+</div>
+${cta}
+`
+  },
+  {
+    slug: "rakus-security",
+    title: "ラクスのWebセキュリティ設定を分析｜設定状況とスコア",
+    description: "ラクス（rakus.co.jp）のWebセキュリティ設定状況を分析。スコア50点（Dランク）。HTTPS、HSTS、CSP、SPF、DMARCなど10項目のチェック結果と改善ポイントを解説。",
+    publishedAt: "2025-02-17",
+    category: "企業分析",
+    tags: ["ラクス","SaaS・IT","セキュリティ分析","企業分析"],
+    content: `
+
+<h2>ラクスの概要</h2>
+<p>ラクスは、「楽楽精算」などのクラウドサービスを提供するSaaS企業です。本記事では、rakus.co.jpのWebセキュリティ設定状況を公開情報に基づいて分析します。</p>
+
+<h2>チェック結果サマリー</h2>
+<div class="not-prose bg-zinc-50 rounded-xl p-6 mb-6">
+  <div class="text-center">
+    <div class="text-4xl font-bold mb-2">50<span class="text-lg text-zinc-500">/100</span></div>
+    <div class="text-xl font-bold text-zinc-700">ランク: D</div>
+    <p class="text-zinc-500 mt-2">10項目中 5項目が設定済みと推測されます</p>
+  </div>
+</div>
+
+<h2>各チェック項目の分析</h2>
+<p>以下は、HTTPレスポンスヘッダーおよびDNSレコードの公開情報に基づく推測結果です。実際の設定とは異なる場合があります。</p>
+<table>
+<thead><tr><th>項目</th><th>状態</th></tr></thead>
+<tbody>
+<tr><td>HTTPS</td><td>✅ 設定あり</td></tr>
+<tr><td>SPF</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Content-Type-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Frame-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>HSTS</td><td>✅ 設定あり</td></tr>
+<tr><td>DMARC</td><td>❌ 未検出</td></tr>
+<tr><td>Referrer-Policy</td><td>❌ 未検出</td></tr>
+<tr><td>DKIM</td><td>❌ 未検出</td></tr>
+<tr><td>CSP</td><td>❌ 未検出</td></tr>
+<tr><td>Permissions-Policy</td><td>❌ 未検出</td></tr>
+</tbody>
+</table>
+
+<h2>改善が推奨されるポイント</h2>
+<p>ラクスのWebセキュリティをさらに強化するために、以下の対策が考えられます。</p>
+<ul>
+<li><strong>DMARC</strong>：DMARCレコードを設定し、SPF・DKIMと組み合わせたメール認証ポリシーを導入することが推奨されます。</li>
+<li><strong>Referrer-Policy</strong>：Referrer-Policyヘッダーを設定し、リファラー情報の漏洩を制御することを推奨します。</li>
+<li><strong>DKIM</strong>：DKIM署名を導入し、メールの完全性と送信元の認証を強化することが推奨されます。</li>
+<li><strong>CSP</strong>：Content-Security-Policyヘッダーを導入し、XSS攻撃のリスクを軽減することが推奨されます。まずはReport-Onlyモードでの導入が効果的です。</li>
+<li><strong>Permissions-Policy</strong>：Permissions-Policyヘッダーを設定し、ブラウザ機能（カメラ、マイク等）へのアクセスを制御することが推奨されます。</li>
+</ul>
+
+<h2>まとめ</h2>
+<p>ラクス（rakus.co.jp）のセキュリティスコアは<strong>50点（Dランク）</strong>です。いくつかの重要なセキュリティヘッダーが未設定の可能性があり、改善が推奨されます。</p>
+<p>セキュリティ設定は日々変化するため、定期的なチェックをおすすめします。</p>
+
+<div class="not-prose bg-amber-50 border border-amber-200 rounded-xl p-4 mt-6 text-sm text-amber-800">
+  <p><strong>免責事項：</strong>本記事は、HTTPレスポンスヘッダーおよびDNS情報の公開情報に基づく分析であり、実際のセキュリティ設定を保証するものではありません。情報は調査時点のものであり、最新の状況とは異なる場合があります。</p>
+</div>
+${cta}
+`
+  },
+  {
+    slug: "fujitsu-security",
+    title: "富士通のWebセキュリティ設定を分析｜設定状況とスコア",
+    description: "富士通（fujitsu.com）のWebセキュリティ設定状況を分析。スコア50点（Dランク）。HTTPS、HSTS、CSP、SPF、DMARCなど10項目のチェック結果と改善ポイントを解説。",
+    publishedAt: "2025-02-17",
+    category: "企業分析",
+    tags: ["富士通","IT・電機メーカー","セキュリティ分析","企業分析"],
+    content: `
+
+<h2>富士通の概要</h2>
+<p>富士通は、ITサービスやソリューションを提供する日本の大手IT・電機メーカーです。本記事では、fujitsu.comのWebセキュリティ設定状況を公開情報に基づいて分析します。</p>
+
+<h2>チェック結果サマリー</h2>
+<div class="not-prose bg-zinc-50 rounded-xl p-6 mb-6">
+  <div class="text-center">
+    <div class="text-4xl font-bold mb-2">50<span class="text-lg text-zinc-500">/100</span></div>
+    <div class="text-xl font-bold text-zinc-700">ランク: D</div>
+    <p class="text-zinc-500 mt-2">10項目中 5項目が設定済みと推測されます</p>
+  </div>
+</div>
+
+<h2>各チェック項目の分析</h2>
+<p>以下は、HTTPレスポンスヘッダーおよびDNSレコードの公開情報に基づく推測結果です。実際の設定とは異なる場合があります。</p>
+<table>
+<thead><tr><th>項目</th><th>状態</th></tr></thead>
+<tbody>
+<tr><td>HTTPS</td><td>✅ 設定あり</td></tr>
+<tr><td>SPF</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Content-Type-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Frame-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>HSTS</td><td>✅ 設定あり</td></tr>
+<tr><td>DMARC</td><td>❌ 未検出</td></tr>
+<tr><td>Referrer-Policy</td><td>❌ 未検出</td></tr>
+<tr><td>DKIM</td><td>❌ 未検出</td></tr>
+<tr><td>CSP</td><td>❌ 未検出</td></tr>
+<tr><td>Permissions-Policy</td><td>❌ 未検出</td></tr>
+</tbody>
+</table>
+
+<h2>改善が推奨されるポイント</h2>
+<p>富士通のWebセキュリティをさらに強化するために、以下の対策が考えられます。</p>
+<ul>
+<li><strong>DMARC</strong>：DMARCレコードを設定し、SPF・DKIMと組み合わせたメール認証ポリシーを導入することが推奨されます。</li>
+<li><strong>Referrer-Policy</strong>：Referrer-Policyヘッダーを設定し、リファラー情報の漏洩を制御することを推奨します。</li>
+<li><strong>DKIM</strong>：DKIM署名を導入し、メールの完全性と送信元の認証を強化することが推奨されます。</li>
+<li><strong>CSP</strong>：Content-Security-Policyヘッダーを導入し、XSS攻撃のリスクを軽減することが推奨されます。まずはReport-Onlyモードでの導入が効果的です。</li>
+<li><strong>Permissions-Policy</strong>：Permissions-Policyヘッダーを設定し、ブラウザ機能（カメラ、マイク等）へのアクセスを制御することが推奨されます。</li>
+</ul>
+
+<h2>まとめ</h2>
+<p>富士通（fujitsu.com）のセキュリティスコアは<strong>50点（Dランク）</strong>です。いくつかの重要なセキュリティヘッダーが未設定の可能性があり、改善が推奨されます。</p>
+<p>セキュリティ設定は日々変化するため、定期的なチェックをおすすめします。</p>
+
+<div class="not-prose bg-amber-50 border border-amber-200 rounded-xl p-4 mt-6 text-sm text-amber-800">
+  <p><strong>免責事項：</strong>本記事は、HTTPレスポンスヘッダーおよびDNS情報の公開情報に基づく分析であり、実際のセキュリティ設定を保証するものではありません。情報は調査時点のものであり、最新の状況とは異なる場合があります。</p>
+</div>
+${cta}
+`
+  },
+  {
+    slug: "nissan-security",
+    title: "日産自動車のWebセキュリティ設定を分析｜設定状況とスコア",
+    description: "日産自動車（nissan.co.jp）のWebセキュリティ設定状況を分析。スコア50点（Dランク）。HTTPS、HSTS、CSP、SPF、DMARCなど10項目のチェック結果と改善ポイントを解説。",
+    publishedAt: "2025-02-17",
+    category: "企業分析",
+    tags: ["日産自動車","自動車","セキュリティ分析","企業分析"],
+    content: `
+
+<h2>日産自動車の概要</h2>
+<p>日産自動車は、電気自動車リーフなどで知られるグローバル自動車メーカーです。本記事では、nissan.co.jpのWebセキュリティ設定状況を公開情報に基づいて分析します。</p>
+
+<h2>チェック結果サマリー</h2>
+<div class="not-prose bg-zinc-50 rounded-xl p-6 mb-6">
+  <div class="text-center">
+    <div class="text-4xl font-bold mb-2">50<span class="text-lg text-zinc-500">/100</span></div>
+    <div class="text-xl font-bold text-zinc-700">ランク: D</div>
+    <p class="text-zinc-500 mt-2">10項目中 5項目が設定済みと推測されます</p>
+  </div>
+</div>
+
+<h2>各チェック項目の分析</h2>
+<p>以下は、HTTPレスポンスヘッダーおよびDNSレコードの公開情報に基づく推測結果です。実際の設定とは異なる場合があります。</p>
+<table>
+<thead><tr><th>項目</th><th>状態</th></tr></thead>
+<tbody>
+<tr><td>HTTPS</td><td>✅ 設定あり</td></tr>
+<tr><td>SPF</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Content-Type-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Frame-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>HSTS</td><td>✅ 設定あり</td></tr>
+<tr><td>DMARC</td><td>❌ 未検出</td></tr>
+<tr><td>Referrer-Policy</td><td>❌ 未検出</td></tr>
+<tr><td>DKIM</td><td>❌ 未検出</td></tr>
+<tr><td>CSP</td><td>❌ 未検出</td></tr>
+<tr><td>Permissions-Policy</td><td>❌ 未検出</td></tr>
+</tbody>
+</table>
+
+<h2>改善が推奨されるポイント</h2>
+<p>日産自動車のWebセキュリティをさらに強化するために、以下の対策が考えられます。</p>
+<ul>
+<li><strong>DMARC</strong>：DMARCレコードを設定し、SPF・DKIMと組み合わせたメール認証ポリシーを導入することが推奨されます。</li>
+<li><strong>Referrer-Policy</strong>：Referrer-Policyヘッダーを設定し、リファラー情報の漏洩を制御することを推奨します。</li>
+<li><strong>DKIM</strong>：DKIM署名を導入し、メールの完全性と送信元の認証を強化することが推奨されます。</li>
+<li><strong>CSP</strong>：Content-Security-Policyヘッダーを導入し、XSS攻撃のリスクを軽減することが推奨されます。まずはReport-Onlyモードでの導入が効果的です。</li>
+<li><strong>Permissions-Policy</strong>：Permissions-Policyヘッダーを設定し、ブラウザ機能（カメラ、マイク等）へのアクセスを制御することが推奨されます。</li>
+</ul>
+
+<h2>まとめ</h2>
+<p>日産自動車（nissan.co.jp）のセキュリティスコアは<strong>50点（Dランク）</strong>です。いくつかの重要なセキュリティヘッダーが未設定の可能性があり、改善が推奨されます。</p>
+<p>セキュリティ設定は日々変化するため、定期的なチェックをおすすめします。</p>
+
+<div class="not-prose bg-amber-50 border border-amber-200 rounded-xl p-4 mt-6 text-sm text-amber-800">
+  <p><strong>免責事項：</strong>本記事は、HTTPレスポンスヘッダーおよびDNS情報の公開情報に基づく分析であり、実際のセキュリティ設定を保証するものではありません。情報は調査時点のものであり、最新の状況とは異なる場合があります。</p>
+</div>
+${cta}
+`
+  },
+  {
+    slug: "benesse-security",
+    title: "ベネッセのWebセキュリティ設定を分析｜設定状況とスコア",
+    description: "ベネッセ（benesse.co.jp）のWebセキュリティ設定状況を分析。スコア50点（Dランク）。HTTPS、HSTS、CSP、SPF、DMARCなど10項目のチェック結果と改善ポイントを解説。",
+    publishedAt: "2025-02-17",
+    category: "企業分析",
+    tags: ["ベネッセ","教育","セキュリティ分析","企業分析"],
+    content: `
+
+<h2>ベネッセの概要</h2>
+<p>ベネッセは、「進研ゼミ」などの教育サービスや介護事業を展開する企業です。本記事では、benesse.co.jpのWebセキュリティ設定状況を公開情報に基づいて分析します。</p>
+
+<h2>チェック結果サマリー</h2>
+<div class="not-prose bg-zinc-50 rounded-xl p-6 mb-6">
+  <div class="text-center">
+    <div class="text-4xl font-bold mb-2">50<span class="text-lg text-zinc-500">/100</span></div>
+    <div class="text-xl font-bold text-zinc-700">ランク: D</div>
+    <p class="text-zinc-500 mt-2">10項目中 5項目が設定済みと推測されます</p>
+  </div>
+</div>
+
+<h2>各チェック項目の分析</h2>
+<p>以下は、HTTPレスポンスヘッダーおよびDNSレコードの公開情報に基づく推測結果です。実際の設定とは異なる場合があります。</p>
+<table>
+<thead><tr><th>項目</th><th>状態</th></tr></thead>
+<tbody>
+<tr><td>HTTPS</td><td>✅ 設定あり</td></tr>
+<tr><td>SPF</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Content-Type-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Frame-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>HSTS</td><td>✅ 設定あり</td></tr>
+<tr><td>DMARC</td><td>❌ 未検出</td></tr>
+<tr><td>Referrer-Policy</td><td>❌ 未検出</td></tr>
+<tr><td>DKIM</td><td>❌ 未検出</td></tr>
+<tr><td>CSP</td><td>❌ 未検出</td></tr>
+<tr><td>Permissions-Policy</td><td>❌ 未検出</td></tr>
+</tbody>
+</table>
+
+<h2>改善が推奨されるポイント</h2>
+<p>ベネッセのWebセキュリティをさらに強化するために、以下の対策が考えられます。</p>
+<ul>
+<li><strong>DMARC</strong>：DMARCレコードを設定し、SPF・DKIMと組み合わせたメール認証ポリシーを導入することが推奨されます。</li>
+<li><strong>Referrer-Policy</strong>：Referrer-Policyヘッダーを設定し、リファラー情報の漏洩を制御することを推奨します。</li>
+<li><strong>DKIM</strong>：DKIM署名を導入し、メールの完全性と送信元の認証を強化することが推奨されます。</li>
+<li><strong>CSP</strong>：Content-Security-Policyヘッダーを導入し、XSS攻撃のリスクを軽減することが推奨されます。まずはReport-Onlyモードでの導入が効果的です。</li>
+<li><strong>Permissions-Policy</strong>：Permissions-Policyヘッダーを設定し、ブラウザ機能（カメラ、マイク等）へのアクセスを制御することが推奨されます。</li>
+</ul>
+
+<h2>まとめ</h2>
+<p>ベネッセ（benesse.co.jp）のセキュリティスコアは<strong>50点（Dランク）</strong>です。いくつかの重要なセキュリティヘッダーが未設定の可能性があり、改善が推奨されます。</p>
+<p>セキュリティ設定は日々変化するため、定期的なチェックをおすすめします。</p>
+
+<div class="not-prose bg-amber-50 border border-amber-200 rounded-xl p-4 mt-6 text-sm text-amber-800">
+  <p><strong>免責事項：</strong>本記事は、HTTPレスポンスヘッダーおよびDNS情報の公開情報に基づく分析であり、実際のセキュリティ設定を保証するものではありません。情報は調査時点のものであり、最新の状況とは異なる場合があります。</p>
+</div>
+${cta}
+`
+  },
+  {
+    slug: "ntt-group-security",
+    title: "NTTグループのWebセキュリティ設定を分析｜設定状況とスコア",
+    description: "NTTグループ（group.ntt）のWebセキュリティ設定状況を分析。スコア50点（Dランク）。HTTPS、HSTS、CSP、SPF、DMARCなど10項目のチェック結果と改善ポイントを解説。",
+    publishedAt: "2025-02-17",
+    category: "企業分析",
+    tags: ["NTTグループ","通信","セキュリティ分析","企業分析"],
+    content: `
+
+<h2>NTTグループの概要</h2>
+<p>NTTグループは、日本最大の通信企業グループで、NTTドコモやNTTデータなどを傘下に持ちます。本記事では、group.nttのWebセキュリティ設定状況を公開情報に基づいて分析します。</p>
+
+<h2>チェック結果サマリー</h2>
+<div class="not-prose bg-zinc-50 rounded-xl p-6 mb-6">
+  <div class="text-center">
+    <div class="text-4xl font-bold mb-2">50<span class="text-lg text-zinc-500">/100</span></div>
+    <div class="text-xl font-bold text-zinc-700">ランク: D</div>
+    <p class="text-zinc-500 mt-2">10項目中 5項目が設定済みと推測されます</p>
+  </div>
+</div>
+
+<h2>各チェック項目の分析</h2>
+<p>以下は、HTTPレスポンスヘッダーおよびDNSレコードの公開情報に基づく推測結果です。実際の設定とは異なる場合があります。</p>
+<table>
+<thead><tr><th>項目</th><th>状態</th></tr></thead>
+<tbody>
+<tr><td>HTTPS</td><td>✅ 設定あり</td></tr>
+<tr><td>SPF</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Content-Type-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Frame-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>HSTS</td><td>✅ 設定あり</td></tr>
+<tr><td>DMARC</td><td>❌ 未検出</td></tr>
+<tr><td>Referrer-Policy</td><td>❌ 未検出</td></tr>
+<tr><td>DKIM</td><td>❌ 未検出</td></tr>
+<tr><td>CSP</td><td>❌ 未検出</td></tr>
+<tr><td>Permissions-Policy</td><td>❌ 未検出</td></tr>
+</tbody>
+</table>
+
+<h2>改善が推奨されるポイント</h2>
+<p>NTTグループのWebセキュリティをさらに強化するために、以下の対策が考えられます。</p>
+<ul>
+<li><strong>DMARC</strong>：DMARCレコードを設定し、SPF・DKIMと組み合わせたメール認証ポリシーを導入することが推奨されます。</li>
+<li><strong>Referrer-Policy</strong>：Referrer-Policyヘッダーを設定し、リファラー情報の漏洩を制御することを推奨します。</li>
+<li><strong>DKIM</strong>：DKIM署名を導入し、メールの完全性と送信元の認証を強化することが推奨されます。</li>
+<li><strong>CSP</strong>：Content-Security-Policyヘッダーを導入し、XSS攻撃のリスクを軽減することが推奨されます。まずはReport-Onlyモードでの導入が効果的です。</li>
+<li><strong>Permissions-Policy</strong>：Permissions-Policyヘッダーを設定し、ブラウザ機能（カメラ、マイク等）へのアクセスを制御することが推奨されます。</li>
+</ul>
+
+<h2>まとめ</h2>
+<p>NTTグループ（group.ntt）のセキュリティスコアは<strong>50点（Dランク）</strong>です。いくつかの重要なセキュリティヘッダーが未設定の可能性があり、改善が推奨されます。</p>
+<p>セキュリティ設定は日々変化するため、定期的なチェックをおすすめします。</p>
+
+<div class="not-prose bg-amber-50 border border-amber-200 rounded-xl p-4 mt-6 text-sm text-amber-800">
+  <p><strong>免責事項：</strong>本記事は、HTTPレスポンスヘッダーおよびDNS情報の公開情報に基づく分析であり、実際のセキュリティ設定を保証するものではありません。情報は調査時点のものであり、最新の状況とは異なる場合があります。</p>
+</div>
+${cta}
+`
+  },
+  {
+    slug: "mufg-security",
+    title: "三菱UFJフィナンシャル・グループのWebセキュリティ設定を分析｜設定状況とスコア",
+    description: "三菱UFJフィナンシャル・グループ（www.mufg.jp）のWebセキュリティ設定状況を分析。スコア45点（Eランク）。HTTPS、HSTS、CSP、SPF、DMARCなど10項目のチェック結果と改善ポイントを解説。",
+    publishedAt: "2025-02-17",
+    category: "企業分析",
+    tags: ["三菱UFJフィナンシャル・グループ","銀行・金融","セキュリティ分析","企業分析"],
+    content: `
+
+<h2>三菱UFJフィナンシャル・グループの概要</h2>
+<p>三菱UFJフィナンシャル・グループは、日本最大の金融グループで、銀行・信託・証券などを展開しています。本記事では、www.mufg.jpのWebセキュリティ設定状況を公開情報に基づいて分析します。</p>
+
+<h2>チェック結果サマリー</h2>
+<div class="not-prose bg-zinc-50 rounded-xl p-6 mb-6">
+  <div class="text-center">
+    <div class="text-4xl font-bold mb-2">45<span class="text-lg text-zinc-500">/100</span></div>
+    <div class="text-xl font-bold text-zinc-700">ランク: E</div>
+    <p class="text-zinc-500 mt-2">10項目中 5項目が設定済みと推測されます</p>
+  </div>
+</div>
+
+<h2>各チェック項目の分析</h2>
+<p>以下は、HTTPレスポンスヘッダーおよびDNSレコードの公開情報に基づく推測結果です。実際の設定とは異なる場合があります。</p>
+<table>
+<thead><tr><th>項目</th><th>状態</th></tr></thead>
+<tbody>
+<tr><td>HTTPS</td><td>✅ 設定あり</td></tr>
+<tr><td>SPF</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Content-Type-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Frame-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>HSTS</td><td>✅ 設定あり</td></tr>
+<tr><td>DMARC</td><td>❌ 未検出</td></tr>
+<tr><td>Referrer-Policy</td><td>❌ 未検出</td></tr>
+<tr><td>DKIM</td><td>❌ 未検出</td></tr>
+<tr><td>CSP</td><td>❌ 未検出</td></tr>
+<tr><td>Permissions-Policy</td><td>❌ 未検出</td></tr>
+</tbody>
+</table>
+
+<h2>改善が推奨されるポイント</h2>
+<p>三菱UFJフィナンシャル・グループのWebセキュリティをさらに強化するために、以下の対策が考えられます。</p>
+<ul>
+<li><strong>DMARC</strong>：DMARCレコードを設定し、SPF・DKIMと組み合わせたメール認証ポリシーを導入することが推奨されます。</li>
+<li><strong>Referrer-Policy</strong>：Referrer-Policyヘッダーを設定し、リファラー情報の漏洩を制御することを推奨します。</li>
+<li><strong>DKIM</strong>：DKIM署名を導入し、メールの完全性と送信元の認証を強化することが推奨されます。</li>
+<li><strong>CSP</strong>：Content-Security-Policyヘッダーを導入し、XSS攻撃のリスクを軽減することが推奨されます。まずはReport-Onlyモードでの導入が効果的です。</li>
+<li><strong>Permissions-Policy</strong>：Permissions-Policyヘッダーを設定し、ブラウザ機能（カメラ、マイク等）へのアクセスを制御することが推奨されます。</li>
+</ul>
+
+<h2>まとめ</h2>
+<p>三菱UFJフィナンシャル・グループ（www.mufg.jp）のセキュリティスコアは<strong>45点（Eランク）</strong>です。いくつかの重要なセキュリティヘッダーが未設定の可能性があり、改善が推奨されます。</p>
+<p>セキュリティ設定は日々変化するため、定期的なチェックをおすすめします。</p>
+
+<div class="not-prose bg-amber-50 border border-amber-200 rounded-xl p-4 mt-6 text-sm text-amber-800">
+  <p><strong>免責事項：</strong>本記事は、HTTPレスポンスヘッダーおよびDNS情報の公開情報に基づく分析であり、実際のセキュリティ設定を保証するものではありません。情報は調査時点のものであり、最新の状況とは異なる場合があります。</p>
+</div>
+${cta}
+`
+  },
+  {
+    slug: "softbank-security",
+    title: "ソフトバンクのWebセキュリティ設定を分析｜設定状況とスコア",
+    description: "ソフトバンク（softbank.jp）のWebセキュリティ設定状況を分析。スコア40点（Eランク）。HTTPS、HSTS、CSP、SPF、DMARCなど10項目のチェック結果と改善ポイントを解説。",
+    publishedAt: "2025-02-17",
+    category: "企業分析",
+    tags: ["ソフトバンク","通信","セキュリティ分析","企業分析"],
+    content: `
+
+<h2>ソフトバンクの概要</h2>
+<p>ソフトバンクは、通信事業を中心に、IT・エネルギーなど多角的に事業を展開する企業です。本記事では、softbank.jpのWebセキュリティ設定状況を公開情報に基づいて分析します。</p>
+
+<h2>チェック結果サマリー</h2>
+<div class="not-prose bg-zinc-50 rounded-xl p-6 mb-6">
+  <div class="text-center">
+    <div class="text-4xl font-bold mb-2">40<span class="text-lg text-zinc-500">/100</span></div>
+    <div class="text-xl font-bold text-zinc-700">ランク: E</div>
+    <p class="text-zinc-500 mt-2">10項目中 4項目が設定済みと推測されます</p>
+  </div>
+</div>
+
+<h2>各チェック項目の分析</h2>
+<p>以下は、HTTPレスポンスヘッダーおよびDNSレコードの公開情報に基づく推測結果です。実際の設定とは異なる場合があります。</p>
+<table>
+<thead><tr><th>項目</th><th>状態</th></tr></thead>
+<tbody>
+<tr><td>HTTPS</td><td>✅ 設定あり</td></tr>
+<tr><td>SPF</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Content-Type-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Frame-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>HSTS</td><td>❌ 未検出</td></tr>
+<tr><td>DMARC</td><td>❌ 未検出</td></tr>
+<tr><td>Referrer-Policy</td><td>❌ 未検出</td></tr>
+<tr><td>DKIM</td><td>❌ 未検出</td></tr>
+<tr><td>CSP</td><td>❌ 未検出</td></tr>
+<tr><td>Permissions-Policy</td><td>❌ 未検出</td></tr>
+</tbody>
+</table>
+
+<h2>改善が推奨されるポイント</h2>
+<p>ソフトバンクのWebセキュリティをさらに強化するために、以下の対策が考えられます。</p>
+<ul>
+<li><strong>HSTS</strong>：Strict-Transport-Securityヘッダーを設定し、HTTPS接続を強制することで中間者攻撃のリスクを低減できます。</li>
+<li><strong>DMARC</strong>：DMARCレコードを設定し、SPF・DKIMと組み合わせたメール認証ポリシーを導入することが推奨されます。</li>
+<li><strong>Referrer-Policy</strong>：Referrer-Policyヘッダーを設定し、リファラー情報の漏洩を制御することを推奨します。</li>
+<li><strong>DKIM</strong>：DKIM署名を導入し、メールの完全性と送信元の認証を強化することが推奨されます。</li>
+<li><strong>CSP</strong>：Content-Security-Policyヘッダーを導入し、XSS攻撃のリスクを軽減することが推奨されます。まずはReport-Onlyモードでの導入が効果的です。</li>
+<li><strong>Permissions-Policy</strong>：Permissions-Policyヘッダーを設定し、ブラウザ機能（カメラ、マイク等）へのアクセスを制御することが推奨されます。</li>
+</ul>
+
+<h2>まとめ</h2>
+<p>ソフトバンク（softbank.jp）のセキュリティスコアは<strong>40点（Eランク）</strong>です。いくつかの重要なセキュリティヘッダーが未設定の可能性があり、改善が推奨されます。</p>
+<p>セキュリティ設定は日々変化するため、定期的なチェックをおすすめします。</p>
+
+<div class="not-prose bg-amber-50 border border-amber-200 rounded-xl p-4 mt-6 text-sm text-amber-800">
+  <p><strong>免責事項：</strong>本記事は、HTTPレスポンスヘッダーおよびDNS情報の公開情報に基づく分析であり、実際のセキュリティ設定を保証するものではありません。情報は調査時点のものであり、最新の状況とは異なる場合があります。</p>
+</div>
+${cta}
+`
+  },
+  {
+    slug: "sbi-security",
+    title: "SBIグループのWebセキュリティ設定を分析｜設定状況とスコア",
+    description: "SBIグループ（www.sbigroup.co.jp）のWebセキュリティ設定状況を分析。スコア35点（Fランク）。HTTPS、HSTS、CSP、SPF、DMARCなど10項目のチェック結果と改善ポイントを解説。",
+    publishedAt: "2025-02-17",
+    category: "企業分析",
+    tags: ["SBIグループ","金融・証券","セキュリティ分析","企業分析"],
+    content: `
+
+<h2>SBIグループの概要</h2>
+<p>SBIグループは、ネット証券やネット銀行など、オンライン金融サービスを幅広く展開する金融グループです。本記事では、www.sbigroup.co.jpのWebセキュリティ設定状況を公開情報に基づいて分析します。</p>
+
+<h2>チェック結果サマリー</h2>
+<div class="not-prose bg-zinc-50 rounded-xl p-6 mb-6">
+  <div class="text-center">
+    <div class="text-4xl font-bold mb-2">35<span class="text-lg text-zinc-500">/100</span></div>
+    <div class="text-xl font-bold text-zinc-700">ランク: F</div>
+    <p class="text-zinc-500 mt-2">10項目中 4項目が設定済みと推測されます</p>
+  </div>
+</div>
+
+<h2>各チェック項目の分析</h2>
+<p>以下は、HTTPレスポンスヘッダーおよびDNSレコードの公開情報に基づく推測結果です。実際の設定とは異なる場合があります。</p>
+<table>
+<thead><tr><th>項目</th><th>状態</th></tr></thead>
+<tbody>
+<tr><td>HTTPS</td><td>✅ 設定あり</td></tr>
+<tr><td>SPF</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Content-Type-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Frame-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>HSTS</td><td>❌ 未検出</td></tr>
+<tr><td>DMARC</td><td>❌ 未検出</td></tr>
+<tr><td>Referrer-Policy</td><td>❌ 未検出</td></tr>
+<tr><td>DKIM</td><td>❌ 未検出</td></tr>
+<tr><td>CSP</td><td>❌ 未検出</td></tr>
+<tr><td>Permissions-Policy</td><td>❌ 未検出</td></tr>
+</tbody>
+</table>
+
+<h2>改善が推奨されるポイント</h2>
+<p>SBIグループのWebセキュリティをさらに強化するために、以下の対策が考えられます。</p>
+<ul>
+<li><strong>HSTS</strong>：Strict-Transport-Securityヘッダーを設定し、HTTPS接続を強制することで中間者攻撃のリスクを低減できます。</li>
+<li><strong>DMARC</strong>：DMARCレコードを設定し、SPF・DKIMと組み合わせたメール認証ポリシーを導入することが推奨されます。</li>
+<li><strong>Referrer-Policy</strong>：Referrer-Policyヘッダーを設定し、リファラー情報の漏洩を制御することを推奨します。</li>
+<li><strong>DKIM</strong>：DKIM署名を導入し、メールの完全性と送信元の認証を強化することが推奨されます。</li>
+<li><strong>CSP</strong>：Content-Security-Policyヘッダーを導入し、XSS攻撃のリスクを軽減することが推奨されます。まずはReport-Onlyモードでの導入が効果的です。</li>
+<li><strong>Permissions-Policy</strong>：Permissions-Policyヘッダーを設定し、ブラウザ機能（カメラ、マイク等）へのアクセスを制御することが推奨されます。</li>
+</ul>
+
+<h2>まとめ</h2>
+<p>SBIグループ（www.sbigroup.co.jp）のセキュリティスコアは<strong>35点（Fランク）</strong>です。多くのセキュリティヘッダーが未設定の可能性があり、早急な対応が推奨されます。</p>
+<p>セキュリティ設定は日々変化するため、定期的なチェックをおすすめします。</p>
+
+<div class="not-prose bg-amber-50 border border-amber-200 rounded-xl p-4 mt-6 text-sm text-amber-800">
+  <p><strong>免責事項：</strong>本記事は、HTTPレスポンスヘッダーおよびDNS情報の公開情報に基づく分析であり、実際のセキュリティ設定を保証するものではありません。情報は調査時点のものであり、最新の状況とは異なる場合があります。</p>
+</div>
+${cta}
+`
+  },
+  {
+    slug: "dentsu-security",
+    title: "電通のWebセキュリティ設定を分析｜設定状況とスコア",
+    description: "電通（www.dentsu.co.jp）のWebセキュリティ設定状況を分析。スコア35点（Fランク）。HTTPS、HSTS、CSP、SPF、DMARCなど10項目のチェック結果と改善ポイントを解説。",
+    publishedAt: "2025-02-17",
+    category: "企業分析",
+    tags: ["電通","広告","セキュリティ分析","企業分析"],
+    content: `
+
+<h2>電通の概要</h2>
+<p>電通は、日本最大の広告代理店で、グローバルにマーケティング・コミュニケーション事業を展開しています。本記事では、www.dentsu.co.jpのWebセキュリティ設定状況を公開情報に基づいて分析します。</p>
+
+<h2>チェック結果サマリー</h2>
+<div class="not-prose bg-zinc-50 rounded-xl p-6 mb-6">
+  <div class="text-center">
+    <div class="text-4xl font-bold mb-2">35<span class="text-lg text-zinc-500">/100</span></div>
+    <div class="text-xl font-bold text-zinc-700">ランク: F</div>
+    <p class="text-zinc-500 mt-2">10項目中 4項目が設定済みと推測されます</p>
+  </div>
+</div>
+
+<h2>各チェック項目の分析</h2>
+<p>以下は、HTTPレスポンスヘッダーおよびDNSレコードの公開情報に基づく推測結果です。実際の設定とは異なる場合があります。</p>
+<table>
+<thead><tr><th>項目</th><th>状態</th></tr></thead>
+<tbody>
+<tr><td>HTTPS</td><td>✅ 設定あり</td></tr>
+<tr><td>SPF</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Content-Type-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Frame-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>HSTS</td><td>❌ 未検出</td></tr>
+<tr><td>DMARC</td><td>❌ 未検出</td></tr>
+<tr><td>Referrer-Policy</td><td>❌ 未検出</td></tr>
+<tr><td>DKIM</td><td>❌ 未検出</td></tr>
+<tr><td>CSP</td><td>❌ 未検出</td></tr>
+<tr><td>Permissions-Policy</td><td>❌ 未検出</td></tr>
+</tbody>
+</table>
+
+<h2>改善が推奨されるポイント</h2>
+<p>電通のWebセキュリティをさらに強化するために、以下の対策が考えられます。</p>
+<ul>
+<li><strong>HSTS</strong>：Strict-Transport-Securityヘッダーを設定し、HTTPS接続を強制することで中間者攻撃のリスクを低減できます。</li>
+<li><strong>DMARC</strong>：DMARCレコードを設定し、SPF・DKIMと組み合わせたメール認証ポリシーを導入することが推奨されます。</li>
+<li><strong>Referrer-Policy</strong>：Referrer-Policyヘッダーを設定し、リファラー情報の漏洩を制御することを推奨します。</li>
+<li><strong>DKIM</strong>：DKIM署名を導入し、メールの完全性と送信元の認証を強化することが推奨されます。</li>
+<li><strong>CSP</strong>：Content-Security-Policyヘッダーを導入し、XSS攻撃のリスクを軽減することが推奨されます。まずはReport-Onlyモードでの導入が効果的です。</li>
+<li><strong>Permissions-Policy</strong>：Permissions-Policyヘッダーを設定し、ブラウザ機能（カメラ、マイク等）へのアクセスを制御することが推奨されます。</li>
+</ul>
+
+<h2>まとめ</h2>
+<p>電通（www.dentsu.co.jp）のセキュリティスコアは<strong>35点（Fランク）</strong>です。多くのセキュリティヘッダーが未設定の可能性があり、早急な対応が推奨されます。</p>
+<p>セキュリティ設定は日々変化するため、定期的なチェックをおすすめします。</p>
+
+<div class="not-prose bg-amber-50 border border-amber-200 rounded-xl p-4 mt-6 text-sm text-amber-800">
+  <p><strong>免責事項：</strong>本記事は、HTTPレスポンスヘッダーおよびDNS情報の公開情報に基づく分析であり、実際のセキュリティ設定を保証するものではありません。情報は調査時点のものであり、最新の状況とは異なる場合があります。</p>
+</div>
+${cta}
+`
+  },
+  {
+    slug: "toyota-security",
+    title: "トヨタ自動車のWebセキュリティ設定を分析｜設定状況とスコア",
+    description: "トヨタ自動車（toyota.jp）のWebセキュリティ設定状況を分析。スコア30点（Fランク）。HTTPS、HSTS、CSP、SPF、DMARCなど10項目のチェック結果と改善ポイントを解説。",
+    publishedAt: "2025-02-17",
+    category: "企業分析",
+    tags: ["トヨタ自動車","自動車","セキュリティ分析","企業分析"],
+    content: `
+
+<h2>トヨタ自動車の概要</h2>
+<p>トヨタ自動車は、世界最大級の自動車メーカーで、ハイブリッド車や燃料電池車でも知られています。本記事では、toyota.jpのWebセキュリティ設定状況を公開情報に基づいて分析します。</p>
+
+<h2>チェック結果サマリー</h2>
+<div class="not-prose bg-zinc-50 rounded-xl p-6 mb-6">
+  <div class="text-center">
+    <div class="text-4xl font-bold mb-2">30<span class="text-lg text-zinc-500">/100</span></div>
+    <div class="text-xl font-bold text-zinc-700">ランク: F</div>
+    <p class="text-zinc-500 mt-2">10項目中 3項目が設定済みと推測されます</p>
+  </div>
+</div>
+
+<h2>各チェック項目の分析</h2>
+<p>以下は、HTTPレスポンスヘッダーおよびDNSレコードの公開情報に基づく推測結果です。実際の設定とは異なる場合があります。</p>
+<table>
+<thead><tr><th>項目</th><th>状態</th></tr></thead>
+<tbody>
+<tr><td>HTTPS</td><td>✅ 設定あり</td></tr>
+<tr><td>SPF</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Content-Type-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Frame-Options</td><td>❌ 未検出</td></tr>
+<tr><td>HSTS</td><td>❌ 未検出</td></tr>
+<tr><td>DMARC</td><td>❌ 未検出</td></tr>
+<tr><td>Referrer-Policy</td><td>❌ 未検出</td></tr>
+<tr><td>DKIM</td><td>❌ 未検出</td></tr>
+<tr><td>CSP</td><td>❌ 未検出</td></tr>
+<tr><td>Permissions-Policy</td><td>❌ 未検出</td></tr>
+</tbody>
+</table>
+
+<h2>改善が推奨されるポイント</h2>
+<p>トヨタ自動車のWebセキュリティをさらに強化するために、以下の対策が考えられます。</p>
+<ul>
+<li><strong>X-Frame-Options</strong>：X-Frame-Optionsヘッダーを設定し、クリックジャッキング攻撃を防止することが推奨されます。</li>
+<li><strong>HSTS</strong>：Strict-Transport-Securityヘッダーを設定し、HTTPS接続を強制することで中間者攻撃のリスクを低減できます。</li>
+<li><strong>DMARC</strong>：DMARCレコードを設定し、SPF・DKIMと組み合わせたメール認証ポリシーを導入することが推奨されます。</li>
+<li><strong>Referrer-Policy</strong>：Referrer-Policyヘッダーを設定し、リファラー情報の漏洩を制御することを推奨します。</li>
+<li><strong>DKIM</strong>：DKIM署名を導入し、メールの完全性と送信元の認証を強化することが推奨されます。</li>
+<li><strong>CSP</strong>：Content-Security-Policyヘッダーを導入し、XSS攻撃のリスクを軽減することが推奨されます。まずはReport-Onlyモードでの導入が効果的です。</li>
+<li><strong>Permissions-Policy</strong>：Permissions-Policyヘッダーを設定し、ブラウザ機能（カメラ、マイク等）へのアクセスを制御することが推奨されます。</li>
+</ul>
+
+<h2>まとめ</h2>
+<p>トヨタ自動車（toyota.jp）のセキュリティスコアは<strong>30点（Fランク）</strong>です。多くのセキュリティヘッダーが未設定の可能性があり、早急な対応が推奨されます。</p>
+<p>セキュリティ設定は日々変化するため、定期的なチェックをおすすめします。</p>
+
+<div class="not-prose bg-amber-50 border border-amber-200 rounded-xl p-4 mt-6 text-sm text-amber-800">
+  <p><strong>免責事項：</strong>本記事は、HTTPレスポンスヘッダーおよびDNS情報の公開情報に基づく分析であり、実際のセキュリティ設定を保証するものではありません。情報は調査時点のものであり、最新の状況とは異なる場合があります。</p>
+</div>
+${cta}
+`
+  },
+  {
+    slug: "fastretailing-security",
+    title: "ファーストリテイリングのWebセキュリティ設定を分析｜設定状況とスコア",
+    description: "ファーストリテイリング（www.fastretailing.com）のWebセキュリティ設定状況を分析。スコア30点（Fランク）。HTTPS、HSTS、CSP、SPF、DMARCなど10項目のチェック結果と改善ポイントを解説。",
+    publishedAt: "2025-02-17",
+    category: "企業分析",
+    tags: ["ファーストリテイリング","アパレル・小売","セキュリティ分析","企業分析"],
+    content: `
+
+<h2>ファーストリテイリングの概要</h2>
+<p>ファーストリテイリングは、ユニクロやGUを展開するアパレル企業で、グローバルに事業展開しています。本記事では、www.fastretailing.comのWebセキュリティ設定状況を公開情報に基づいて分析します。</p>
+
+<h2>チェック結果サマリー</h2>
+<div class="not-prose bg-zinc-50 rounded-xl p-6 mb-6">
+  <div class="text-center">
+    <div class="text-4xl font-bold mb-2">30<span class="text-lg text-zinc-500">/100</span></div>
+    <div class="text-xl font-bold text-zinc-700">ランク: F</div>
+    <p class="text-zinc-500 mt-2">10項目中 3項目が設定済みと推測されます</p>
+  </div>
+</div>
+
+<h2>各チェック項目の分析</h2>
+<p>以下は、HTTPレスポンスヘッダーおよびDNSレコードの公開情報に基づく推測結果です。実際の設定とは異なる場合があります。</p>
+<table>
+<thead><tr><th>項目</th><th>状態</th></tr></thead>
+<tbody>
+<tr><td>HTTPS</td><td>✅ 設定あり</td></tr>
+<tr><td>SPF</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Content-Type-Options</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Frame-Options</td><td>❌ 未検出</td></tr>
+<tr><td>HSTS</td><td>❌ 未検出</td></tr>
+<tr><td>DMARC</td><td>❌ 未検出</td></tr>
+<tr><td>Referrer-Policy</td><td>❌ 未検出</td></tr>
+<tr><td>DKIM</td><td>❌ 未検出</td></tr>
+<tr><td>CSP</td><td>❌ 未検出</td></tr>
+<tr><td>Permissions-Policy</td><td>❌ 未検出</td></tr>
+</tbody>
+</table>
+
+<h2>改善が推奨されるポイント</h2>
+<p>ファーストリテイリングのWebセキュリティをさらに強化するために、以下の対策が考えられます。</p>
+<ul>
+<li><strong>X-Frame-Options</strong>：X-Frame-Optionsヘッダーを設定し、クリックジャッキング攻撃を防止することが推奨されます。</li>
+<li><strong>HSTS</strong>：Strict-Transport-Securityヘッダーを設定し、HTTPS接続を強制することで中間者攻撃のリスクを低減できます。</li>
+<li><strong>DMARC</strong>：DMARCレコードを設定し、SPF・DKIMと組み合わせたメール認証ポリシーを導入することが推奨されます。</li>
+<li><strong>Referrer-Policy</strong>：Referrer-Policyヘッダーを設定し、リファラー情報の漏洩を制御することを推奨します。</li>
+<li><strong>DKIM</strong>：DKIM署名を導入し、メールの完全性と送信元の認証を強化することが推奨されます。</li>
+<li><strong>CSP</strong>：Content-Security-Policyヘッダーを導入し、XSS攻撃のリスクを軽減することが推奨されます。まずはReport-Onlyモードでの導入が効果的です。</li>
+<li><strong>Permissions-Policy</strong>：Permissions-Policyヘッダーを設定し、ブラウザ機能（カメラ、マイク等）へのアクセスを制御することが推奨されます。</li>
+</ul>
+
+<h2>まとめ</h2>
+<p>ファーストリテイリング（www.fastretailing.com）のセキュリティスコアは<strong>30点（Fランク）</strong>です。多くのセキュリティヘッダーが未設定の可能性があり、早急な対応が推奨されます。</p>
+<p>セキュリティ設定は日々変化するため、定期的なチェックをおすすめします。</p>
+
+<div class="not-prose bg-amber-50 border border-amber-200 rounded-xl p-4 mt-6 text-sm text-amber-800">
+  <p><strong>免責事項：</strong>本記事は、HTTPレスポンスヘッダーおよびDNS情報の公開情報に基づく分析であり、実際のセキュリティ設定を保証するものではありません。情報は調査時点のものであり、最新の状況とは異なる場合があります。</p>
+</div>
+${cta}
+`
+  },
+  {
+    slug: "recruit-security",
+    title: "リクルートのWebセキュリティ設定を分析｜設定状況とスコア",
+    description: "リクルート（recruit.co.jp）のWebセキュリティ設定状況を分析。スコア20点（Fランク）。HTTPS、HSTS、CSP、SPF、DMARCなど10項目のチェック結果と改善ポイントを解説。",
+    publishedAt: "2025-02-17",
+    category: "企業分析",
+    tags: ["リクルート","人材・IT","セキュリティ分析","企業分析"],
+    content: `
+
+<h2>リクルートの概要</h2>
+<p>リクルートは、人材、住宅、飲食など幅広い領域でマッチングプラットフォームを展開する企業です。本記事では、recruit.co.jpのWebセキュリティ設定状況を公開情報に基づいて分析します。</p>
+
+<h2>チェック結果サマリー</h2>
+<div class="not-prose bg-zinc-50 rounded-xl p-6 mb-6">
+  <div class="text-center">
+    <div class="text-4xl font-bold mb-2">20<span class="text-lg text-zinc-500">/100</span></div>
+    <div class="text-xl font-bold text-zinc-700">ランク: F</div>
+    <p class="text-zinc-500 mt-2">10項目中 2項目が設定済みと推測されます</p>
+  </div>
+</div>
+
+<h2>各チェック項目の分析</h2>
+<p>以下は、HTTPレスポンスヘッダーおよびDNSレコードの公開情報に基づく推測結果です。実際の設定とは異なる場合があります。</p>
+<table>
+<thead><tr><th>項目</th><th>状態</th></tr></thead>
+<tbody>
+<tr><td>HTTPS</td><td>✅ 設定あり</td></tr>
+<tr><td>SPF</td><td>✅ 設定あり</td></tr>
+<tr><td>X-Content-Type-Options</td><td>❌ 未検出</td></tr>
+<tr><td>X-Frame-Options</td><td>❌ 未検出</td></tr>
+<tr><td>HSTS</td><td>❌ 未検出</td></tr>
+<tr><td>DMARC</td><td>❌ 未検出</td></tr>
+<tr><td>Referrer-Policy</td><td>❌ 未検出</td></tr>
+<tr><td>DKIM</td><td>❌ 未検出</td></tr>
+<tr><td>CSP</td><td>❌ 未検出</td></tr>
+<tr><td>Permissions-Policy</td><td>❌ 未検出</td></tr>
+</tbody>
+</table>
+
+<h2>改善が推奨されるポイント</h2>
+<p>リクルートのWebセキュリティをさらに強化するために、以下の対策が考えられます。</p>
+<ul>
+<li><strong>X-Content-Type-Options</strong>：X-Content-Type-Options: nosniff を設定し、MIMEタイプスニッフィング攻撃を防止することを推奨します。</li>
+<li><strong>X-Frame-Options</strong>：X-Frame-Optionsヘッダーを設定し、クリックジャッキング攻撃を防止することが推奨されます。</li>
+<li><strong>HSTS</strong>：Strict-Transport-Securityヘッダーを設定し、HTTPS接続を強制することで中間者攻撃のリスクを低減できます。</li>
+<li><strong>DMARC</strong>：DMARCレコードを設定し、SPF・DKIMと組み合わせたメール認証ポリシーを導入することが推奨されます。</li>
+<li><strong>Referrer-Policy</strong>：Referrer-Policyヘッダーを設定し、リファラー情報の漏洩を制御することを推奨します。</li>
+<li><strong>DKIM</strong>：DKIM署名を導入し、メールの完全性と送信元の認証を強化することが推奨されます。</li>
+<li><strong>CSP</strong>：Content-Security-Policyヘッダーを導入し、XSS攻撃のリスクを軽減することが推奨されます。まずはReport-Onlyモードでの導入が効果的です。</li>
+<li><strong>Permissions-Policy</strong>：Permissions-Policyヘッダーを設定し、ブラウザ機能（カメラ、マイク等）へのアクセスを制御することが推奨されます。</li>
+</ul>
+
+<h2>まとめ</h2>
+<p>リクルート（recruit.co.jp）のセキュリティスコアは<strong>20点（Fランク）</strong>です。多くのセキュリティヘッダーが未設定の可能性があり、早急な対応が推奨されます。</p>
+<p>セキュリティ設定は日々変化するため、定期的なチェックをおすすめします。</p>
+
+<div class="not-prose bg-amber-50 border border-amber-200 rounded-xl p-4 mt-6 text-sm text-amber-800">
+  <p><strong>免責事項：</strong>本記事は、HTTPレスポンスヘッダーおよびDNS情報の公開情報に基づく分析であり、実際のセキュリティ設定を保証するものではありません。情報は調査時点のものであり、最新の状況とは異なる場合があります。</p>
+</div>
+${cta}
+`
+  },
 ];
 
 export function getArticleBySlug(slug: string): Article | undefined {
