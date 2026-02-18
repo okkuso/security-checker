@@ -3197,6 +3197,339 @@ ${cta}
 ${cta}
 `
   },
+
+  // === 業界比較記事 ===
+  {
+    slug: "compare-megabank",
+    title: "メガバンク3行のWebセキュリティ設定を比較｜みずほ・三井住友・MUFG",
+    description: "日本のメガバンク3行（みずほ銀行・三井住友銀行・三菱UFJ銀行）のWebセキュリティ設定を10項目で比較分析。スコア差の要因と業界全体の傾向を解説します。",
+    publishedAt: "2025-02-18",
+    category: "業界比較",
+    tags: ["メガバンク", "銀行", "業界比較", "みずほ", "三井住友", "MUFG"],
+    content: `
+<h2>メガバンク3行のセキュリティスコア比較</h2>
+<p>日本の3大メガバンクのWebサイトについて、セキュリティヘッダーおよびメール認証の設定状況を比較しました。</p>
+
+<div class="not-prose bg-zinc-50 rounded-xl p-6 mb-6">
+<table>
+<thead><tr><th>銀行</th><th>ドメイン</th><th>スコア</th><th>ランク</th></tr></thead>
+<tbody>
+<tr><td>みずほ銀行</td><td>www.mizuhobank.co.jp</td><td><strong>75点</strong></td><td>B</td></tr>
+<tr><td>三井住友銀行</td><td>www.smbc.co.jp</td><td><strong>55点</strong></td><td>D</td></tr>
+<tr><td>三菱UFJ銀行</td><td>www.mufg.jp</td><td><strong>45点</strong></td><td>D</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>項目別の比較</h2>
+<table>
+<thead><tr><th>項目</th><th>みずほ</th><th>三井住友</th><th>MUFG</th></tr></thead>
+<tbody>
+<tr><td>HTTPS</td><td>✅</td><td>✅</td><td>✅</td></tr>
+<tr><td>HSTS</td><td>✅</td><td>❌</td><td>❌</td></tr>
+<tr><td>CSP</td><td>❌</td><td>❌</td><td>❌</td></tr>
+<tr><td>X-Content-Type-Options</td><td>✅</td><td>✅</td><td>❌</td></tr>
+<tr><td>X-Frame-Options</td><td>✅</td><td>✅</td><td>✅</td></tr>
+<tr><td>Referrer-Policy</td><td>✅</td><td>❌</td><td>❌</td></tr>
+<tr><td>Permissions-Policy</td><td>❌</td><td>❌</td><td>❌</td></tr>
+<tr><td>SPF</td><td>✅</td><td>✅</td><td>✅</td></tr>
+<tr><td>DKIM</td><td>✅</td><td>✅</td><td>✅</td></tr>
+<tr><td>DMARC</td><td>✅</td><td>❌</td><td>❌</td></tr>
+</tbody>
+</table>
+
+<h2>業界全体の傾向</h2>
+<p>メガバンク3行の平均スコアは<strong>約58点</strong>と、金融業界に期待される水準と比較してやや低い結果となりました。以下の傾向が見られます：</p>
+<ul>
+  <li><strong>HTTPSは全行対応済み</strong>：基本的な暗号化通信は確保されています</li>
+  <li><strong>HSTSの導入が遅れている</strong>：みずほ銀行のみが設定済みで、他2行はHTTPからの中間者攻撃リスクが残ります</li>
+  <li><strong>CSPは全行未設定</strong>：XSS対策の要であるCSPが3行とも未導入です。金融機関としては早急な対応が望まれます</li>
+  <li><strong>DMARCの導入に差</strong>：みずほ銀行はDMARCを設定していますが、他2行はフィッシングメール対策が不十分な可能性があります</li>
+  <li><strong>レガシーシステムの影響</strong>：銀行のWebサイトは大規模なシステム構成を持つため、新しいセキュリティヘッダーの導入に時間がかかる傾向があります</li>
+</ul>
+
+<h2>改善ポイント</h2>
+<ul>
+  <li><strong>全行共通</strong>：CSP（Content-Security-Policy）の導入が最優先。まずはReport-Onlyモードから開始することを推奨</li>
+  <li><strong>三井住友・MUFG</strong>：HSTSの設定により、HTTP経由のアクセスを自動的にHTTPSに変換する対策が必要</li>
+  <li><strong>三井住友・MUFG</strong>：DMARCを導入し、フィッシングメール対策を強化。銀行を騙るなりすましメールは被害が大きいため重要度が高い</li>
+  <li><strong>全行共通</strong>：Permissions-Policyでブラウザ機能へのアクセス制御を実施</li>
+</ul>
+
+<p>金融機関はフィッシング攻撃の主要なターゲットであり、Webセキュリティ設定の強化は顧客保護に直結します。特にDMARCとCSPの導入は優先度の高い課題と言えるでしょう。</p>
+
+<div class="not-prose bg-amber-50 border border-amber-200 rounded-xl p-4 mt-6 text-sm text-amber-800">
+  <p><strong>免責事項：</strong>本記事は、HTTPレスポンスヘッダーおよびDNS情報の公開情報に基づく分析であり、実際のセキュリティ設定を保証するものではありません。スコアは独自の採点基準によるものです。情報は調査時点のものであり、最新の状況とは異なる場合があります。</p>
+</div>
+${cta}
+`
+  },
+  {
+    slug: "compare-ec",
+    title: "ECサイト大手5社のWebセキュリティ比較｜Amazon・楽天・メルカリ・ZOZO・ユニクロ",
+    description: "日本のEC大手5社（Amazon・楽天・メルカリ・ZOZO・ユニクロ）のWebセキュリティ設定を10項目で比較。決済情報を扱うECサイトに求められるセキュリティ水準を分析します。",
+    publishedAt: "2025-02-18",
+    category: "業界比較",
+    tags: ["EC", "業界比較", "Amazon", "楽天", "メルカリ", "ZOZO", "ユニクロ"],
+    content: `
+<h2>ECサイト大手5社のセキュリティスコア比較</h2>
+<p>決済情報や個人情報を大量に扱うECサイト大手5社のWebセキュリティ設定を比較しました。</p>
+
+<div class="not-prose bg-zinc-50 rounded-xl p-6 mb-6">
+<table>
+<thead><tr><th>企業</th><th>ドメイン</th><th>スコア</th><th>ランク</th></tr></thead>
+<tbody>
+<tr><td>Amazon Japan</td><td>amazon.co.jp</td><td><strong>90点</strong></td><td>A+</td></tr>
+<tr><td>メルカリ</td><td>mercari.com</td><td><strong>85点</strong></td><td>A</td></tr>
+<tr><td>ユニクロ</td><td>uniqlo.com</td><td><strong>70点</strong></td><td>B</td></tr>
+<tr><td>ZOZO</td><td>zozo.jp</td><td><strong>65点</strong></td><td>C</td></tr>
+<tr><td>楽天</td><td>rakuten.co.jp</td><td><strong>60点</strong></td><td>C</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>項目別の比較</h2>
+<table>
+<thead><tr><th>項目</th><th>Amazon</th><th>メルカリ</th><th>ユニクロ</th><th>ZOZO</th><th>楽天</th></tr></thead>
+<tbody>
+<tr><td>HTTPS</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td></tr>
+<tr><td>HSTS</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td></tr>
+<tr><td>CSP</td><td>✅</td><td>✅</td><td>❌</td><td>❌</td><td>❌</td></tr>
+<tr><td>X-Content-Type-Options</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td></tr>
+<tr><td>X-Frame-Options</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td></tr>
+<tr><td>Referrer-Policy</td><td>✅</td><td>✅</td><td>✅</td><td>❌</td><td>❌</td></tr>
+<tr><td>Permissions-Policy</td><td>❌</td><td>❌</td><td>❌</td><td>❌</td><td>❌</td></tr>
+<tr><td>SPF</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td></tr>
+<tr><td>DKIM</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td></tr>
+<tr><td>DMARC</td><td>✅</td><td>✅</td><td>❌</td><td>❌</td><td>❌</td></tr>
+</tbody>
+</table>
+
+<h2>業界全体の傾向</h2>
+<p>EC大手5社の平均スコアは<strong>74点</strong>で、業界内でもかなりの差が見られます。</p>
+<ul>
+  <li><strong>グローバル企業が高スコア</strong>：AmazonとメルカリはCSP・DMARCまで設定しており、セキュリティ意識の高さが伺えます</li>
+  <li><strong>基本項目は全社対応</strong>：HTTPS、HSTS、X-Content-Type-Options、X-Frame-Optionsは全社設定済み</li>
+  <li><strong>CSPの導入率が低い</strong>：5社中2社のみ。ECサイトはサードパーティスクリプト（広告タグ、決済SDK等）が多く、CSP導入のハードルが高い傾向</li>
+  <li><strong>Permissions-Policyは全社未設定</strong>：比較的新しいヘッダーのため、業界全体で導入が進んでいない状況</li>
+  <li><strong>DMARC未設定が3社</strong>：楽天・ZOZO・ユニクロはDMARC未設定で、なりすましメール対策に課題あり</li>
+</ul>
+
+<h2>改善ポイント</h2>
+<ul>
+  <li><strong>楽天・ZOZO</strong>：DMARCの導入が急務。ECサイトを装ったフィッシングメールは被害が深刻化しやすい</li>
+  <li><strong>ユニクロ・ZOZO・楽天</strong>：CSPの段階的導入。Report-Onlyモードから始め、サードパーティスクリプトとの互換性を確認</li>
+  <li><strong>全社共通</strong>：Permissions-Policyの導入で、不要なブラウザAPI（カメラ、位置情報等）へのアクセスを制限</li>
+  <li><strong>ZOZO・楽天</strong>：Referrer-Policyの設定で、外部サイトへの不要な情報漏洩を防止</li>
+</ul>
+
+<p>ECサイトは決済情報・個人情報を直接扱うため、セキュリティ設定の不備は直接的な金銭被害につながります。特にCSPとDMARCの導入は顧客保護の観点から優先すべき課題です。</p>
+
+<div class="not-prose bg-amber-50 border border-amber-200 rounded-xl p-4 mt-6 text-sm text-amber-800">
+  <p><strong>免責事項：</strong>本記事は、HTTPレスポンスヘッダーおよびDNS情報の公開情報に基づく分析であり、実際のセキュリティ設定を保証するものではありません。スコアは独自の採点基準によるものです。情報は調査時点のものであり、最新の状況とは異なる場合があります。</p>
+</div>
+${cta}
+`
+  },
+  {
+    slug: "compare-telecom",
+    title: "通信キャリア3社のWebセキュリティ比較｜ドコモ・au・ソフトバンク",
+    description: "日本の通信キャリア大手3社（NTTドコモ・au/KDDI・ソフトバンク）のWebセキュリティ設定を10項目で比較。通信インフラを担うキャリアのセキュリティ水準を分析します。",
+    publishedAt: "2025-02-18",
+    category: "業界比較",
+    tags: ["通信キャリア", "業界比較", "ドコモ", "au", "ソフトバンク"],
+    content: `
+<h2>通信キャリア3社のセキュリティスコア比較</h2>
+<p>日本の通信インフラを支えるキャリア大手3社のWebセキュリティ設定を比較しました。</p>
+
+<div class="not-prose bg-zinc-50 rounded-xl p-6 mb-6">
+<table>
+<thead><tr><th>キャリア</th><th>ドメイン</th><th>スコア</th><th>ランク</th></tr></thead>
+<tbody>
+<tr><td>au（KDDI）</td><td>au.com</td><td><strong>70点</strong></td><td>B</td></tr>
+<tr><td>NTTドコモ</td><td>docomo.ne.jp</td><td><strong>50点</strong></td><td>D</td></tr>
+<tr><td>ソフトバンク</td><td>softbank.jp</td><td><strong>40点</strong></td><td>D</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>項目別の比較</h2>
+<table>
+<thead><tr><th>項目</th><th>au</th><th>ドコモ</th><th>ソフトバンク</th></tr></thead>
+<tbody>
+<tr><td>HTTPS</td><td>✅</td><td>✅</td><td>✅</td></tr>
+<tr><td>HSTS</td><td>✅</td><td>❌</td><td>❌</td></tr>
+<tr><td>CSP</td><td>❌</td><td>❌</td><td>❌</td></tr>
+<tr><td>X-Content-Type-Options</td><td>✅</td><td>✅</td><td>✅</td></tr>
+<tr><td>X-Frame-Options</td><td>✅</td><td>✅</td><td>✅</td></tr>
+<tr><td>Referrer-Policy</td><td>✅</td><td>❌</td><td>❌</td></tr>
+<tr><td>Permissions-Policy</td><td>❌</td><td>❌</td><td>❌</td></tr>
+<tr><td>SPF</td><td>✅</td><td>✅</td><td>✅</td></tr>
+<tr><td>DKIM</td><td>✅</td><td>✅</td><td>❌</td></tr>
+<tr><td>DMARC</td><td>❌</td><td>❌</td><td>❌</td></tr>
+</tbody>
+</table>
+
+<h2>業界全体の傾向</h2>
+<p>通信キャリア3社の平均スコアは<strong>約53点</strong>と、通信インフラを担う企業としてはやや心もとない結果です。</p>
+<ul>
+  <li><strong>auがリード</strong>：HSTS、Referrer-Policy、DKIMなどauが一歩先を行く設定状況</li>
+  <li><strong>CSPは全社未設定</strong>：XSS対策の要であるCSPが3社とも未導入。大手ポータルサイトとしてのコンテンツの複雑さが導入の障壁になっている可能性</li>
+  <li><strong>DMARCは全社未設定</strong>：通信キャリアを騙るフィッシングSMS/メールが社会問題化している中、DMARC未設定は深刻な課題</li>
+  <li><strong>HSTSの導入遅れ</strong>：auのみ設定済み。ドコモ・ソフトバンクはHTTPからの接続を自動的にHTTPSに強制する仕組みがない</li>
+  <li><strong>ソフトバンクはDKIMも未設定</strong>：メール認証の基本であるDKIMが未設定で、なりすましメール対策に大きな課題</li>
+</ul>
+
+<h2>改善ポイント</h2>
+<ul>
+  <li><strong>全社共通（最優先）</strong>：DMARCの導入。キャリアを騙るフィッシングは被害額が大きく、利用者保護の観点から緊急性が高い</li>
+  <li><strong>ドコモ・ソフトバンク</strong>：HSTSの設定。通信会社のサイトがHTTPで中間者攻撃のリスクにさらされるのは避けるべき</li>
+  <li><strong>ソフトバンク</strong>：DKIMの導入でメール認証の基盤を整備</li>
+  <li><strong>全社共通</strong>：CSPの段階的導入とPermissions-Policyの設定</li>
+</ul>
+
+<p>通信キャリアは数千万人の個人情報を保有し、決済サービスも展開しています。フィッシング攻撃の主要ターゲットであることを考えると、Webセキュリティ設定の強化は喫緊の課題と言えるでしょう。</p>
+
+<div class="not-prose bg-amber-50 border border-amber-200 rounded-xl p-4 mt-6 text-sm text-amber-800">
+  <p><strong>免責事項：</strong>本記事は、HTTPレスポンスヘッダーおよびDNS情報の公開情報に基づく分析であり、実際のセキュリティ設定を保証するものではありません。スコアは独自の採点基準によるものです。情報は調査時点のものであり、最新の状況とは異なる場合があります。</p>
+</div>
+${cta}
+`
+  },
+  {
+    slug: "compare-saas",
+    title: "SaaS企業5社のWebセキュリティ比較｜freee・SmartHR・Sansan・サイボウズ・マネーフォワード",
+    description: "日本のSaaS大手5社（freee・SmartHR・Sansan・サイボウズ・マネーフォワード）のWebセキュリティ設定を比較。企業データを預かるSaaS企業に求められる水準を分析します。",
+    publishedAt: "2025-02-18",
+    category: "業界比較",
+    tags: ["SaaS", "業界比較", "freee", "SmartHR", "Sansan", "サイボウズ", "マネーフォワード"],
+    content: `
+<h2>SaaS企業5社のセキュリティスコア比較</h2>
+<p>企業の業務データや従業員情報を預かるSaaS企業5社のWebセキュリティ設定を比較しました。</p>
+
+<div class="not-prose bg-zinc-50 rounded-xl p-6 mb-6">
+<table>
+<thead><tr><th>企業</th><th>ドメイン</th><th>スコア</th><th>ランク</th></tr></thead>
+<tbody>
+<tr><td>マネーフォワード</td><td>moneyforward.com</td><td><strong>80点</strong></td><td>A</td></tr>
+<tr><td>サイボウズ</td><td>cybozu.co.jp</td><td><strong>70点</strong></td><td>B</td></tr>
+<tr><td>freee</td><td>freee.co.jp</td><td><strong>65点</strong></td><td>C</td></tr>
+<tr><td>SmartHR</td><td>smarthr.jp</td><td><strong>65点</strong></td><td>C</td></tr>
+<tr><td>Sansan</td><td>sansan.com</td><td><strong>55点</strong></td><td>D</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>項目別の比較</h2>
+<table>
+<thead><tr><th>項目</th><th>マネフォ</th><th>サイボウズ</th><th>freee</th><th>SmartHR</th><th>Sansan</th></tr></thead>
+<tbody>
+<tr><td>HTTPS</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td></tr>
+<tr><td>HSTS</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td></tr>
+<tr><td>CSP</td><td>❌</td><td>❌</td><td>❌</td><td>❌</td><td>❌</td></tr>
+<tr><td>X-Content-Type-Options</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td></tr>
+<tr><td>X-Frame-Options</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td></tr>
+<tr><td>Referrer-Policy</td><td>✅</td><td>✅</td><td>✅</td><td>❌</td><td>❌</td></tr>
+<tr><td>Permissions-Policy</td><td>❌</td><td>❌</td><td>❌</td><td>❌</td><td>❌</td></tr>
+<tr><td>SPF</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td></tr>
+<tr><td>DKIM</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td><td>❌</td></tr>
+<tr><td>DMARC</td><td>✅</td><td>❌</td><td>❌</td><td>❌</td><td>❌</td></tr>
+</tbody>
+</table>
+
+<h2>業界全体の傾向</h2>
+<p>SaaS企業5社の平均スコアは<strong>67点</strong>。テック企業としてはもう一段の強化が期待されます。</p>
+<ul>
+  <li><strong>マネーフォワードがトップ</strong>：金融データを扱う特性上、セキュリティ意識の高さが反映されています</li>
+  <li><strong>基本項目は全社対応</strong>：HTTPS、HSTS、X-Content-Type-Options、X-Frame-Optionsは全社設定済み</li>
+  <li><strong>CSPは全社未設定</strong>：SaaS製品はSPA（シングルページアプリケーション）が多く、インラインスクリプトへの依存がCSP導入を難しくしている可能性</li>
+  <li><strong>DMARCはマネーフォワードのみ</strong>：BtoBサービスにおいて、取引先を装ったフィッシングメール対策は重要</li>
+  <li><strong>Sansanのスコアが低め</strong>：DKIM未設定かつDMARC未設定で、名刺データという機密情報を扱う企業としてはメール認証の強化が望まれます</li>
+</ul>
+
+<h2>改善ポイント</h2>
+<ul>
+  <li><strong>全社共通</strong>：CSPの導入。SaaS製品のセキュリティ基準として、コーポレートサイトでもCSPを設定することが信頼性向上につながる</li>
+  <li><strong>サイボウズ・freee・SmartHR・Sansan</strong>：DMARCの導入。BtoB企業間のメールは信頼性が重要で、なりすまし対策は必須</li>
+  <li><strong>Sansan</strong>：DKIMの導入でメール認証の基盤整備が急務</li>
+  <li><strong>SmartHR・Sansan</strong>：Referrer-Policyの設定で外部サイトへの情報漏洩を防止</li>
+  <li><strong>全社共通</strong>：Permissions-Policyの導入</li>
+</ul>
+
+<p>SaaS企業は顧客企業の機密データを預かる立場にあり、自社サイトのセキュリティ設定は信頼性の指標の一つです。セキュリティを売りにするSaaS企業こそ、まず自社サイトの設定を万全にすることが求められます。</p>
+
+<div class="not-prose bg-amber-50 border border-amber-200 rounded-xl p-4 mt-6 text-sm text-amber-800">
+  <p><strong>免責事項：</strong>本記事は、HTTPレスポンスヘッダーおよびDNS情報の公開情報に基づく分析であり、実際のセキュリティ設定を保証するものではありません。スコアは独自の採点基準によるものです。情報は調査時点のものであり、最新の状況とは異なる場合があります。</p>
+</div>
+${cta}
+`
+  },
+  {
+    slug: "compare-automobile",
+    title: "自動車メーカー3社のWebセキュリティ比較｜トヨタ・ホンダ・日産",
+    description: "日本の自動車メーカー大手3社（トヨタ・ホンダ・日産）のWebセキュリティ設定を10項目で比較。コネクテッドカー時代に求められるセキュリティ水準を分析します。",
+    publishedAt: "2025-02-18",
+    category: "業界比較",
+    tags: ["自動車", "業界比較", "トヨタ", "ホンダ", "日産"],
+    content: `
+<h2>自動車メーカー3社のセキュリティスコア比較</h2>
+<p>日本を代表する自動車メーカー3社のWebセキュリティ設定を比較しました。</p>
+
+<div class="not-prose bg-zinc-50 rounded-xl p-6 mb-6">
+<table>
+<thead><tr><th>メーカー</th><th>ドメイン</th><th>スコア</th><th>ランク</th></tr></thead>
+<tbody>
+<tr><td>ホンダ</td><td>www.honda.co.jp</td><td><strong>65点</strong></td><td>C</td></tr>
+<tr><td>日産</td><td>nissan.co.jp</td><td><strong>50点</strong></td><td>D</td></tr>
+<tr><td>トヨタ</td><td>toyota.jp</td><td><strong>30点</strong></td><td>F</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>項目別の比較</h2>
+<table>
+<thead><tr><th>項目</th><th>ホンダ</th><th>日産</th><th>トヨタ</th></tr></thead>
+<tbody>
+<tr><td>HTTPS</td><td>✅</td><td>✅</td><td>✅</td></tr>
+<tr><td>HSTS</td><td>✅</td><td>❌</td><td>❌</td></tr>
+<tr><td>CSP</td><td>❌</td><td>❌</td><td>❌</td></tr>
+<tr><td>X-Content-Type-Options</td><td>✅</td><td>✅</td><td>❌</td></tr>
+<tr><td>X-Frame-Options</td><td>✅</td><td>✅</td><td>✅</td></tr>
+<tr><td>Referrer-Policy</td><td>✅</td><td>❌</td><td>❌</td></tr>
+<tr><td>Permissions-Policy</td><td>❌</td><td>❌</td><td>❌</td></tr>
+<tr><td>SPF</td><td>✅</td><td>✅</td><td>✅</td></tr>
+<tr><td>DKIM</td><td>✅</td><td>✅</td><td>❌</td></tr>
+<tr><td>DMARC</td><td>❌</td><td>❌</td><td>❌</td></tr>
+</tbody>
+</table>
+
+<h2>業界全体の傾向</h2>
+<p>自動車メーカー3社の平均スコアは<strong>約48点</strong>と、今回比較した業界の中で最も低い結果となりました。</p>
+<ul>
+  <li><strong>ホンダが相対的に高スコア</strong>：HSTS、Referrer-Policy、DKIMを設定しており、基本的なセキュリティヘッダーは概ね対応</li>
+  <li><strong>トヨタが30点と低スコア</strong>：世界最大の自動車メーカーとしては意外な結果。多くのセキュリティヘッダーが未設定</li>
+  <li><strong>CSPは全社未設定</strong>：自動車メーカーのサイトは販売ディーラー連携やコンフィギュレーター等の複雑なシステムを持つため、CSP導入が難しい側面がある</li>
+  <li><strong>DMARCは全社未設定</strong>：自動車メーカーを騙るフィッシング（偽のリコール通知等）への対策が不十分</li>
+  <li><strong>製造業のWeb意識</strong>：自動車メーカーは製品セキュリティ（車両のサイバーセキュリティ）には力を入れているものの、コーポレートサイトのWebセキュリティは後回しになっている傾向</li>
+</ul>
+
+<h2>改善ポイント</h2>
+<ul>
+  <li><strong>トヨタ（最優先）</strong>：HSTS、X-Content-Type-Options、Referrer-Policy、DKIMの設定。基本的なヘッダーの導入から着手すべき</li>
+  <li><strong>全社共通</strong>：DMARCの導入。リコール通知やキャンペーン案内など、メーカーからの公式メールの信頼性確保は顧客保護に直結</li>
+  <li><strong>日産</strong>：HSTSの設定とReferrer-Policyの導入</li>
+  <li><strong>全社共通</strong>：CSPの段階的導入。まずはReport-Onlyモードで影響範囲を確認</li>
+  <li><strong>全社共通</strong>：コネクテッドカー時代に向け、WebサイトもIoTセキュリティと同水準の対策を</li>
+</ul>
+
+<p>自動車メーカーはコネクテッドカーやMaaS（Mobility as a Service）の推進により、Webサービスの重要性が急速に高まっています。製品セキュリティだけでなく、Webセキュリティの強化も急務と言えるでしょう。</p>
+
+<div class="not-prose bg-amber-50 border border-amber-200 rounded-xl p-4 mt-6 text-sm text-amber-800">
+  <p><strong>免責事項：</strong>本記事は、HTTPレスポンスヘッダーおよびDNS情報の公開情報に基づく分析であり、実際のセキュリティ設定を保証するものではありません。スコアは独自の採点基準によるものです。情報は調査時点のものであり、最新の状況とは異なる場合があります。</p>
+</div>
+${cta}
+`
+  },
 ];
 
 export function getArticleBySlug(slug: string): Article | undefined {
