@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Script from "next/script";
 import { notFound } from "next/navigation";
-import { articles, getArticleBySlug } from "@/content/articles";
+import { articles, getArticleBySlug, type FaqItem } from "@/content/articles";
 import type { Metadata } from "next";
 
 const BASE_URL = "https://security-check-site.net"; // TODO: 本番ドメイン決定後に変更
@@ -62,6 +62,21 @@ function getArticleJsonLd(article: { title: string; description: string; slug: s
   };
 }
 
+function getFaqJsonLd(faq: FaqItem[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faq.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
+  };
+}
+
 export default function ArticlePage({ params }: Props) {
   const article = getArticleBySlug(params.slug);
   if (!article) notFound();
@@ -88,6 +103,14 @@ export default function ArticlePage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(getArticleJsonLd(article)) }}
       />
+
+      {article.faq && article.faq.length > 0 && (
+        <Script
+          id="faq-jsonld"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(getFaqJsonLd(article.faq)) }}
+        />
+      )}
 
       {/* パンくず */}
       <nav className="flex items-center gap-2 text-sm text-zinc-400 mb-8">

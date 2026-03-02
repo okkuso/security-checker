@@ -1,3 +1,8 @@
+export interface FaqItem {
+  question: string;
+  answer: string;
+}
+
 export interface Article {
   slug: string;
   title: string;
@@ -6,6 +11,7 @@ export interface Article {
   category: string;
   tags: string[];
   content: string;
+  faq?: FaqItem[];
 }
 
 const cta = `
@@ -3494,7 +3500,12 @@ ${cta}
   <p><strong>免責事項：</strong>本記事は、HTTPレスポンスヘッダーおよびDNS情報の公開情報に基づく分析であり、実際のセキュリティ設定を保証するものではありません。スコアは独自の採点基準によるものです。情報は調査時点のものであり、最新の状況とは異なる場合があります。</p>
 </div>
 ${cta}
-`
+`,
+    faq: [
+      { question: "ドコモ・au・ソフトバンクでセキュリティが一番強いのは？", answer: "当サイトの独自採点ではソフトバンクが60点で1位。2位auが50点、3位ドコモが40点という結果でした。" },
+      { question: "通信キャリアのDMARC対応状況は？", answer: "2026年時点で3社ともDMARC未設定です。フィッシングメール対策として早急な導入が望まれます。" },
+      { question: "キャリアのセキュリティスコアはどう採点している？", answer: "HTTPS設定、セキュリティヘッダー（CSP・HSTS等）、DMARC/SPF/DKIM等の10項目を各10点満点で採点しています。" },
+    ]
   },
   {
     slug: "compare-saas",
@@ -3571,7 +3582,12 @@ ${cta}
   <p><strong>免責事項：</strong>本記事は、HTTPレスポンスヘッダーおよびDNS情報の公開情報に基づく分析であり、実際のセキュリティ設定を保証するものではありません。スコアは独自の採点基準によるものです。情報は調査時点のものであり、最新の状況とは異なる場合があります。</p>
 </div>
 ${cta}
-`
+`,
+    faq: [
+      { question: "SaaS企業で最もセキュリティが強いのは？", answer: "マネーフォワードが80点で1位。2位サイボウズ75点、3位Sansan70点、4位freee55点、5位SmartHR55点でした。" },
+      { question: "SaaS企業のセキュリティで特に問題な点は？", answer: "5社平均67点で、特にContent Security Policy（CSP）の未設定が目立ちます。XSS攻撃への脆弱性が懸念されます。" },
+      { question: "SaaSを選ぶ時にセキュリティで確認すべき点は？", answer: "HTTPS対応、セキュリティヘッダー設定、DMARC対応、SOC2/ISMS認証の有無を確認することをおすすめします。" },
+    ]
   },
   {
     slug: "compare-automobile",
