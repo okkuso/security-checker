@@ -3496,6 +3496,14 @@ ${cta}
   <li><a href="/articles/softbank-security">ソフトバンクのセキュリティ設定を詳しく見る</a></li>
 </ul>
 
+<h2>他の業界のセキュリティ比較</h2>
+<ul>
+  <li><a href="/articles/compare-saas">SaaS大手5社のセキュリティ比較ランキング</a>：freee・SmartHR・マネーフォワードなど</li>
+  <li><a href="/articles/compare-automobile">トヨタ・ホンダ・日産のセキュリティ比較</a></li>
+  <li><a href="/articles/compare-ec">EC大手5社のセキュリティ比較</a></li>
+  <li><a href="/articles/what-is-https">HTTPSとは？仕組みと設定方法を図解で解説</a></li>
+</ul>
+
 <div class="not-prose bg-amber-50 border border-amber-200 rounded-xl p-4 mt-6 text-sm text-amber-800">
   <p><strong>免責事項：</strong>本記事は、HTTPレスポンスヘッダーおよびDNS情報の公開情報に基づく分析であり、実際のセキュリティ設定を保証するものではありません。スコアは独自の採点基準によるものです。情報は調査時点のものであり、最新の状況とは異なる場合があります。</p>
 </div>
@@ -3576,6 +3584,14 @@ ${cta}
   <li><a href="/articles/freee-security">freeeのセキュリティ設定を詳しく見る</a></li>
   <li><a href="/articles/smarthr-security">SmartHRのセキュリティ設定を詳しく見る</a></li>
   <li><a href="/articles/sansan-security">Sansanのセキュリティ設定を詳しく見る</a></li>
+</ul>
+
+<h2>他の業界のセキュリティ比較</h2>
+<ul>
+  <li><a href="/articles/compare-telecom">ドコモ・au・ソフトバンクのセキュリティ比較</a>：3社中最下位は40点</li>
+  <li><a href="/articles/compare-automobile">トヨタ・ホンダ・日産のセキュリティ比較</a></li>
+  <li><a href="/articles/compare-ec">EC大手5社のセキュリティ比較</a></li>
+  <li><a href="/articles/what-is-https">HTTPSとは？仕組みと設定方法を図解で解説</a></li>
 </ul>
 
 <div class="not-prose bg-amber-50 border border-amber-200 rounded-xl p-4 mt-6 text-sm text-amber-800">
