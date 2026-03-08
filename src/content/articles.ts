@@ -3517,8 +3517,8 @@ ${cta}
   },
   {
     slug: "compare-saas",
-    title: "【2026年最新版】SaaS大手5社のセキュリティ比較ランキング｜1位80点・最下位は？",
-    description: "freee・SmartHR・Sansan・サイボウズ・マネーフォワードを10項目で採点。1位80点、最下位55点の差を3分で解説。導入前に確認したいチェックポイントも紹介。",
+    title: "【2026年最新】SaaS大手5社のセキュリティ比較｜freee・SmartHR・Sansanの順位は？",
+    description: "freee・SmartHR・Sansan・サイボウズ・マネーフォワードを10項目で比較。1位80点〜最下位55点の差と、導入前に見るべき3つのチェックポイントを解説。",
     publishedAt: "2025-02-18",
     category: "業界比較",
     tags: ["SaaS", "業界比較", "freee", "SmartHR", "Sansan", "サイボウズ", "マネーフォワード"],
