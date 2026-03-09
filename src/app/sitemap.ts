@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 import { articles } from "@/content/articles";
 
-const BASE_URL = "https://security-check-site.net"; // TODO: 本番ドメイン決定後に変更
+const BASE_URL = "https://www.security-check-site.net";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const blogEntries = articles.map((article) => ({

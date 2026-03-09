@@ -4,7 +4,7 @@ import Script from "next/script";
 import "./globals.css";
 
 const siteName = "Webセキュリティ設定チェッカー";
-const siteUrl = "https://security-check-site.net";
+const siteUrl = "https://www.security-check-site.net";
 const siteDescription = "URLを入力するだけでWebサイトのセキュリティ設定をスコアリング。HTTPS・HSTS・CSP・SPF・DMARCなど10項目を無料チェック。日本企業50社のランキングも公開中。";
 
 export const metadata: Metadata = {

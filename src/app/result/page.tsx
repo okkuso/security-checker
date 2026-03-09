@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import ResultClient from "./ResultClient";
 
-const siteUrl = "https://security-check-site.net";
+const siteUrl = "https://www.security-check-site.net";
 const siteName = "Webセキュリティ設定チェッカー";
 
 function getRank(score: number) {

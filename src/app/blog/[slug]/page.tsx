@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { articles, getArticleBySlug, type FaqItem } from "@/content/articles";
 import type { Metadata } from "next";
 
-const BASE_URL = "https://security-check-site.net"; // TODO: 本番ドメイン決定後に変更
+const BASE_URL = "https://www.security-check-site.net";
 
 interface Props {
   params: { slug: string };
