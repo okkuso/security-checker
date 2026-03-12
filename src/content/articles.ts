@@ -24,8 +24,8 @@ const cta = `
 export const articles: Article[] = [
   {
     slug: "what-is-https",
-    title: "httpsとは？初心者向けに仕組み・設定方法・SEO効果をわかりやすく解説【2026年版】",
-    description: "https とは何かを初心者向けに解説。HTTPとの違い、SSL/TLS証明書の設定方法3選、SEOへの影響、未対応リスクまで3分でわかります。",
+    title: "httpsとは何？初心者向けにHTTPとの違い・設定方法・SEO効果を3分解説【2026年版】",
+    description: "httpsとは何かを初心者向けに解説。HTTPとの違い、SSL/TLS証明書の設定手順、SEO効果、未対応リスクを3分で理解できる入門ガイド。",
     publishedAt: "2025-02-15",
     category: "Web基礎",
     tags: ["HTTPS", "SSL", "TLS", "暗号化", "SEO"],
@@ -3517,8 +3517,8 @@ ${cta}
   },
   {
     slug: "compare-saas",
-    title: "【2026年最新】SaaS5社のセキュリティ比較｜freee・SmartHR・Sansanは何位？",
-    description: "SaaS大手5社を10項目で診断。マネーフォワード80点〜Sansan55点の差と、導入前に確認すべき3つのポイントを3分でチェック。",
+    title: "【2026年版】SaaS5社セキュリティ比較ランキング｜1位80点・最下位55点はどこ？",
+    description: "freee・SmartHR・Sansan・サイボウズ・マネーフォワードを10項目で比較。1位80点〜最下位55点の差と導入前チェック3点を3分で解説。",
     publishedAt: "2025-02-18",
     category: "業界比較",
     tags: ["SaaS", "業界比較", "freee", "SmartHR", "Sansan", "サイボウズ", "マネーフォワード"],
