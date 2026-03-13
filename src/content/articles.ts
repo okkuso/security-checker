@@ -24,8 +24,8 @@ const cta = `
 export const articles: Article[] = [
   {
     slug: "what-is-https",
-    title: "httpsとは何？初心者向けにHTTPとの違い・設定方法・SEO効果を3分解説【2026年版】",
-    description: "httpsとは何かを初心者向けに解説。HTTPとの違い、SSL/TLS証明書の設定手順、SEO効果、未対応リスクを3分で理解できる入門ガイド。",
+    title: "httpsとは？意味・HTTPとの違い・設定方法を初心者向けに3分解説【2026年版】",
+    description: "httpsとは何か（意味）を初心者向けに解説。HTTPとの違い、SSL/TLS証明書の設定手順、SEO効果、未対応リスクを3分で理解できる入門ガイド。",
     publishedAt: "2025-02-15",
     category: "Web基礎",
     tags: ["HTTPS", "SSL", "TLS", "暗号化", "SEO"],
@@ -92,6 +92,12 @@ export const articles: Article[] = [
 
 <h2>あなたのサイトはHTTPS化されていますか？</h2>
 <p>「うちのサイトはHTTPS化済みだから大丈夫」と思っていても、<strong>HSTSやセキュリティヘッダーが未設定</strong>というケースは非常に多いです。当サイトの無料診断ツールでは、HTTPSを含む<strong>10項目のセキュリティチェック</strong>を一括で実施できます。</p>
+<h2>関連記事</h2>
+<ul>
+  <li><a href="/articles/what-is-hsts">HSTSとは？設定しないと中間者攻撃される？</a></li>
+  <li><a href="/articles/what-is-csp">CSPとは？XSS攻撃を防ぐ設定方法</a></li>
+  <li><a href="/articles/compare-saas">SaaS大手5社のセキュリティ比較ランキング</a></li>
+</ul>
 ${cta}
 `
   },
