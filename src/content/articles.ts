@@ -87,16 +87,16 @@ export const articles: Article[] = [
 <ul>
   <li><strong>HTTPからHTTPSへのリダイレクト</strong>：301リダイレクトで古いURLからの転送を設定</li>
   <li><strong>混合コンテンツ（Mixed Content）の修正</strong>：ページ内の画像やスクリプトがHTTPのままだと警告が出ます</li>
-  <li><strong>HSTSの設定</strong>：ブラウザに「常にHTTPSで接続する」よう指示する仕組み。<a href="/articles/what-is-hsts">HSTSの詳しい解説はこちら</a></li>
+  <li><strong>HSTSの設定</strong>：ブラウザに「常にHTTPSで接続する」よう指示する仕組み。<a href="/blog/what-is-hsts">HSTSの詳しい解説はこちら</a></li>
 </ul>
 
 <h2>あなたのサイトはHTTPS化されていますか？</h2>
 <p>「うちのサイトはHTTPS化済みだから大丈夫」と思っていても、<strong>HSTSやセキュリティヘッダーが未設定</strong>というケースは非常に多いです。当サイトの無料診断ツールでは、HTTPSを含む<strong>10項目のセキュリティチェック</strong>を一括で実施できます。</p>
 <h2>関連記事</h2>
 <ul>
-  <li><a href="/articles/what-is-hsts">HSTSとは？設定しないと中間者攻撃される？</a></li>
-  <li><a href="/articles/what-is-csp">CSPとは？XSS攻撃を防ぐ設定方法</a></li>
-  <li><a href="/articles/compare-saas">SaaS大手5社のセキュリティ比較ランキング</a></li>
+  <li><a href="/blog/what-is-hsts">HSTSとは？設定しないと中間者攻撃される？</a></li>
+  <li><a href="/blog/what-is-csp">CSPとは？XSS攻撃を防ぐ設定方法</a></li>
+  <li><a href="/blog/compare-saas">SaaS大手5社のセキュリティ比較ランキング</a></li>
 </ul>
 ${cta}
 `
@@ -154,8 +154,8 @@ ${cta}
 
 <h2>関連記事</h2>
 <ul>
-  <li><a href="/articles/what-is-https">HTTPSとは？仕組み・設定方法・SEO効果を図解で解説</a></li>
-  <li><a href="/articles/what-is-csp">CSPとは？XSS攻撃を防ぐ設定方法と導入手順</a></li>
+  <li><a href="/blog/what-is-https">HTTPSとは？仕組み・設定方法・SEO効果を図解で解説</a></li>
+  <li><a href="/blog/what-is-csp">CSPとは？XSS攻撃を防ぐ設定方法と導入手順</a></li>
 </ul>
 ${cta}
 `
@@ -226,8 +226,8 @@ ${cta}
 
 <h2>関連記事</h2>
 <ul>
-  <li><a href="/articles/what-is-hsts">HSTSとは？設定しないと中間者攻撃される？</a></li>
-  <li><a href="/articles/what-is-https">HTTPSとは？仕組み・設定方法を図解で解説</a></li>
+  <li><a href="/blog/what-is-hsts">HSTSとは？設定しないと中間者攻撃される？</a></li>
+  <li><a href="/blog/what-is-https">HTTPSとは？仕組み・設定方法を図解で解説</a></li>
 </ul>
 ${cta}
 `
@@ -291,8 +291,8 @@ ${cta}
 
 <h2>関連記事</h2>
 <ul>
-  <li><a href="/articles/what-is-dmarc">DMARCとは？SPF・DKIMと組み合わせたメール認証の決定版</a></li>
-  <li><a href="/articles/what-is-https">HTTPSとは？仕組み・設定方法を図解で解説</a></li>
+  <li><a href="/blog/what-is-dmarc">DMARCとは？SPF・DKIMと組み合わせたメール認証の決定版</a></li>
+  <li><a href="/blog/what-is-https">HTTPSとは？仕組み・設定方法を図解で解説</a></li>
 </ul>
 ${cta}
 `
@@ -362,8 +362,8 @@ ${cta}
 
 <h2>関連記事</h2>
 <ul>
-  <li><a href="/articles/what-is-spf">SPFレコードとは？書き方・確認方法・よくある5つの設定ミス</a></li>
-  <li><a href="/articles/what-is-https">HTTPSとは？仕組み・設定方法を図解で解説</a></li>
+  <li><a href="/blog/what-is-spf">SPFレコードとは？書き方・確認方法・よくある5つの設定ミス</a></li>
+  <li><a href="/blog/what-is-https">HTTPSとは？仕組み・設定方法を図解で解説</a></li>
 </ul>
 ${cta}
 `
@@ -1721,9 +1721,9 @@ ${cta}
 
 <h2>関連記事</h2>
 <ul>
-  <li><a href="/articles/compare-saas">SaaS大手5社のセキュリティ設定を徹底比較</a></li>
-  <li><a href="/articles/smarthr-security">SmartHRのWebセキュリティ設定を分析</a></li>
-  <li><a href="/articles/moneyforward-security">マネーフォワードのWebセキュリティ設定を分析</a></li>
+  <li><a href="/blog/compare-saas">SaaS大手5社のセキュリティ設定を徹底比較</a></li>
+  <li><a href="/blog/smarthr-security">SmartHRのWebセキュリティ設定を分析</a></li>
+  <li><a href="/blog/moneyforward-security">マネーフォワードのWebセキュリティ設定を分析</a></li>
 </ul>
 
 <div class="not-prose bg-amber-50 border border-amber-200 rounded-xl p-4 mt-6 text-sm text-amber-800">
@@ -1842,9 +1842,9 @@ ${cta}
 
 <h2>関連記事</h2>
 <ul>
-  <li><a href="/articles/compare-automobile">トヨタ・ホンダ・日産のセキュリティ比較</a></li>
-  <li><a href="/articles/toyota-security">トヨタのWebセキュリティ設定を分析</a></li>
-  <li><a href="/articles/nissan-security">日産のWebセキュリティ設定を分析</a></li>
+  <li><a href="/blog/compare-automobile">トヨタ・ホンダ・日産のセキュリティ比較</a></li>
+  <li><a href="/blog/toyota-security">トヨタのWebセキュリティ設定を分析</a></li>
+  <li><a href="/blog/nissan-security">日産のWebセキュリティ設定を分析</a></li>
 </ul>
 
 <div class="not-prose bg-amber-50 border border-amber-200 rounded-xl p-4 mt-6 text-sm text-amber-800">
@@ -2314,9 +2314,9 @@ ${cta}
 
 <h2>関連記事</h2>
 <ul>
-  <li><a href="/articles/compare-telecom">ドコモ・au・ソフトバンクのセキュリティ対策を比較</a></li>
-  <li><a href="/articles/au-security">auのWebセキュリティ設定を分析</a></li>
-  <li><a href="/articles/softbank-security">ソフトバンクのWebセキュリティ設定を分析</a></li>
+  <li><a href="/blog/compare-telecom">ドコモ・au・ソフトバンクのセキュリティ対策を比較</a></li>
+  <li><a href="/blog/au-security">auのWebセキュリティ設定を分析</a></li>
+  <li><a href="/blog/softbank-security">ソフトバンクのWebセキュリティ設定を分析</a></li>
 </ul>
 
 <div class="not-prose bg-amber-50 border border-amber-200 rounded-xl p-4 mt-6 text-sm text-amber-800">
@@ -3152,9 +3152,9 @@ ${cta}
 
 <h2>関連記事</h2>
 <ul>
-  <li><a href="/articles/compare-automobile">トヨタ・ホンダ・日産のセキュリティ比較｜世界のトヨタが30点？</a></li>
-  <li><a href="/articles/honda-security">ホンダのWebセキュリティ設定を分析</a></li>
-  <li><a href="/articles/nissan-security">日産のWebセキュリティ設定を分析</a></li>
+  <li><a href="/blog/compare-automobile">トヨタ・ホンダ・日産のセキュリティ比較｜世界のトヨタが30点？</a></li>
+  <li><a href="/blog/honda-security">ホンダのWebセキュリティ設定を分析</a></li>
+  <li><a href="/blog/nissan-security">日産のWebセキュリティ設定を分析</a></li>
 </ul>
 
 <div class="not-prose bg-amber-50 border border-amber-200 rounded-xl p-4 mt-6 text-sm text-amber-800">
@@ -3349,9 +3349,9 @@ ${cta}
 
 <h2>各行の詳細分析</h2>
 <ul>
-  <li><a href="/articles/mizuho-security">みずほ銀行のセキュリティ設定を詳しく見る</a></li>
-  <li><a href="/articles/smbc-security">三井住友銀行のセキュリティ設定を詳しく見る</a></li>
-  <li><a href="/articles/mufg-security">三菱UFJ銀行のセキュリティ設定を詳しく見る</a></li>
+  <li><a href="/blog/mizuho-security">みずほ銀行のセキュリティ設定を詳しく見る</a></li>
+  <li><a href="/blog/smbc-security">三井住友銀行のセキュリティ設定を詳しく見る</a></li>
+  <li><a href="/blog/mufg-security">三菱UFJ銀行のセキュリティ設定を詳しく見る</a></li>
 </ul>
 
 <div class="not-prose bg-amber-50 border border-amber-200 rounded-xl p-4 mt-6 text-sm text-amber-800">
@@ -3423,11 +3423,11 @@ ${cta}
 
 <h2>各社の詳細分析</h2>
 <ul>
-  <li><a href="/articles/amazon-security">Amazon Japanのセキュリティ設定を詳しく見る</a></li>
-  <li><a href="/articles/mercari-security">メルカリのセキュリティ設定を詳しく見る</a></li>
-  <li><a href="/articles/uniqlo-security">ユニクロのセキュリティ設定を詳しく見る</a></li>
-  <li><a href="/articles/zozo-security">ZOZOのセキュリティ設定を詳しく見る</a></li>
-  <li><a href="/articles/rakuten-security">楽天のセキュリティ設定を詳しく見る</a></li>
+  <li><a href="/blog/amazon-security">Amazon Japanのセキュリティ設定を詳しく見る</a></li>
+  <li><a href="/blog/mercari-security">メルカリのセキュリティ設定を詳しく見る</a></li>
+  <li><a href="/blog/uniqlo-security">ユニクロのセキュリティ設定を詳しく見る</a></li>
+  <li><a href="/blog/zozo-security">ZOZOのセキュリティ設定を詳しく見る</a></li>
+  <li><a href="/blog/rakuten-security">楽天のセキュリティ設定を詳しく見る</a></li>
 </ul>
 
 <div class="not-prose bg-amber-50 border border-amber-200 rounded-xl p-4 mt-6 text-sm text-amber-800">
@@ -3497,17 +3497,17 @@ ${cta}
 
 <h2>各社の詳細分析</h2>
 <ul>
-  <li><a href="/articles/au-security">auのセキュリティ設定を詳しく見る</a></li>
-  <li><a href="/articles/docomo-security">NTTドコモのセキュリティ設定を詳しく見る</a></li>
-  <li><a href="/articles/softbank-security">ソフトバンクのセキュリティ設定を詳しく見る</a></li>
+  <li><a href="/blog/au-security">auのセキュリティ設定を詳しく見る</a></li>
+  <li><a href="/blog/docomo-security">NTTドコモのセキュリティ設定を詳しく見る</a></li>
+  <li><a href="/blog/softbank-security">ソフトバンクのセキュリティ設定を詳しく見る</a></li>
 </ul>
 
 <h2>他の業界のセキュリティ比較</h2>
 <ul>
-  <li><a href="/articles/compare-saas">SaaS大手5社のセキュリティ比較ランキング</a>：freee・SmartHR・マネーフォワードなど</li>
-  <li><a href="/articles/compare-automobile">トヨタ・ホンダ・日産のセキュリティ比較</a></li>
-  <li><a href="/articles/compare-ec">EC大手5社のセキュリティ比較</a></li>
-  <li><a href="/articles/what-is-https">HTTPSとは？仕組みと設定方法を図解で解説</a></li>
+  <li><a href="/blog/compare-saas">SaaS大手5社のセキュリティ比較ランキング</a>：freee・SmartHR・マネーフォワードなど</li>
+  <li><a href="/blog/compare-automobile">トヨタ・ホンダ・日産のセキュリティ比較</a></li>
+  <li><a href="/blog/compare-ec">EC大手5社のセキュリティ比較</a></li>
+  <li><a href="/blog/what-is-https">HTTPSとは？仕組みと設定方法を図解で解説</a></li>
 </ul>
 
 <div class="not-prose bg-amber-50 border border-amber-200 rounded-xl p-4 mt-6 text-sm text-amber-800">
@@ -3585,19 +3585,19 @@ ${cta}
 
 <h2>各社の詳細分析</h2>
 <ul>
-  <li><a href="/articles/moneyforward-security">マネーフォワードのセキュリティ設定を詳しく見る</a></li>
-  <li><a href="/articles/cybozu-security">サイボウズのセキュリティ設定を詳しく見る</a></li>
-  <li><a href="/articles/freee-security">freeeのセキュリティ設定を詳しく見る</a></li>
-  <li><a href="/articles/smarthr-security">SmartHRのセキュリティ設定を詳しく見る</a></li>
-  <li><a href="/articles/sansan-security">Sansanのセキュリティ設定を詳しく見る</a></li>
+  <li><a href="/blog/moneyforward-security">マネーフォワードのセキュリティ設定を詳しく見る</a></li>
+  <li><a href="/blog/cybozu-security">サイボウズのセキュリティ設定を詳しく見る</a></li>
+  <li><a href="/blog/freee-security">freeeのセキュリティ設定を詳しく見る</a></li>
+  <li><a href="/blog/smarthr-security">SmartHRのセキュリティ設定を詳しく見る</a></li>
+  <li><a href="/blog/sansan-security">Sansanのセキュリティ設定を詳しく見る</a></li>
 </ul>
 
 <h2>他の業界のセキュリティ比較</h2>
 <ul>
-  <li><a href="/articles/compare-telecom">ドコモ・au・ソフトバンクのセキュリティ比較</a>：3社中最下位は40点</li>
-  <li><a href="/articles/compare-automobile">トヨタ・ホンダ・日産のセキュリティ比較</a></li>
-  <li><a href="/articles/compare-ec">EC大手5社のセキュリティ比較</a></li>
-  <li><a href="/articles/what-is-https">HTTPSとは？仕組みと設定方法を図解で解説</a></li>
+  <li><a href="/blog/compare-telecom">ドコモ・au・ソフトバンクのセキュリティ比較</a>：3社中最下位は40点</li>
+  <li><a href="/blog/compare-automobile">トヨタ・ホンダ・日産のセキュリティ比較</a></li>
+  <li><a href="/blog/compare-ec">EC大手5社のセキュリティ比較</a></li>
+  <li><a href="/blog/what-is-https">HTTPSとは？仕組みと設定方法を図解で解説</a></li>
 </ul>
 
 <div class="not-prose bg-amber-50 border border-amber-200 rounded-xl p-4 mt-6 text-sm text-amber-800">
@@ -3673,9 +3673,9 @@ ${cta}
 
 <h2>各社の詳細分析</h2>
 <ul>
-  <li><a href="/articles/toyota-security">トヨタのWebセキュリティ設定を詳しく見る</a></li>
-  <li><a href="/articles/honda-security">ホンダのWebセキュリティ設定を詳しく見る</a></li>
-  <li><a href="/articles/nissan-security">日産のWebセキュリティ設定を詳しく見る</a></li>
+  <li><a href="/blog/toyota-security">トヨタのWebセキュリティ設定を詳しく見る</a></li>
+  <li><a href="/blog/honda-security">ホンダのWebセキュリティ設定を詳しく見る</a></li>
+  <li><a href="/blog/nissan-security">日産のWebセキュリティ設定を詳しく見る</a></li>
 </ul>
 
 <div class="not-prose bg-amber-50 border border-amber-200 rounded-xl p-4 mt-6 text-sm text-amber-800">
