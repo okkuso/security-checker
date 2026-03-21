@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { articles, getArticleBySlug, type FaqItem } from "@/content/articles";
 import type { Metadata } from "next";
 
-const BASE_URL = "https://www.security-check-site.net";
+const BASE_URL = "https://security-check-site.net";
 
 interface Props {
   params: { slug: string };

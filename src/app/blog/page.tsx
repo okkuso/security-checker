@@ -3,7 +3,7 @@ import Script from "next/script";
 import { articles } from "@/content/articles";
 import type { Metadata } from "next";
 
-const BASE_URL = "https://www.security-check-site.net";
+const BASE_URL = "https://security-check-site.net";
 
 export const metadata: Metadata = {
   title: "セキュリティ比較・設定ガイド｜HTTPS・DMARC・企業比較記事一覧",
