@@ -96,6 +96,41 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Featured comparisons */}
+      <section className="mt-16">
+        <div className="flex items-center justify-between mb-4">
+          <h2 className="text-lg font-semibold text-zinc-900">🔥 よく読まれている比較記事</h2>
+          <Link href="/blog" className="text-sm text-zinc-400 hover:text-zinc-600 transition-colors">
+            すべての記事を見る →
+          </Link>
+        </div>
+        <div className="grid gap-3 sm:grid-cols-3">
+          {[
+            "compare-saas",
+            "compare-telecom",
+            "compare-automobile",
+          ].map((slug) => {
+            const article = articles.find((a) => a.slug === slug);
+            if (!article) return null;
+            return (
+              <Link
+                key={article.slug}
+                href={`/blog/${article.slug}`}
+                className="block bg-white border border-zinc-200 rounded-xl p-5 hover:border-zinc-300 hover:shadow-sm transition-all"
+              >
+                <div className="flex items-center gap-2 mb-1">
+                  <span className="text-xs font-medium px-2 py-0.5 rounded-full bg-zinc-100 text-zinc-600">
+                    {article.category}
+                  </span>
+                </div>
+                <h3 className="font-bold text-zinc-900 mb-2 line-clamp-2">{article.title}</h3>
+                <p className="text-sm text-zinc-500 line-clamp-3">{article.description}</p>
+              </Link>
+            );
+          })}
+        </div>
+      </section>
+
       {/* Blog */}
       <section className="mt-16">
         <div className="flex items-center justify-between mb-4">
