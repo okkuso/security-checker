@@ -8,6 +8,7 @@ export interface Article {
   title: string;
   description: string;
   publishedAt: string;
+  updatedAt?: string;
   category: string;
   tags: string[];
   content: string;
@@ -27,6 +28,7 @@ export const articles: Article[] = [
     title: "httpsとは？意味・HTTPとの違い・設定方法を初心者向けに3分解説【2026年版】",
     description: "httpsとは何か（意味）を初心者向けに解説。HTTPとの違い、SSL/TLS証明書の設定手順、SEO効果、未対応リスクを3分で理解できる入門ガイド。",
     publishedAt: "2025-02-15",
+    updatedAt: "2026-03-13",
     category: "Web基礎",
     tags: ["HTTPS", "SSL", "TLS", "暗号化", "SEO"],
     content: `
@@ -3441,6 +3443,7 @@ ${cta}
     title: "【2026年最新】ドコモ・au・ソフトバンクのセキュリティ比較｜あなたのキャリアは何位？",
     description: "通信キャリア大手3社を10項目で比較。au 70点・ドコモ 50点・ソフトバンク 40点の差を3分で解説。DMARC未設定リスクと今すぐできる確認方法も紹介。",
     publishedAt: "2025-02-18",
+    updatedAt: "2026-03-05",
     category: "業界比較",
     tags: ["通信キャリア", "業界比較", "ドコモ", "au", "ソフトバンク"],
     content: `
@@ -3526,6 +3529,7 @@ ${cta}
     title: "【2026年版】SaaS5社セキュリティ比較ランキング｜1位80点・最下位55点はどこ？",
     description: "freee・SmartHR・Sansan・サイボウズ・マネーフォワードを10項目で比較。1位80点〜最下位55点の差と導入前チェック3点を3分で解説。",
     publishedAt: "2025-02-18",
+    updatedAt: "2026-03-12",
     category: "業界比較",
     tags: ["SaaS", "業界比較", "freee", "SmartHR", "Sansan", "サイボウズ", "マネーフォワード"],
     content: `
@@ -3616,6 +3620,7 @@ ${cta}
     title: "【2026年最新】トヨタ・ホンダ・日産のセキュリティ比較｜30点〜65点の差はなぜ？",
     description: "自動車メーカー3社を10項目で採点。ホンダ65点・日産50点・トヨタ30点の差を具体的に解説。DMARC未設定リスクと確認方法を3分で紹介。",
     publishedAt: "2025-02-18",
+    updatedAt: "2026-03-05",
     category: "業界比較",
     tags: ["自動車", "業界比較", "トヨタ", "ホンダ", "日産"],
     content: `

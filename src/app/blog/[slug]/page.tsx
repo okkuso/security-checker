@@ -28,6 +28,7 @@ export function generateMetadata({ params }: Props): Metadata {
       title: article.title,
       description: article.description,
       publishedTime: article.publishedAt,
+      modifiedTime: article.updatedAt ?? article.publishedAt,
       tags: article.tags,
     },
   };
@@ -45,13 +46,16 @@ function getBreadcrumbJsonLd(article: { title: string; slug: string }) {
   };
 }
 
-function getArticleJsonLd(article: { title: string; description: string; slug: string; publishedAt: string; tags: string[] }) {
+function getArticleJsonLd(article: { title: string; description: string; slug: string; publishedAt: string; updatedAt?: string; tags: string[] }) {
   return {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: article.title,
     description: article.description,
     datePublished: article.publishedAt,
+    dateModified: article.updatedAt ?? article.publishedAt,
+    inLanguage: "ja-JP",
+    mainEntityOfPage: `${BASE_URL}/blog/${article.slug}`,
     keywords: article.tags.join(", "),
     url: `${BASE_URL}/blog/${article.slug}`,
     publisher: {
@@ -122,11 +126,14 @@ export default function ArticlePage({ params }: Props) {
       </nav>
 
       {/* メタ情報 */}
-      <div className="flex items-center gap-2 mb-4">
+      <div className="flex flex-wrap items-center gap-2 mb-4">
         <span className="text-xs font-medium px-2.5 py-0.5 rounded-full bg-zinc-100 text-zinc-600">
           {article.category}
         </span>
-        <span className="text-xs text-zinc-400">{article.publishedAt}</span>
+        <span className="text-xs text-zinc-400">公開: {article.publishedAt}</span>
+        {article.updatedAt && article.updatedAt !== article.publishedAt && (
+          <span className="text-xs text-zinc-400">更新: {article.updatedAt}</span>
+        )}
       </div>
 
       <h1 className="text-3xl sm:text-4xl font-bold text-zinc-900 mb-2">{article.title}</h1>

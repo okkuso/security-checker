@@ -6,8 +6,8 @@ const BASE_URL = "https://security-check-site.net";
 export default function sitemap(): MetadataRoute.Sitemap {
   const blogEntries = articles.map((article) => ({
     url: `${BASE_URL}/blog/${article.slug}`,
-    lastModified: new Date(article.publishedAt),
-    changeFrequency: "monthly" as const,
+    lastModified: new Date(article.updatedAt ?? article.publishedAt),
+    changeFrequency: "weekly" as const,
     priority: 0.7,
   }));
 
