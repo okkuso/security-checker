@@ -18,6 +18,7 @@ export const metadata: Metadata = {
 };
 
 const featuredSlugs = ["compare-saas", "compare-telecom", "compare-automobile"];
+const foundationSlugs = ["what-is-https", "what-is-dmarc", "what-is-spf", "what-is-csp", "what-is-hsts"];
 
 function getBreadcrumbJsonLd() {
   return {
@@ -45,6 +46,9 @@ function getItemListJsonLd() {
 
 export default function BlogPage() {
   const featuredArticles = featuredSlugs
+    .map((slug) => articles.find((article) => article.slug === slug))
+    .filter((article): article is NonNullable<typeof article> => Boolean(article));
+  const foundationArticles = foundationSlugs
     .map((slug) => articles.find((article) => article.slug === slug))
     .filter((article): article is NonNullable<typeof article> => Boolean(article));
 
@@ -100,6 +104,25 @@ export default function BlogPage() {
         </div>
       </section>
 
+      <section className="mb-10 rounded-2xl border border-zinc-200 bg-zinc-50 p-6">
+        <h2 className="text-lg font-semibold text-zinc-900 mb-3">まず読む基礎解説</h2>
+        <p className="text-sm text-zinc-500 mb-4">
+          露出が落ちている比較記事だけでなく、HTTPS・DMARC・SPF・CSP・HSTS の基礎記事もまとめてたどれるようにしました。
+          初学者向けの解説から企業比較記事へ回遊しやすくする導線です。
+        </p>
+        <div className="flex flex-wrap gap-2">
+          {foundationArticles.map((article) => (
+            <Link
+              key={article.slug}
+              href={`/blog/${article.slug}`}
+              className="px-3 py-1.5 rounded-full border border-zinc-200 bg-white text-sm text-zinc-700 hover:border-zinc-300 hover:bg-zinc-100 transition-colors"
+            >
+              {article.title}
+            </Link>
+          ))}
+        </div>
+      </section>
+
       <div className="space-y-4">
         {articles.map((article) => (
           <Link
@@ -111,7 +134,10 @@ export default function BlogPage() {
               <span className="text-xs font-medium px-2.5 py-0.5 rounded-full bg-zinc-100 text-zinc-600">
                 {article.category}
               </span>
-              <span className="text-xs text-zinc-400">{article.publishedAt}</span>
+              <span className="text-xs text-zinc-400">公開: {article.publishedAt}</span>
+              {article.updatedAt && article.updatedAt !== article.publishedAt && (
+                <span className="text-xs text-zinc-400">更新: {article.updatedAt}</span>
+              )}
             </div>
             <h2 className="text-lg font-bold text-zinc-900 mb-2">{article.title}</h2>
             <p className="text-sm text-zinc-500 line-clamp-2">{article.description}</p>
