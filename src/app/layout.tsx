@@ -74,6 +74,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <Link href="/blog" className="text-zinc-500 hover:text-zinc-900 transition-colors">
                 ブログ
               </Link>
+              <Link href="/site-map" className="text-zinc-500 hover:text-zinc-900 transition-colors">
+                サイトマップ
+              </Link>
             </nav>
           </div>
         </header>

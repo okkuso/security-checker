@@ -75,7 +75,12 @@ export default function BlogPage() {
       </div>
 
       <section className="mb-10">
-        <h2 className="text-lg font-semibold text-zinc-900 mb-4">注目の比較記事</h2>
+        <div className="flex items-center justify-between mb-4">
+          <h2 className="text-lg font-semibold text-zinc-900">注目の比較記事</h2>
+          <Link href="/site-map" className="text-sm text-zinc-400 hover:text-zinc-600 transition-colors">
+            HTMLサイトマップ →
+          </Link>
+        </div>
         <div className="grid gap-4 sm:grid-cols-3">
           {featuredArticles.map((article) => (
             <Link

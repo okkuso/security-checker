@@ -159,8 +159,29 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="mt-16 rounded-2xl border border-zinc-200 bg-zinc-50 p-6">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <h2 className="text-lg font-semibold text-zinc-900">🗺️ 記事をまとめてたどる</h2>
+            <p className="text-sm text-zinc-500 mt-1">
+              比較記事・基礎解説・企業分析を一覧できるHTMLサイトマップを追加しました。
+            </p>
+          </div>
+          <Link
+            href="/site-map"
+            className="inline-flex items-center justify-center rounded-xl bg-zinc-900 px-5 py-3 text-sm font-bold text-white hover:bg-zinc-800 transition-colors"
+          >
+            サイトマップを見る →
+          </Link>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="text-center text-zinc-400 text-xs mt-16 pt-6 border-t border-zinc-200">
+        <div className="flex items-center justify-center gap-4 mb-3 text-sm">
+          <Link href="/blog" className="hover:text-zinc-600 transition-colors">ブログ</Link>
+          <Link href="/site-map" className="hover:text-zinc-600 transition-colors">サイトマップ</Link>
+        </div>
         本チェックは公開情報に基づくセキュリティ設定の確認であり、Webサイトの安全性を保証・否定するものではありません。
       </footer>
     </main>
