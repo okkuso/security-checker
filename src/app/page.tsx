@@ -131,6 +131,35 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="mt-16 rounded-2xl border border-zinc-200 bg-zinc-50 p-6">
+        <div className="flex items-center justify-between mb-4 gap-3">
+          <div>
+            <h2 className="text-lg font-semibold text-zinc-900">🧭 まず読む基礎解説</h2>
+            <p className="text-sm text-zinc-500 mt-1">
+              HTTPS・DMARC・SPF・CSP・HSTS の基礎記事へ、トップページから直接たどれる導線を追加しています。
+            </p>
+          </div>
+          <Link href="/blog" className="text-sm text-zinc-400 hover:text-zinc-600 transition-colors whitespace-nowrap">
+            ブログ一覧 →
+          </Link>
+        </div>
+        <div className="flex flex-wrap gap-2">
+          {["what-is-https", "what-is-dmarc", "what-is-spf", "what-is-csp", "what-is-hsts"].map((slug) => {
+            const article = articles.find((a) => a.slug === slug);
+            if (!article) return null;
+            return (
+              <Link
+                key={article.slug}
+                href={`/blog/${article.slug}`}
+                className="px-3 py-1.5 rounded-full border border-zinc-200 bg-white text-sm text-zinc-700 hover:border-zinc-300 hover:bg-zinc-100 transition-colors"
+              >
+                {article.title}
+              </Link>
+            );
+          })}
+        </div>
+      </section>
+
       {/* Blog */}
       <section className="mt-16">
         <div className="flex items-center justify-between mb-4">
