@@ -25,16 +25,25 @@ const cta = `
 export const articles: Article[] = [
   {
     slug: "what-is-https",
-    title: "httpsとは？意味・HTTPとの違い・設定方法を初心者向けに3分解説【2026年版】",
-    description: "httpsとは何か（意味）を初心者向けに解説。HTTPとの違い、SSL/TLS証明書の設定手順、SEO効果、未対応リスクを3分で理解できる入門ガイド。",
+    title: "httpsとは？SEOに効果ある？意味・HTTPとの違い・設定方法を初心者向けに3分解説【2026年版】",
+    description: "httpsはSEOに効果あるのか、意味・HTTPとの違い・SSL/TLS証明書の設定手順・未対応リスクまで初心者向けに3分で解説する入門ガイド。",
     publishedAt: "2025-02-15",
-    updatedAt: "2026-03-13",
+    updatedAt: "2026-03-29",
     category: "Web基礎",
     tags: ["HTTPS", "SSL", "TLS", "暗号化", "SEO"],
     content: `
 <h2>HTTPSとは？3分でわかる基礎知識</h2>
 <p>HTTPSとは、Webサイトとブラウザ間の通信を<strong>暗号化して安全にする仕組み</strong>です。URLの先頭が<code>https://</code>で始まるサイトは、この仕組みが導入されています。</p>
 <p>2026年現在、<strong>Webサイト全体の約95%</strong>がHTTPS化されており、もはや「導入するかどうか」ではなく「導入していないと問題」という状況です。</p>
+
+<h2>HTTPSはSEOに効果ある？先に結論</h2>
+<p>結論から言うと、<strong>HTTPSはSEOにとってプラス</strong>です。ただし「HTTPSにしただけで一気に上がる」わけではなく、Googleが評価する<strong>信頼性・安全性・ユーザー体験</strong>を底上げする基礎施策と考えるのが正確です。</p>
+<ul>
+  <li><strong>検索順位の軽い追い風</strong>：GoogleはHTTPSをランキングシグナルとして扱っています</li>
+  <li><strong>離脱率の改善</strong>：ブラウザ警告が減るため、ユーザーが安心して閲覧しやすくなります</li>
+  <li><strong>CVRにも波及</strong>：問い合わせや購入前の不安を減らしやすくなります</li>
+</ul>
+<p>つまり、<strong>SEOのためにHTTPS化する価値は十分ある</strong>ものの、本質は「安全性の向上が結果的にSEOにも効く」という理解が近いです。</p>
 
 <h2>HTTPとHTTPSの違い｜図解で理解</h2>
 <p>HTTPは「HyperText Transfer Protocol」の略で、ブラウザとサーバー間でデータをやり取りするためのルール（通信規約）です。HTTPSはこのHTTPに<strong>暗号化の仕組み（SSL/TLS）</strong>を追加したものです。</p>
