@@ -25,12 +25,26 @@ const cta = `
 export const articles: Article[] = [
   {
     slug: "what-is-https",
-    title: "httpsとは？SEOに効果ある？意味・HTTPとの違い・設定方法を初心者向けに3分解説【2026年版】",
-    description: "httpsはSEOに効果あるのか、意味・HTTPとの違い・SSL/TLS証明書の設定手順・未対応リスクまで初心者向けに3分で解説する入門ガイド。",
+    title: "HTTPSはSEOに効果ある？httpsとは何か・HTTPとの違い・設定方法を初心者向けに3分解説【2026年版】",
+    description: "HTTPSはSEOに効果あるのか、httpsとは何か、HTTPとの違い、SSL/TLS証明書の設定手順、未対応リスクまで初心者向けに3分で解説する入門ガイド。",
     publishedAt: "2025-02-15",
-    updatedAt: "2026-03-29",
+    updatedAt: "2026-03-30",
     category: "Web基礎",
     tags: ["HTTPS", "SSL", "TLS", "暗号化", "SEO"],
+    faq: [
+      {
+        question: "HTTPSはSEOに効果がありますか？",
+        answer: "あります。GoogleはHTTPSをランキングシグナルのひとつとして扱っており、ブラウザ警告の回避や信頼性向上も含めてSEOにプラスです。ただしHTTPS化だけで大きく順位が上がるわけではなく、技術SEOの土台として考えるのが適切です。",
+      },
+      {
+        question: "HTTPとHTTPSの違いは何ですか？",
+        answer: "HTTPは暗号化なし、HTTPSはSSL/TLSによって通信が暗号化された状態です。HTTPSでは盗聴・改ざん・なりすましのリスクを下げられます。",
+      },
+      {
+        question: "HTTPS化したあとに確認すべき設定は何ですか？",
+        answer: "HTTPからHTTPSへの301リダイレクト、混合コンテンツの解消、HSTSの設定、証明書の自動更新、Search Consoleやサイトマップの再確認が重要です。",
+      },
+    ],
     content: `
 <h2>HTTPSとは？3分でわかる基礎知識</h2>
 <p>HTTPSとは、Webサイトとブラウザ間の通信を<strong>暗号化して安全にする仕組み</strong>です。URLの先頭が<code>https://</code>で始まるサイトは、この仕組みが導入されています。</p>
