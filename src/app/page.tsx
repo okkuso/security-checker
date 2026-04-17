@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import Script from "next/script";
 import rankingsData from "@/data/rankings.json";
 import { articles } from "@/content/articles";
 
@@ -25,6 +26,34 @@ function rankBadge(rank: number) {
   return `${rank}`;
 }
 
+const faqItems = [
+  {
+    question: "サイトのセキュリティチェックでは何がわかりますか？",
+    answer: "HTTPS、HSTS、CSP、X-Frame-Options、SPF、DMARCなど公開情報から確認できる主要設定の有無をまとめて確認できます。",
+  },
+  {
+    question: "無料で何回でも診断できますか？",
+    answer: "はい。URLを入力するだけで無料で診断できます。営業不要の簡易チェック用途でも使えます。",
+  },
+  {
+    question: "脆弱性診断とは違いますか？",
+    answer: "違います。このサイトは公開設定の見える範囲を確認する簡易診断です。アプリ内部の脆弱性診断やペネトレーションテストの代替ではありません。",
+  },
+];
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.answer,
+    },
+  })),
+};
+
 export default function Home() {
   const [url, setUrl] = useState("");
   const router = useRouter();
@@ -37,6 +66,12 @@ export default function Home() {
 
   return (
     <main className="max-w-3xl mx-auto px-4 py-16">
+      <Script
+        id="home-faq-jsonld"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+
       {/* Hero */}
       <section className="text-center mb-20">
         <p className="text-sm font-medium text-zinc-400 tracking-widest uppercase mb-4">Web Security Settings Check</p>
@@ -63,6 +98,20 @@ export default function Home() {
             診断する
           </button>
         </form>
+      </section>
+
+      <section className="mt-12 rounded-2xl border border-zinc-200 bg-zinc-50 p-6">
+        <h2 className="text-lg font-semibold text-zinc-900 mb-3">このサイトでできるセキュリティチェック</h2>
+        <p className="text-zinc-600 mb-4">
+          このWebセキュリティチェックサイトでは、URLを入れるだけで <strong>HTTPS・HSTS・CSP・SPF・DMARC</strong> などの設定漏れをすばやく確認できます。
+          「まず公開情報ベースで現状を把握したい」という用途に向いた無料診断ツールです。
+        </p>
+        <ul className="grid gap-3 sm:grid-cols-2 text-sm text-zinc-600">
+          <li className="rounded-xl border border-zinc-200 bg-white p-4">HTTPSと証明書の有無を確認</li>
+          <li className="rounded-xl border border-zinc-200 bg-white p-4">HSTSやCSPなど主要ヘッダーを確認</li>
+          <li className="rounded-xl border border-zinc-200 bg-white p-4">SPF・DMARCなどメール認証設定を確認</li>
+          <li className="rounded-xl border border-zinc-200 bg-white p-4">主要企業ランキングと比較記事も読める</li>
+        </ul>
       </section>
 
       {/* Ranking */}
@@ -202,6 +251,18 @@ export default function Home() {
           >
             サイトマップを見る →
           </Link>
+        </div>
+      </section>
+
+      <section className="mt-16">
+        <h2 className="text-lg font-semibold text-zinc-900 mb-4">よくある質問</h2>
+        <div className="space-y-3">
+          {faqItems.map((item) => (
+            <div key={item.question} className="rounded-xl border border-zinc-200 bg-white p-5">
+              <h3 className="font-bold text-zinc-900 mb-2">{item.question}</h3>
+              <p className="text-sm text-zinc-600 leading-6">{item.answer}</p>
+            </div>
+          ))}
         </div>
       </section>
 

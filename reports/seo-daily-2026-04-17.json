@@ -1,0 +1,101 @@
+{
+  "generatedAt": "2026-04-17T00:06:02.000Z",
+  "siteUrl": "sc-domain:security-check-site.net",
+  "startDate": "2026-04-10",
+  "endDate": "2026-04-16",
+  "summary": {
+    "rows": [
+      {
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 27
+      }
+    ],
+    "responseAggregationType": "byProperty"
+  },
+  "byPage": {
+    "rows": [
+      {
+        "keys": [
+          "https://security-check-site.net/"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 27
+      }
+    ],
+    "responseAggregationType": "byPage"
+  },
+  "byQuery": {
+    "responseAggregationType": "byProperty"
+  },
+  "byDate": {
+    "rows": [
+      {
+        "keys": [
+          "2026-04-10"
+        ],
+        "clicks": 0,
+        "impressions": 0,
+        "ctr": 0,
+        "position": 0
+      },
+      {
+        "keys": [
+          "2026-04-11"
+        ],
+        "clicks": 0,
+        "impressions": 0,
+        "ctr": 0,
+        "position": 0
+      },
+      {
+        "keys": [
+          "2026-04-12"
+        ],
+        "clicks": 0,
+        "impressions": 0,
+        "ctr": 0,
+        "position": 0
+      },
+      {
+        "keys": [
+          "2026-04-13"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 27
+      },
+      {
+        "keys": [
+          "2026-04-14"
+        ],
+        "clicks": 0,
+        "impressions": 0,
+        "ctr": 0,
+        "position": 0
+      }
+    ],
+    "responseAggregationType": "byProperty"
+  },
+  "sitemap": {
+    "path": "https://security-check-site.net/sitemap.xml",
+    "lastSubmitted": "2026-02-18T13:14:02.556Z",
+    "isPending": false,
+    "isSitemapsIndex": false,
+    "type": "sitemap",
+    "lastDownloaded": "2026-04-06T22:44:37.096Z",
+    "warnings": "0",
+    "errors": "0",
+    "contents": [
+      {
+        "type": "web",
+        "submitted": "63",
+        "indexed": "0"
+      }
+    ]
+  }
+}
