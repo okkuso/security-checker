@@ -54,6 +54,55 @@ const faqJsonLd = {
   })),
 };
 
+const howToJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  name: "サイトのセキュリティチェックを無料で行う方法",
+  description: "URLを入力するだけで、HTTPS・HSTS・CSP・SPF・DMARCなどの公開設定を無料診断する手順です。",
+  totalTime: "PT2M",
+  step: [
+    {
+      "@type": "HowToStep",
+      name: "URLを入力する",
+      text: "チェックしたいWebサイトのURLを入力します。",
+    },
+    {
+      "@type": "HowToStep",
+      name: "診断結果を確認する",
+      text: "HTTPS、HSTS、CSP、SPF、DMARCなど主要設定の有無を確認します。",
+    },
+    {
+      "@type": "HowToStep",
+      name: "関連記事で改善方法を学ぶ",
+      text: "設定漏れがあれば、HTTPS・DMARC・SPF・CSP・HSTSの解説記事から対応方法を確認します。",
+    },
+  ],
+};
+
+const webApplicationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  name: "Webセキュリティ設定チェッカー",
+  applicationCategory: "SecurityApplication",
+  operatingSystem: "Web",
+  isAccessibleForFree: true,
+  description: "URLを入力するだけで、サイトのセキュリティ設定を無料診断できるWebツールです。HTTPS・HSTS・CSP・SPF・DMARCなど10項目を確認できます。",
+  featureList: [
+    "HTTPSチェック",
+    "HSTSチェック",
+    "CSPチェック",
+    "SPFチェック",
+    "DMARCチェック",
+    "ランキング比較",
+  ],
+  offers: {
+    "@type": "Offer",
+    price: "0",
+    priceCurrency: "JPY",
+  },
+  url: "https://security-check-site.net",
+};
+
 export default function Home() {
   const [url, setUrl] = useState("");
   const router = useRouter();
@@ -71,6 +120,16 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
+      <Script
+        id="home-howto-jsonld"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToJsonLd) }}
+      />
+      <Script
+        id="home-webapp-jsonld"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webApplicationJsonLd) }}
+      />
 
       {/* Hero */}
       <section className="text-center mb-20">
@@ -79,9 +138,15 @@ export default function Home() {
           あなたのサイト、<br />
           <span className="text-red-500">丸見え</span>かも。
         </h1>
-        <p className="text-zinc-500 text-lg mb-10 max-w-lg mx-auto">
-          URLを入力するだけで、公開情報からセキュリティ設定をスコアリング。設定漏れを見逃していませんか？
+        <p className="text-zinc-500 text-lg mb-6 max-w-2xl mx-auto">
+          URLを入力するだけで、公開情報からサイトのセキュリティ設定を無料チェック。HTTPS、HSTS、CSP、SPF、DMARCなどの設定漏れを2分で確認できます。
         </p>
+        <div className="flex flex-wrap items-center justify-center gap-2 mb-10 text-sm text-zinc-500">
+          <span className="rounded-full border border-zinc-200 bg-white px-3 py-1">無料</span>
+          <span className="rounded-full border border-zinc-200 bg-white px-3 py-1">登録不要</span>
+          <span className="rounded-full border border-zinc-200 bg-white px-3 py-1">URL入力だけ</span>
+          <span className="rounded-full border border-zinc-200 bg-white px-3 py-1">主要10項目を確認</span>
+        </div>
 
         <form onSubmit={handleSubmit} className="flex gap-2 max-w-xl mx-auto">
           <input
@@ -101,6 +166,12 @@ export default function Home() {
       </section>
 
       <section className="mt-12 rounded-2xl border border-zinc-200 bg-zinc-50 p-6">
+        <h2 className="text-lg font-semibold text-zinc-900 mb-3">サイトのセキュリティチェックは3ステップ</h2>
+        <ol className="grid gap-3 sm:grid-cols-3 text-sm text-zinc-600 mb-6">
+          <li className="rounded-xl border border-zinc-200 bg-white p-4"><strong className="block text-zinc-900 mb-1">1. URLを入力</strong>調べたいサイトをそのまま貼り付けます。</li>
+          <li className="rounded-xl border border-zinc-200 bg-white p-4"><strong className="block text-zinc-900 mb-1">2. 設定状況を確認</strong>HTTPSやセキュリティヘッダー、メール認証をまとめて見ます。</li>
+          <li className="rounded-xl border border-zinc-200 bg-white p-4"><strong className="block text-zinc-900 mb-1">3. 改善方法を読む</strong>不足があれば関連記事から設定手順を追えます。</li>
+        </ol>
         <h2 className="text-lg font-semibold text-zinc-900 mb-3">このサイトでできるセキュリティチェック</h2>
         <p className="text-zinc-600 mb-4">
           このWebセキュリティチェックサイトでは、URLを入れるだけで <strong>HTTPS・HSTS・CSP・SPF・DMARC</strong> などの設定漏れをすばやく確認できます。
