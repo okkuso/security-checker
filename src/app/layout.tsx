@@ -5,12 +5,12 @@ import "./globals.css";
 
 const siteName = "Webセキュリティ設定チェッカー";
 const siteUrl = "https://security-check-site.net";
-const siteDescription = "URLを入力するだけでサイトのセキュリティ設定を無料チェック。HTTPS・HSTS・CSP・SPF・DMARCなど10項目を診断できるWebセキュリティチェックサイトです。";
+const siteDescription = "URLを入力するだけでサイトのセキュリティ設定を無料診断。登録不要で HTTPS・HSTS・CSP・SPF・DMARC など10項目をチェックできるWebセキュリティチェックサイトです。";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "サイトのセキュリティチェックを無料診断, HTTPS・DMARC・CSP確認 | Webセキュリティ設定チェッカー",
+    default: "サイトのセキュリティ設定を無料診断, 登録不要で10項目チェック | Webセキュリティ設定チェッカー",
     template: `%s | ${siteName}`,
   },
   description: siteDescription,
@@ -19,13 +19,13 @@ export const metadata: Metadata = {
     locale: "ja_JP",
     url: siteUrl,
     siteName,
-    title: "サイトのセキュリティチェックを無料診断 | Webセキュリティ設定チェッカー",
+    title: "サイトのセキュリティ設定を無料診断, 登録不要で10項目チェック | Webセキュリティ設定チェッカー",
     description: siteDescription,
     images: [{ url: `${siteUrl}/api/og`, width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "サイトのセキュリティチェックを無料診断 | Webセキュリティ設定チェッカー",
+    title: "サイトのセキュリティ設定を無料診断, 登録不要で10項目チェック | Webセキュリティ設定チェッカー",
     description: siteDescription,
     images: [`${siteUrl}/api/og`],
   },

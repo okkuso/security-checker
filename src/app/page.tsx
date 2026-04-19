@@ -41,6 +41,19 @@ const faqItems = [
   },
 ];
 
+const checkItems = [
+  "HTTPS対応",
+  "SSL証明書の有効性",
+  "HSTS",
+  "CSP",
+  "X-Content-Type-Options",
+  "X-Frame-Options",
+  "Referrer-Policy",
+  "Permissions-Policy",
+  "SPFレコード",
+  "DMARCレコード",
+];
+
 const faqJsonLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -103,6 +116,17 @@ const webApplicationJsonLd = {
   url: "https://security-check-site.net",
 };
 
+const itemListJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "サイトのセキュリティチェック10項目",
+  itemListElement: checkItems.map((item, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    name: item,
+  })),
+};
+
 export default function Home() {
   const [url, setUrl] = useState("");
   const router = useRouter();
@@ -130,16 +154,21 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webApplicationJsonLd) }}
       />
+      <Script
+        id="home-check-itemlist-jsonld"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }}
+      />
 
       {/* Hero */}
       <section className="text-center mb-20">
         <p className="text-sm font-medium text-zinc-400 tracking-widest uppercase mb-4">Web Security Settings Check</p>
         <h1 className="text-4xl sm:text-5xl font-bold mb-4 text-zinc-900">
-          あなたのサイト、<br />
-          <span className="text-red-500">丸見え</span>かも。
+          サイトのセキュリティ設定を<br />
+          <span className="text-red-500">無料診断</span>
         </h1>
         <p className="text-zinc-500 text-lg mb-6 max-w-2xl mx-auto">
-          URLを入力するだけで、公開情報からサイトのセキュリティ設定を無料チェック。HTTPS、HSTS、CSP、SPF、DMARCなどの設定漏れを2分で確認できます。
+          URLを入力するだけで、公開情報からサイトのセキュリティ設定を無料チェック。HTTPS、HSTS、CSP、SPF、DMARCなど10項目の設定漏れを2分で確認できます。
         </p>
         <div className="flex flex-wrap items-center justify-center gap-2 mb-10 text-sm text-zinc-500">
           <span className="rounded-full border border-zinc-200 bg-white px-3 py-1">無料</span>
@@ -183,6 +212,23 @@ export default function Home() {
           <li className="rounded-xl border border-zinc-200 bg-white p-4">SPF・DMARCなどメール認証設定を確認</li>
           <li className="rounded-xl border border-zinc-200 bg-white p-4">主要企業ランキングと比較記事も読める</li>
         </ul>
+      </section>
+
+      <section className="mt-10 rounded-2xl border border-zinc-200 bg-white p-6">
+        <div className="flex items-center justify-between gap-3 mb-4">
+          <div>
+            <h2 className="text-lg font-semibold text-zinc-900">✅ このツールで確認できる10項目</h2>
+            <p className="text-sm text-zinc-500 mt-1">ホームだけで確認できる内容を、検索ユーザーにもそのまま伝わるよう一覧化しました。</p>
+          </div>
+          <span className="text-xs text-zinc-400 whitespace-nowrap">無料・登録不要</span>
+        </div>
+        <div className="grid gap-3 sm:grid-cols-2 text-sm text-zinc-600">
+          {checkItems.map((item) => (
+            <div key={item} className="rounded-xl border border-zinc-200 bg-zinc-50 px-4 py-3">
+              {item}
+            </div>
+          ))}
+        </div>
       </section>
 
       {/* Ranking */}
