@@ -1,0 +1,64 @@
+{
+  "date": "2026-04-20",
+  "period": {
+    "startDate": "2026-04-12",
+    "endDate": "2026-04-18"
+  },
+  "siteUrl": "sc-domain:security-check-site.net",
+  "summary": {
+    "indexed": 0,
+    "submitted": 63,
+    "impressions": 2,
+    "clicks": 0,
+    "ctr": 0,
+    "position": 27,
+    "sitemapLastDownloaded": "2026-04-06T22:44:37.096Z"
+  },
+  "pages": [
+    {
+      "page": "https://security-check-site.net/",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 27
+    }
+  ],
+  "queries": [],
+  "comparison": {
+    "vsPrevious": {
+      "impressions": 0,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 0,
+      "indexed": 0,
+      "submitted": 0,
+      "sitemapLastDownloadedChanged": false
+    },
+    "notes": [
+      "前日と同じくホームページのみ露出",
+      "Search Consoleのクエリ返却なし",
+      "sitemap submitted 63 / indexed 0、最終取得も更新なし"
+    ]
+  },
+  "actions": [
+    {
+      "type": "metadata",
+      "file": "src/app/layout.tsx",
+      "details": "title/description/OG/Twitterに SSL証明書・HTTPS・DMARC を追加し、ホーム露出時のクエリ適合幅を拡張"
+    },
+    {
+      "type": "homepage-copy",
+      "file": "src/app/page.tsx",
+      "details": "ヒーロー本文とFAQに SSLチェック / セキュリティヘッダーチェック / DMARC確認 の同義語を追加"
+    },
+    {
+      "type": "homepage-content",
+      "file": "src/app/page.tsx",
+      "details": "『こんな検索意図に近い人向けです』セクションを追加し、SSLチェックなどの需要語を明示"
+    }
+  ],
+  "build": {
+    "command": "npx next build",
+    "status": "success"
+  }
+}

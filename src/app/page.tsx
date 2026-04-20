@@ -29,7 +29,11 @@ function rankBadge(rank: number) {
 const faqItems = [
   {
     question: "サイトのセキュリティチェックでは何がわかりますか？",
-    answer: "HTTPS、HSTS、CSP、X-Frame-Options、SPF、DMARCなど公開情報から確認できる主要設定の有無をまとめて確認できます。",
+    answer: "HTTPS、SSL証明書、HSTS、CSP、X-Frame-Options、SPF、DMARCなど公開情報から確認できる主要設定の有無をまとめて確認できます。",
+  },
+  {
+    question: "SSLチェックやセキュリティヘッダーチェックにも使えますか？",
+    answer: "はい。HTTPSとSSL証明書の状態、HSTSやCSPなどのセキュリティヘッダー、SPF・DMARCのメール認証設定をまとめて確認できます。",
   },
   {
     question: "無料で何回でも診断できますか？",
@@ -99,9 +103,11 @@ const webApplicationJsonLd = {
   applicationCategory: "SecurityApplication",
   operatingSystem: "Web",
   isAccessibleForFree: true,
-  description: "URLを入力するだけで、サイトのセキュリティ設定を無料診断できるWebツールです。HTTPS・HSTS・CSP・SPF・DMARCなど10項目を確認できます。",
+  description: "URLを入力するだけで、サイトのセキュリティ設定を無料診断できるWebツールです。HTTPS・SSL証明書・HSTS・CSP・SPF・DMARCなど10項目を確認できます。",
   featureList: [
     "HTTPSチェック",
+    "SSL証明書チェック",
+    "セキュリティヘッダーチェック",
     "HSTSチェック",
     "CSPチェック",
     "SPFチェック",
@@ -167,8 +173,11 @@ export default function Home() {
           サイトのセキュリティ設定を<br />
           <span className="text-red-500">無料診断</span>
         </h1>
-        <p className="text-zinc-500 text-lg mb-6 max-w-2xl mx-auto">
-          URLを入力するだけで、公開情報からサイトのセキュリティ設定を無料チェック。HTTPS、HSTS、CSP、SPF、DMARCなど10項目の設定漏れを2分で確認できます。
+        <p className="text-zinc-500 text-lg mb-3 max-w-2xl mx-auto">
+          URLを入力するだけで、公開情報からサイトのセキュリティ設定を無料チェック。HTTPS、SSL証明書、HSTS、CSP、SPF、DMARCなど10項目の設定漏れを2分で確認できます。
+        </p>
+        <p className="text-sm text-zinc-400 mb-6 max-w-2xl mx-auto">
+          「SSLチェックをしたい」「セキュリティヘッダーを確認したい」「DMARC設定を見たい」ときの入口として使える無料ツールです。
         </p>
         <div className="flex flex-wrap items-center justify-center gap-2 mb-10 text-sm text-zinc-500">
           <span className="rounded-full border border-zinc-200 bg-white px-3 py-1">無料</span>
@@ -215,6 +224,22 @@ export default function Home() {
       </section>
 
       <section className="mt-10 rounded-2xl border border-zinc-200 bg-white p-6">
+        <div className="mb-5 rounded-2xl border border-dashed border-zinc-200 bg-zinc-50 p-4">
+          <h2 className="text-base font-semibold text-zinc-900 mb-2">こんな検索意図に近い人向けです</h2>
+          <div className="flex flex-wrap gap-2 text-sm text-zinc-600">
+            {[
+              "サイト セキュリティチェック",
+              "SSLチェック",
+              "HTTPS確認",
+              "セキュリティヘッダーチェック",
+              "DMARC確認",
+            ].map((keyword) => (
+              <span key={keyword} className="rounded-full border border-zinc-200 bg-white px-3 py-1">
+                {keyword}
+              </span>
+            ))}
+          </div>
+        </div>
         <div className="flex items-center justify-between gap-3 mb-4">
           <div>
             <h2 className="text-lg font-semibold text-zinc-900">✅ このツールで確認できる10項目</h2>
