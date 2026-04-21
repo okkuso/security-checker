@@ -19,8 +19,8 @@ export const metadata: Metadata = {
   },
 };
 
-const featuredSlugs = ["compare-saas", "compare-telecom", "compare-automobile", "what-is-https"];
-const foundationalSlugs = ["what-is-https", "what-is-hsts", "what-is-csp", "what-is-spf", "what-is-dmarc"];
+const featuredSlugs = ["site-security-check-guide", "compare-saas", "compare-telecom", "what-is-https"];
+const foundationalSlugs = ["site-security-check-guide", "what-is-https", "what-is-hsts", "what-is-csp", "what-is-spf", "what-is-dmarc"];
 
 const featuredArticles = featuredSlugs
   .map((slug) => articles.find((article) => article.slug === slug))

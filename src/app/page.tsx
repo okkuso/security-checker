@@ -335,7 +335,7 @@ export default function Home() {
           </Link>
         </div>
         <div className="flex flex-wrap gap-2">
-          {["what-is-https", "what-is-dmarc", "what-is-spf", "what-is-csp", "what-is-hsts"].map((slug) => {
+          {["site-security-check-guide", "what-is-https", "what-is-dmarc", "what-is-spf", "what-is-csp", "what-is-hsts"].map((slug) => {
             const article = articles.find((a) => a.slug === slug);
             if (!article) return null;
             return (

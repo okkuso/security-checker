@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 };
 
 const featuredSlugs = ["compare-saas", "compare-telecom", "compare-automobile"];
-const foundationSlugs = ["what-is-https", "what-is-dmarc", "what-is-spf", "what-is-csp", "what-is-hsts"];
+const foundationSlugs = ["site-security-check-guide", "what-is-https", "what-is-dmarc", "what-is-spf", "what-is-csp", "what-is-hsts"];
 
 function getBreadcrumbJsonLd() {
   return {
@@ -107,7 +107,7 @@ export default function BlogPage() {
       <section className="mb-10 rounded-2xl border border-zinc-200 bg-zinc-50 p-6">
         <h2 className="text-lg font-semibold text-zinc-900 mb-3">まず読む基礎解説</h2>
         <p className="text-sm text-zinc-500 mb-4">
-          露出が落ちている比較記事だけでなく、HTTPS・DMARC・SPF・CSP・HSTS の基礎記事もまとめてたどれるようにしました。
+          露出が落ちている比較記事だけでなく、サイトのセキュリティチェック、HTTPS・DMARC・SPF・CSP・HSTS の基礎記事もまとめてたどれるようにしました。
           初学者向けの解説から企業比較記事へ回遊しやすくする導線です。
         </p>
         <div className="flex flex-wrap gap-2">

@@ -1,0 +1,27 @@
+{
+  "generatedAt": "2026-04-21T00:06:39.145Z",
+  "siteUrl": "sc-domain:security-check-site.net",
+  "period": {
+    "startDate": "2026-04-14",
+    "endDate": "2026-04-20"
+  },
+  "summary": {
+    "clicks": 0,
+    "impressions": 0,
+    "ctr": 0,
+    "position": 0
+  },
+  "pages": [],
+  "queries": [],
+  "sitemaps": [
+    {
+      "path": "https://security-check-site.net/sitemap.xml",
+      "submitted": "063",
+      "indexed": "00",
+      "lastDownloaded": "2026-04-06T22:44:37.096Z",
+      "isPending": false,
+      "warnings": "0",
+      "errors": "0"
+    }
+  ]
+}

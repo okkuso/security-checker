@@ -3712,6 +3712,102 @@ ${cta}
 ${cta}
 `
   },
+  {
+    slug: "site-security-check-guide",
+    title: "サイトのセキュリティチェックとは？無料で確認できる10項目と見るべきポイントを解説",
+    description: "サイトのセキュリティチェックで何を見ればよいかを初心者向けに解説。HTTPS、SSL証明書、セキュリティヘッダー、SPF、DMARCの確認ポイントと無料診断の使い方をまとめました。",
+    publishedAt: "2026-04-21",
+    updatedAt: "2026-04-21",
+    category: "Web基礎",
+    tags: ["サイト セキュリティチェック", "SSLチェック", "セキュリティヘッダー", "DMARC", "HTTPS"],
+    content: `
+<h2>サイトのセキュリティチェックとは？</h2>
+<p>サイトのセキュリティチェックとは、<strong>Webサイトが最低限の安全設定をできているか</strong>を確認することです。脆弱性診断のようにアプリ内部まで深く調べるものではなく、まずは公開情報から<strong>設定漏れや初歩的な弱点</strong>を見つける入口として使われます。</p>
+<p>特に「SSLチェックをしたい」「セキュリティヘッダーを見たい」「DMARC設定があるか知りたい」という場面では、公開情報ベースの簡易チェックでも十分に役立ちます。</p>
+
+<h2>まず確認したい10項目</h2>
+<p>当サイトでは、次の10項目をまとめて確認できます。</p>
+<ul>
+  <li><strong>HTTPS対応</strong>：HTTPではなくHTTPSで安全に通信できるか</li>
+  <li><strong>SSL証明書</strong>：証明書が有効か、期限切れでないか</li>
+  <li><strong>HSTS</strong>：HTTPS接続をブラウザに強制できているか</li>
+  <li><strong>CSP</strong>：XSS対策として読み込み元を制御しているか</li>
+  <li><strong>X-Content-Type-Options</strong>：MIME sniffingを防げるか</li>
+  <li><strong>X-Frame-Options</strong>：クリックジャッキング対策があるか</li>
+  <li><strong>Referrer-Policy</strong>：参照元情報を出しすぎていないか</li>
+  <li><strong>Permissions-Policy</strong>：ブラウザ機能の権限を制御しているか</li>
+  <li><strong>SPF</strong>：送信ドメイン認証の基本設定があるか</li>
+  <li><strong>DMARC</strong>：なりすましメール対策の方針を公開しているか</li>
+</ul>
+
+<h2>なぜこのチェックが必要なのか</h2>
+<p>Webサイトは見た目が正常でも、ヘッダーやDNS設定が抜けていることが少なくありません。例えば次のような状態はよくあります。</p>
+<ul>
+  <li>HTTPS化はしているが<strong>HSTSが未設定</strong></li>
+  <li>問い合わせフォームはあるのに<strong>DMARCが未設定</strong></li>
+  <li>WordPressや外部タグを使っていて<strong>CSPが未整備</strong></li>
+  <li>運用担当が変わった影響で<strong>SSL証明書更新漏れ</strong>が起きる</li>
+</ul>
+<p>こうした問題は、事故が起きてから気づくより、定期的に公開設定を見直した方がはるかに低コストです。</p>
+
+<h2>無料の簡易チェックで分かること、分からないこと</h2>
+<p>公開情報ベースの診断で分かるのは、主に<strong>設定の有無</strong>です。一方で、サーバー内部の脆弱性や認証バイパス、アプリの実装不備までは分かりません。</p>
+<ul>
+  <li><strong>分かること</strong>：HTTPS、SSL証明書、主要セキュリティヘッダー、SPF、DMARC</li>
+  <li><strong>分からないこと</strong>：SQLインジェクション、認可不備、管理画面の脆弱性、内部設定ミス</li>
+</ul>
+<p>つまり、無料チェックは<strong>最初の棚卸し</strong>として有効で、その後に必要なら専門的な脆弱性診断へ進むのが現実的です。</p>
+
+<h2>チェック結果で特に見るべきポイント</h2>
+<h3>1. HTTPSとSSL証明書</h3>
+<p>まずは通信の暗号化ができているかを確認します。HTTPS未対応や証明書エラーは、ユーザー離脱だけでなくSEOにも悪影響があります。詳しくは <a href="/blog/what-is-https">HTTPSとは何かの解説</a> も参考になります。</p>
+
+<h3>2. セキュリティヘッダー</h3>
+<p>HSTS、CSP、X-Frame-Options などのヘッダーは、公開サイトの基本防御です。特に<strong>HSTSとCSP</strong>は差が出やすく、企業サイトでも未設定が珍しくありません。</p>
+
+<h3>3. メール認証（SPF / DMARC）</h3>
+<p>コーポレートサイトやサービスサイトでは、ドメインの信頼性を守るためにSPFやDMARCの確認が重要です。DMARC未設定だと、なりすましメール対策が弱い状態になりやすくなります。</p>
+
+<h2>どんな人に向いている？</h2>
+<ul>
+  <li>自社サイトの公開設定をざっと確認したい担当者</li>
+  <li>営業前に見込み客サイトの安全設定を把握したい人</li>
+  <li>制作会社やフリーランスで納品前チェックをしたい人</li>
+  <li>「SSLチェック」「セキュリティヘッダーチェック」をすぐ試したい人</li>
+</ul>
+
+<h2>無料でサイトのセキュリティチェックをする方法</h2>
+<ol>
+  <li>トップページでチェックしたいURLを入力する</li>
+  <li>HTTPS、SSL、ヘッダー、SPF、DMARCの結果を見る</li>
+  <li>不足があれば関連記事から設定方法を確認する</li>
+</ol>
+<p>まずは <a href="/">トップページの無料診断</a> から試してみてください。</p>
+
+<h2>関連記事</h2>
+<ul>
+  <li><a href="/blog/what-is-https">HTTPSとは？SEO効果・設定方法を解説</a></li>
+  <li><a href="/blog/what-is-hsts">HSTSとは？設定しないとどうなる？</a></li>
+  <li><a href="/blog/what-is-csp">CSPとは？XSS対策の基本を解説</a></li>
+  <li><a href="/blog/what-is-dmarc">DMARCとは？なりすましメール対策を解説</a></li>
+</ul>
+${cta}
+`,
+    faq: [
+      {
+        question: "サイトのセキュリティチェックでは何を確認すればいいですか？",
+        answer: "まずは HTTPS、SSL証明書、HSTS、CSP、X-Frame-Options、SPF、DMARC など、公開情報から確認できる基本設定を見ます。",
+      },
+      {
+        question: "無料チェックで脆弱性診断の代わりになりますか？",
+        answer: "代わりにはなりません。無料チェックは設定漏れの把握に向いた入口で、アプリ内部の脆弱性までは分かりません。",
+      },
+      {
+        question: "SSLチェックやDMARC確認もこのサイトでできますか？",
+        answer: "はい。HTTPSとSSL証明書の状態、主要なセキュリティヘッダー、SPF・DMARCの有無をまとめて確認できます。",
+      },
+    ]
+  },
 ];
 
 export function getArticleBySlug(slug: string): Article | undefined {
