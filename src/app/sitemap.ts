@@ -8,6 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "compare-saas": 0.9,
     "compare-telecom": 0.9,
     "compare-automobile": 0.85,
+    "ssl-check-guide": 0.85,
     "what-is-https": 0.85,
     "what-is-dmarc": 0.8,
     "what-is-spf": 0.8,

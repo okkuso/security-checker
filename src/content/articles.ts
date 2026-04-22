@@ -3808,6 +3808,105 @@ ${cta}
       },
     ]
   },
+  {
+    slug: "ssl-check-guide",
+    title: "SSLチェックとは？証明書の確認方法と見るべき7項目を初心者向けに解説",
+    description: "SSLチェックで何を確認すればよいかを初心者向けに解説。SSL証明書の有効期限、HTTPS化、混合コンテンツ、HSTS、セキュリティヘッダーまで、公開情報から見るべき7項目をまとめました。",
+    publishedAt: "2026-04-22",
+    updatedAt: "2026-04-22",
+    category: "Web基礎",
+    tags: ["SSLチェック", "SSL証明書", "HTTPS", "セキュリティヘッダー", "サイト セキュリティチェック"],
+    content: `
+<h2>SSLチェックとは？</h2>
+<p>SSLチェックとは、<strong>Webサイトが暗号化通信を正しく使えているか</strong>を確認することです。最近は厳密にはTLSが主流ですが、一般的には今も「SSLチェック」という呼び方が広く使われています。</p>
+<p>具体的には、<strong>HTTPSで接続できるか、証明書が有効か、期限切れではないか、設定漏れがないか</strong>を見ます。サイト運営者だけでなく、制作会社や営業担当が見込み顧客サイトを確認するときにも役立つ基本チェックです。</p>
+
+<h2>SSLチェックでまず見るべき7項目</h2>
+<ol>
+  <li><strong>HTTPSで開けるか</strong></li>
+  <li><strong>SSL証明書の有効期限</strong></li>
+  <li><strong>証明書の発行先ドメインが正しいか</strong></li>
+  <li><strong>HTTPからHTTPSへリダイレクトされるか</strong></li>
+  <li><strong>混合コンテンツがないか</strong></li>
+  <li><strong>HSTSが設定されているか</strong></li>
+  <li><strong>CSPやX-Frame-Optionsなど主要ヘッダーがあるか</strong></li>
+</ol>
+<p>単に「鍵マークが出るか」だけでは不十分で、<strong>周辺設定まで含めて確認</strong>しておくと事故を防ぎやすくなります。</p>
+
+<h2>1. HTTPSで表示されるか</h2>
+<p>最初に確認したいのは、サイトが <code>https://</code> で正常に開けるかです。HTTPしか使えない状態だと、通信内容が暗号化されず、フォーム入力やログイン情報が危険にさらされます。</p>
+<p>詳しい仕組みは <a href="/blog/what-is-https">HTTPSとは何かの解説</a> で補足しています。</p>
+
+<h2>2. SSL証明書の有効期限</h2>
+<p>SSL証明書は期限が切れるとブラウザ警告が出ます。問い合わせフォームや採用ページでも、警告が出た瞬間に信頼を大きく落とします。</p>
+<ul>
+  <li><strong>有効期限切れ</strong>が近づいていないか</li>
+  <li><strong>自動更新設定</strong>が動いているか</li>
+  <li><strong>証明書チェーン</strong>に問題がないか</li>
+</ul>
+
+<h2>3. ドメイン不一致や設定ミス</h2>
+<p>証明書自体が有効でも、<strong>対象ドメインがずれている</strong>とエラーになります。wwwありなし、サブドメイン追加、CDN切り替えのタイミングで起きやすいミスです。</p>
+
+<h2>4. HTTPからHTTPSへリダイレクトされるか</h2>
+<p>HTTPS化していても、HTTP URL がそのまま残っているケースがあります。<strong>301リダイレクト</strong>でHTTPS版へ統一できていないと、SEO上も評価が分散しやすくなります。</p>
+
+<h2>5. 混合コンテンツ</h2>
+<p>ページ自体はHTTPSでも、画像やスクリプトをHTTPで読み込んでいると<strong>混合コンテンツ</strong>になります。ブラウザ警告や機能不全の原因になるため、SSLチェックでは見落とせません。</p>
+
+<h2>6. HSTSまで設定されているか</h2>
+<p>HTTPSに対応していても、HSTSがなければ最初のHTTPアクセス時にリスクが残ります。<a href="/blog/what-is-hsts">HSTSの解説記事</a> もあわせて確認すると、なぜ必要か理解しやすいです。</p>
+
+<h2>7. セキュリティヘッダーも一緒に見る</h2>
+<p>SSLチェックのついでに、HSTSだけでなく <strong>CSP</strong> や <strong>X-Frame-Options</strong> などの基本ヘッダーも見ておくと、公開設定の棚卸しとして効率的です。</p>
+<p>「証明書は入っているが、他の防御が弱い」というサイトは珍しくありません。SSL単体ではなく、<strong>セキュリティ設定全体</strong>として見るのがおすすめです。</p>
+
+<h2>無料のSSLチェックで分かること</h2>
+<ul>
+  <li><strong>分かること</strong>：HTTPS対応、証明書状態、HSTS、主要ヘッダー、SPF、DMARCなど公開設定</li>
+  <li><strong>分からないこと</strong>：アプリ内部の脆弱性、管理画面の認可不備、サーバー内部の設定不備</li>
+</ul>
+<p>まずは公開設定を把握し、その後に必要なら脆弱性診断へ進む流れが現実的です。</p>
+
+<h2>SSLチェックはこんな人に向いている</h2>
+<ul>
+  <li>自社サイトの証明書切れや設定漏れを見たい担当者</li>
+  <li>制作会社で納品前にHTTPS周りを確認したい人</li>
+  <li>営業前に相手サイトのセキュリティ状態をざっと把握したい人</li>
+  <li>「SSL証明書確認」「HTTPSチェック」をすぐ試したい人</li>
+</ul>
+
+<h2>今すぐSSLチェックをする方法</h2>
+<ol>
+  <li><a href="/">トップページの無料診断</a>でURLを入力する</li>
+  <li>HTTPSと証明書、HSTS、主要ヘッダーの有無を見る</li>
+  <li>不足があれば関連記事から設定方法を確認する</li>
+</ol>
+
+<h2>関連記事</h2>
+<ul>
+  <li><a href="/blog/site-security-check-guide">サイトのセキュリティチェックで見るべき10項目</a></li>
+  <li><a href="/blog/what-is-https">HTTPSとは？SEO効果と設定方法を解説</a></li>
+  <li><a href="/blog/what-is-hsts">HSTSとは？設定しないとどうなる？</a></li>
+  <li><a href="/blog/what-is-csp">CSPとは？XSS対策の基本を解説</a></li>
+</ul>
+${cta}
+`,
+    faq: [
+      {
+        question: "SSLチェックでは何を確認すればいいですか？",
+        answer: "HTTPSで開けるか、SSL証明書の有効期限、HTTPからHTTPSへのリダイレクト、混合コンテンツ、HSTSや主要セキュリティヘッダーの有無を確認するのが基本です。",
+      },
+      {
+        question: "SSLチェックとHTTPSチェックは同じですか？",
+        answer: "近いですが完全には同じではありません。HTTPSチェックは暗号化通信の有無を見るのが中心で、SSLチェックは証明書状態や周辺設定まで含めて確認するイメージです。",
+      },
+      {
+        question: "無料のSSLチェックで脆弱性まで分かりますか？",
+        answer: "分かりません。無料チェックは公開設定の確認に向いており、アプリ内部の脆弱性診断やペネトレーションテストの代わりにはなりません。",
+      },
+    ]
+  },
 ];
 
 export function getArticleBySlug(slug: string): Article | undefined {

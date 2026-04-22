@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-04-22T00:10:15.517Z",
+  "siteUrl": "sc-domain:security-check-site.net",
+  "period": {
+    "startDate": "2026-04-15",
+    "endDate": "2026-04-21"
+  },
+  "summary": {
+    "clicks": 0,
+    "impressions": 0,
+    "ctr": 0,
+    "position": 0
+  },
+  "pages": [],
+  "queries": [],
+  "sitemaps": [
+    {
+      "path": "https://security-check-site.net/sitemap.xml",
+      "submitted": "63",
+      "indexed": "0",
+      "lastDownloaded": "2026-04-06T22:44:37.096Z",
+      "isPending": false,
+      "warnings": "0",
+      "errors": "0",
+      "type": "sitemap"
+    }
+  ],
+  "analysis": {
+    "comparedTo": "2026-04-21",
+    "impressionsDelta": 0,
+    "clicksDelta": 0,
+    "ctrDelta": 0,
+    "positionDelta": 0,
+    "indexedDelta": 0,
+    "sitemapLastDownloadedChanged": false,
+    "note": "7日間の露出は引き続き0件。新規にSSLチェック需要を受ける記事を追加し、ホーム・ブログ一覧・HTMLサイトマップから導線強化を実施。"
+  },
+  "actions": [
+    {
+      "type": "new_article",
+      "slug": "ssl-check-guide",
+      "title": "SSLチェックとは？証明書の確認方法と見るべき7項目を初心者向けに解説"
+    },
+    {
+      "type": "internal_links",
+      "targets": [
+        "/",
+        "/blog",
+        "/site-map",
+        "/sitemap.xml"
+      ],
+      "note": "新記事への内部リンクとサイトマップ優先度を追加"
+    }
+  ]
+}
