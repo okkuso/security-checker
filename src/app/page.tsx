@@ -233,6 +233,7 @@ export default function Home() {
               "SSL証明書 確認",
               "HTTPS確認",
               "セキュリティヘッダーチェック",
+              "HTTPヘッダー チェック",
               "DMARC確認",
             ].map((keyword) => (
               <span key={keyword} className="rounded-full border border-zinc-200 bg-white px-3 py-1">
@@ -328,7 +329,7 @@ export default function Home() {
           <div>
             <h2 className="text-lg font-semibold text-zinc-900">🧭 まず読む基礎解説</h2>
             <p className="text-sm text-zinc-500 mt-1">
-              SSLチェック・HTTPS・DMARC・SPF・CSP・HSTS の基礎記事へ、トップページから直接たどれる導線を追加しています。
+              SSLチェック・セキュリティヘッダーチェック・HTTPS・DMARC・SPF・CSP・HSTS の基礎記事へ、トップページから直接たどれる導線を追加しています。
             </p>
           </div>
           <Link href="/blog" className="text-sm text-zinc-400 hover:text-zinc-600 transition-colors whitespace-nowrap">
@@ -336,7 +337,7 @@ export default function Home() {
           </Link>
         </div>
         <div className="flex flex-wrap gap-2">
-          {["site-security-check-guide", "ssl-check-guide", "what-is-https", "what-is-dmarc", "what-is-spf", "what-is-csp", "what-is-hsts"].map((slug) => {
+          {["site-security-check-guide", "ssl-check-guide", "security-header-check-guide", "what-is-https", "what-is-dmarc", "what-is-spf", "what-is-csp", "what-is-hsts"].map((slug) => {
             const article = articles.find((a) => a.slug === slug);
             if (!article) return null;
             return (

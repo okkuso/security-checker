@@ -3813,7 +3813,7 @@ ${cta}
     title: "SSLチェックとは？証明書の確認方法と見るべき7項目を初心者向けに解説",
     description: "SSLチェックで何を確認すればよいかを初心者向けに解説。SSL証明書の有効期限、HTTPS化、混合コンテンツ、HSTS、セキュリティヘッダーまで、公開情報から見るべき7項目をまとめました。",
     publishedAt: "2026-04-22",
-    updatedAt: "2026-04-22",
+    updatedAt: "2026-04-23",
     category: "Web基礎",
     tags: ["SSLチェック", "SSL証明書", "HTTPS", "セキュリティヘッダー", "サイト セキュリティチェック"],
     content: `
@@ -3886,6 +3886,7 @@ ${cta}
 <h2>関連記事</h2>
 <ul>
   <li><a href="/blog/site-security-check-guide">サイトのセキュリティチェックで見るべき10項目</a></li>
+  <li><a href="/blog/security-header-check-guide">セキュリティヘッダーチェックとは？見るべき6項目を解説</a></li>
   <li><a href="/blog/what-is-https">HTTPSとは？SEO効果と設定方法を解説</a></li>
   <li><a href="/blog/what-is-hsts">HSTSとは？設定しないとどうなる？</a></li>
   <li><a href="/blog/what-is-csp">CSPとは？XSS対策の基本を解説</a></li>
@@ -3904,6 +3905,95 @@ ${cta}
       {
         question: "無料のSSLチェックで脆弱性まで分かりますか？",
         answer: "分かりません。無料チェックは公開設定の確認に向いており、アプリ内部の脆弱性診断やペネトレーションテストの代わりにはなりません。",
+      },
+    ]
+  },
+  {
+    slug: "security-header-check-guide",
+    title: "セキュリティヘッダーチェックとは？確認したい6項目と無料で見る方法を解説",
+    description: "セキュリティヘッダーチェックで何を見ればよいかを初心者向けに解説。HSTS、CSP、X-Frame-Options、X-Content-Type-Options、Referrer-Policy、Permissions-Policy の確認ポイントと改善優先度をまとめました。",
+    publishedAt: "2026-04-23",
+    updatedAt: "2026-04-23",
+    category: "Web基礎",
+    tags: ["セキュリティヘッダーチェック", "セキュリティヘッダー", "HSTS", "CSP", "X-Frame-Options"],
+    content: `
+<h2>セキュリティヘッダーチェックとは？</h2>
+<p>セキュリティヘッダーチェックとは、<strong>Webサーバーがブラウザに返している防御用ヘッダー</strong>を確認することです。サイトがHTTPS化されていても、ヘッダー設定が弱いとクリックジャッキングやXSS、情報漏えいのリスクを十分に下げられません。</p>
+<p>特に「セキュリティヘッダーチェックをしたい」「HTTPヘッダーを見たい」「HSTSやCSPが入っているか確認したい」という場面では、公開情報ベースの簡易チェックが役立ちます。</p>
+
+<h2>まず確認したい6項目</h2>
+<ul>
+  <li><strong>HSTS</strong>：ブラウザにHTTPS接続を強制できているか</li>
+  <li><strong>CSP</strong>：読み込み元を制御し、XSS対策の土台があるか</li>
+  <li><strong>X-Frame-Options</strong>：クリックジャッキング対策があるか</li>
+  <li><strong>X-Content-Type-Options</strong>：MIME sniffing を防げるか</li>
+  <li><strong>Referrer-Policy</strong>：参照元情報を必要以上に漏らしていないか</li>
+  <li><strong>Permissions-Policy</strong>：カメラやマイクなどブラウザ機能の権限を制御しているか</li>
+</ul>
+<p>この6項目だけでも、公開サイトの基本防御がどの程度できているかをかなり把握できます。</p>
+
+<h2>1. HSTS</h2>
+<p>HSTS は、ユーザーのブラウザに「今後は必ず HTTPS で接続する」と伝える仕組みです。HTTPS化済みでも HSTS がないと、最初のHTTPアクセス時にリスクが残ることがあります。詳しくは <a href="/blog/what-is-hsts">HSTS の解説記事</a> も参考になります。</p>
+
+<h2>2. CSP</h2>
+<p>CSP は、どこからスクリプトや画像を読み込めるかを制御するヘッダーです。特に XSS 対策の中心になりやすく、運用できているサイトとできていないサイトで差がつきやすい項目です。詳しくは <a href="/blog/what-is-csp">CSP の基礎解説</a> を読むと全体像がつかみやすいです。</p>
+
+<h2>3. X-Frame-Options</h2>
+<p>X-Frame-Options は、外部サイトから iframe に埋め込まれることを制限するヘッダーです。クリックジャッキング対策の基本で、コーポレートサイトでも未設定のまま残っていることがあります。</p>
+
+<h2>4. X-Content-Type-Options</h2>
+<p>X-Content-Type-Options は、ブラウザがファイル種別を勝手に推測する挙動を抑えるためのヘッダーです。地味ですが、誤判定によるリスクを下げる基本設定として重要です。</p>
+
+<h2>5. Referrer-Policy</h2>
+<p>Referrer-Policy がないと、リンク遷移時に不要なURL情報が外部へ渡る場合があります。特にパラメータ付きURLを多用するサイトでは、情報の出しすぎを防ぐ観点で見ておきたい項目です。</p>
+
+<h2>6. Permissions-Policy</h2>
+<p>Permissions-Policy は、カメラ、マイク、位置情報などのブラウザ機能をどこまで使わせるかを制御します。必須度は他より少し下がりますが、不要な権限を閉じる意味で評価ポイントになります。</p>
+
+<h2>セキュリティヘッダーチェックで分かること、分からないこと</h2>
+<ul>
+  <li><strong>分かること</strong>：主要セキュリティヘッダーの有無、公開設定の抜け漏れ、改善優先度の目安</li>
+  <li><strong>分からないこと</strong>：アプリ内部の脆弱性、認可不備、CSRF対策の実装詳細、WAF設定の中身</li>
+</ul>
+<p>つまり、ヘッダーチェックは<strong>防御の土台確認</strong>に向いています。脆弱性診断の代わりではありませんが、まず公開設定を揃える段階では十分有効です。</p>
+
+<h2>どんな順番で改善すべき？</h2>
+<ol>
+  <li><strong>HTTPS + HSTS</strong> を整える</li>
+  <li><strong>X-Frame-Options / X-Content-Type-Options</strong> を入れる</li>
+  <li><strong>CSP</strong> を Report-Only から段階導入する</li>
+  <li><strong>Referrer-Policy / Permissions-Policy</strong> を用途に合わせて詰める</li>
+</ol>
+<p>特に表示0件が続くサイトでは、検索流入改善の前にまず「最低限の技術的信頼性」を明示できる記事や導線を増やすのが合理的です。</p>
+
+<h2>無料でセキュリティヘッダーチェックをする方法</h2>
+<ol>
+  <li><a href="/">トップページの無料診断</a>でURLを入力する</li>
+  <li>HSTS、CSP、X-Frame-Options などの結果を見る</li>
+  <li>不足があれば関連記事から設定方法を確認する</li>
+</ol>
+
+<h2>関連記事</h2>
+<ul>
+  <li><a href="/blog/site-security-check-guide">サイトのセキュリティチェックで見るべき10項目</a></li>
+  <li><a href="/blog/ssl-check-guide">SSLチェックで見るべき7項目</a></li>
+  <li><a href="/blog/what-is-hsts">HSTSとは？設定しないとどうなる？</a></li>
+  <li><a href="/blog/what-is-csp">CSPとは？XSS対策の基本を解説</a></li>
+</ul>
+${cta}
+`,
+    faq: [
+      {
+        question: "セキュリティヘッダーチェックでは何を確認すればいいですか？",
+        answer: "まずは HSTS、CSP、X-Frame-Options、X-Content-Type-Options、Referrer-Policy、Permissions-Policy の6項目を見ると、公開サイトの基本防御を把握しやすいです。",
+      },
+      {
+        question: "CSPが未設定だとすぐ危険ですか？",
+        answer: "すぐに事故が起きるとは限りませんが、XSS対策の土台が弱くなります。まずは Report-Only から導入し、段階的に強化するのが一般的です。",
+      },
+      {
+        question: "無料のヘッダーチェックで脆弱性診断の代わりになりますか？",
+        answer: "代わりにはなりません。無料チェックは公開設定の棚卸し向けで、アプリ内部の脆弱性までは分かりません。",
       },
     ]
   },
