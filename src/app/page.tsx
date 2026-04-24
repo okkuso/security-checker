@@ -235,6 +235,7 @@ export default function Home() {
               "セキュリティヘッダーチェック",
               "HTTPヘッダー チェック",
               "DMARC確認",
+              "DMARCチェック",
             ].map((keyword) => (
               <span key={keyword} className="rounded-full border border-zinc-200 bg-white px-3 py-1">
                 {keyword}
@@ -337,7 +338,7 @@ export default function Home() {
           </Link>
         </div>
         <div className="flex flex-wrap gap-2">
-          {["site-security-check-guide", "ssl-check-guide", "security-header-check-guide", "what-is-https", "what-is-dmarc", "what-is-spf", "what-is-csp", "what-is-hsts"].map((slug) => {
+          {["site-security-check-guide", "ssl-check-guide", "security-header-check-guide", "dmarc-check-guide", "what-is-https", "what-is-dmarc", "what-is-spf", "what-is-csp", "what-is-hsts"].map((slug) => {
             const article = articles.find((a) => a.slug === slug);
             if (!article) return null;
             return (

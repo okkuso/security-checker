@@ -3997,6 +3997,98 @@ ${cta}
       },
     ]
   },
+  {
+    slug: "dmarc-check-guide",
+    title: "DMARC確認とは？レコードの見方とチェックしたい5項目を初心者向けに解説",
+    description: "DMARC確認で何を見ればよいかを初心者向けに解説。DMARCレコードの有無、p=none/quarantine/reject の違い、rua設定、SPF・DKIMとの関係、改善優先度をまとめました。",
+    publishedAt: "2026-04-24",
+    updatedAt: "2026-04-24",
+    category: "メール認証",
+    tags: ["DMARC確認", "DMARCチェック", "DMARC", "メール認証", "なりすまし対策"],
+    content: `
+<h2>DMARC確認とは？</h2>
+<p>DMARC確認とは、<strong>ドメインになりすましメール対策の方針が正しく公開されているか</strong>をチェックすることです。コーポレートサイトや採用サイト、問い合わせフォームのあるサイトでは、公開サイトの安全性だけでなく<strong>メール送信ドメインの信頼性</strong>も重要になります。</p>
+<p>特に「DMARC確認をしたい」「DMARCレコードを見たい」「p=none のままで大丈夫か知りたい」という場面では、まず公開DNSを見て状態を把握するのが第一歩です。</p>
+
+<h2>DMARC確認でまず見たい5項目</h2>
+<ol>
+  <li><strong>DMARCレコードが存在するか</strong></li>
+  <li><strong>ポリシーが p=none / quarantine / reject のどれか</strong></li>
+  <li><strong>rua レポート送信先が設定されているか</strong></li>
+  <li><strong>SPF・DKIMと整合しているか</strong></li>
+  <li><strong>本番運用に合わせて段階的に強化できているか</strong></li>
+</ol>
+<p>この5点を押さえるだけで、DMARC設定の成熟度をかなり把握できます。</p>
+
+<h2>1. DMARCレコードがあるか</h2>
+<p>最初に見るのは、<code>_dmarc.example.com</code> に <strong>TXTレコードが存在するか</strong> です。そもそもレコードがなければ、受信側に「認証失敗メールをどう扱うか」を指示できません。</p>
+<p>詳しい仕組みは <a href="/blog/what-is-dmarc">DMARCとは何かの基礎解説</a> でも確認できます。</p>
+
+<h2>2. p=none のままか、強制ポリシーまで進んでいるか</h2>
+<p>DMARC確認で特に重要なのがポリシーです。</p>
+<ul>
+  <li><strong>p=none</strong>：監視だけ。まずは安全に始める段階</li>
+  <li><strong>p=quarantine</strong>：怪しいメールを迷惑メールへ</li>
+  <li><strong>p=reject</strong>：認証失敗メールを拒否</li>
+</ul>
+<p><strong>DMARCレコードがあっても p=none のまま止まっている</strong>サイトは多く、運用としては「見えているが防げていない」状態になりやすいです。</p>
+
+<h2>3. rua でレポートを受け取れているか</h2>
+<p><code>rua=mailto:...</code> があると、集約レポートを受け取れます。DMARCは設定しただけで終わりではなく、<strong>正規メールが全部通っているか、怪しい送信元がないか</strong> を監視して育てる運用が大切です。</p>
+
+<h2>4. SPF・DKIMとセットで見られているか</h2>
+<p>DMARCは単独では成立しません。<strong>SPF と DKIM のどちらか、できれば両方</strong> が整っていて初めて強く機能します。DMARC確認のついでに、<a href="/blog/what-is-spf">SPFの設定</a> や DKIM の有無も一緒に棚卸ししておくと効率的です。</p>
+
+<h2>5. 段階的に強化できる状態か</h2>
+<p>いきなり <code>p=reject</code> にするのが正解とは限りません。送信サービスが多い会社では、まず <code>p=none</code> で監視し、次に <code>quarantine</code>、最後に <code>reject</code> と進める方が安全です。</p>
+<p>ただし長期間 <code>none</code> のままなら、検索ユーザーの意図としては「DMARC設定済み」と言い切りづらいため、改善余地が残ります。</p>
+
+<h2>無料のDMARC確認で分かること、分からないこと</h2>
+<ul>
+  <li><strong>分かること</strong>：レコード有無、ポリシー、レポート送信先、SPF/DMARCの基本整合</li>
+  <li><strong>分からないこと</strong>：社内の全送信経路、DKIM署名の運用詳細、実際に届かなかったメールの原因すべて</li>
+</ul>
+<p>まずは公開設定の棚卸しとしてDMARC確認を行い、その後にレポート分析や配信経路の整理へ進むのが現実的です。</p>
+
+<h2>こんな人に向いています</h2>
+<ul>
+  <li>自社ドメインのなりすまし対策状況をざっと把握したい人</li>
+  <li>営業前に相手企業のDMARC設定有無を見たい人</li>
+  <li>「DMARC確認」「DMARCチェック」をすぐ試したい担当者</li>
+  <li>SPFはあるがDMARCが整っているか不安な人</li>
+</ul>
+
+<h2>今すぐDMARC確認をする方法</h2>
+<ol>
+  <li><a href="/">トップページの無料診断</a>でドメインを入力する</li>
+  <li>DMARCの有無とポリシー、SPFの有無を確認する</li>
+  <li>不足があれば <a href="/blog/what-is-dmarc">DMARC解説記事</a> で設定手順を確認する</li>
+</ol>
+
+<h2>関連記事</h2>
+<ul>
+  <li><a href="/blog/what-is-dmarc">DMARCとは？設定手順5ステップを解説</a></li>
+  <li><a href="/blog/what-is-spf">SPFレコードとは？書き方と確認方法を解説</a></li>
+  <li><a href="/blog/site-security-check-guide">サイトのセキュリティチェックで見るべき10項目</a></li>
+  <li><a href="/blog/ssl-check-guide">SSLチェックとは？見るべき7項目を解説</a></li>
+</ul>
+${cta}
+`,
+    faq: [
+      {
+        question: "DMARC確認では何を見ればいいですか？",
+        answer: "DMARCレコードの有無、p=none/quarantine/reject のどれか、ruaレポート送信先、SPFやDKIMとの整合をまず確認するのが基本です。",
+      },
+      {
+        question: "p=none でもDMARC設定済みと言えますか？",
+        answer: "設定はされていますが、防御は監視中心です。実運用ではレポートを確認しつつ、最終的に quarantine や reject へ強化するのが理想です。",
+      },
+      {
+        question: "無料のDMARC確認でなりすまし対策は十分ですか？",
+        answer: "十分ではありません。無料確認は公開設定の把握に向いており、実際の配信経路整理やDKIM運用、レポート監視は別途必要です。",
+      },
+    ]
+  },
 ];
 
 export function getArticleBySlug(slug: string): Article | undefined {
