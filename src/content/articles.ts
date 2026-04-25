@@ -4089,6 +4089,95 @@ ${cta}
       },
     ]
   },
+  {
+    slug: "spf-check-guide",
+    title: "SPFチェックとは？確認したいレコードの見方とよくある5つの設定ミス",
+    description: "SPFチェックで見るべきポイントを初心者向けに解説。SPFレコードの有無、includeの増えすぎ、~allと-allの違い、複数レコード、DMARCとの関係をまとめました。",
+    publishedAt: "2026-04-25",
+    updatedAt: "2026-04-25",
+    category: "メール認証",
+    tags: ["SPFチェック", "SPF確認", "SPF", "メール認証", "DNS"],
+    content: `
+<h2>SPFチェックとは？</h2>
+<p>SPFチェックとは、<strong>そのドメインからメール送信を許可しているサーバーが正しくDNSで公開されているか</strong>を確認することです。問い合わせ通知、採用連絡、フォーム自動返信などを使うサイトでは、公開Webだけでなく<strong>送信ドメインの信頼性</strong>も重要になります。</p>
+<p>特に「SPFチェックをしたい」「SPFレコードが合っているか見たい」「メールが迷惑判定される理由を知りたい」というときに、最初の棚卸しとして役立ちます。</p>
+
+<h2>SPFチェックで見たい5項目</h2>
+<ol>
+  <li><strong>SPFレコードが存在するか</strong></li>
+  <li><strong>送信サービスが include に漏れなく入っているか</strong></li>
+  <li><strong>DNSルックアップが増えすぎていないか</strong></li>
+  <li><strong>複数のSPFレコードが混在していないか</strong></li>
+  <li><strong>DMARCやDKIMと合わせて運用できているか</strong></li>
+</ol>
+<p>この5点だけでも、SPFの設定ミスの大半を早い段階で見つけやすくなります。</p>
+
+<h2>1. SPFレコードがあるか</h2>
+<p>まず確認したいのは、ドメイン直下に <code>v=spf1</code> で始まるTXTレコードがあるかです。レコード自体がなければ、受信側は「どの送信元が正規か」を判断しにくくなります。</p>
+<p>基礎から理解したい場合は、<a href="/blog/what-is-spf">SPFレコードの解説記事</a>もあわせて読むと把握しやすいです。</p>
+
+<h2>2. 使っている送信サービスが全部入っているか</h2>
+<p>Google Workspace、Microsoft 365、SendGrid、Mailchimp など、メール送信経路が複数ある場合は <strong>include漏れ</strong> が起きやすいです。SPFチェックでは、実際の送信サービスとレコード内容が一致しているかを見ます。</p>
+
+<h2>3. includeが増えすぎていないか</h2>
+<p>SPFには <strong>DNSルックアップ10回まで</strong> という制限があります。便利だからとincludeを増やしすぎると、正しく書いていても検証失敗になることがあります。</p>
+<p>「レコードはあるのに通らない」というケースでは、この上限超過が原因になっていることが少なくありません。</p>
+
+<h2>4. SPFレコードが複数ないか</h2>
+<p>SPFは <strong>1ドメイン1レコード</strong> が基本です。運用途中でサービス追加を繰り返すと、TXTレコードが複数できてしまい、逆にエラーになることがあります。</p>
+
+<h2>5. DMARC・DKIMと一緒に見られているか</h2>
+<p>SPFだけでは、なりすまし対策として十分とは言えません。<a href="/blog/dmarc-check-guide">DMARC確認</a> や DKIM運用と組み合わせることで、受信側により明確なポリシーを伝えられます。</p>
+<p>そのためSPFチェックは、単独確認というより<strong>メール認証全体の入口</strong>として捉えるのが実務的です。</p>
+
+<h2>よくある設定ミス</h2>
+<ul>
+  <li><strong>include漏れ</strong>で一部サービスのメールだけ落ちる</li>
+  <li><strong>~all のまま長期間放置</strong>している</li>
+  <li><strong>-all にした結果、正規メールまで止まる</strong></li>
+  <li><strong>複数TXTレコード</strong>でSPFが無効化される</li>
+  <li><strong>10ルックアップ超過</strong>で判定に失敗する</li>
+</ul>
+
+<h2>こんな人に向いています</h2>
+<ul>
+  <li>自社ドメインのSPF設定が最低限できているか見たい人</li>
+  <li>フォーム通知メールが届きにくくなった原因を探したい人</li>
+  <li>営業前に相手企業のメール認証状況をざっと見たい人</li>
+  <li>DMARC導入前にSPF側の土台を確認したい人</li>
+</ul>
+
+<h2>今すぐSPFチェックをする方法</h2>
+<ol>
+  <li><a href="/">トップページの無料診断</a>でドメインを入力する</li>
+  <li>SPFレコードの有無と内容を確認する</li>
+  <li>不足があれば <a href="/blog/what-is-spf">SPFの基礎解説</a> や <a href="/blog/dmarc-check-guide">DMARC確認ガイド</a> も確認する</li>
+</ol>
+
+<h2>関連記事</h2>
+<ul>
+  <li><a href="/blog/what-is-spf">SPFレコードとは？書き方・確認方法・よくある5つの設定ミス</a></li>
+  <li><a href="/blog/dmarc-check-guide">DMARC確認とは？見るべき5項目を解説</a></li>
+  <li><a href="/blog/what-is-dmarc">DMARCとは？設定手順5ステップを解説</a></li>
+  <li><a href="/blog/site-security-check-guide">サイトのセキュリティチェックで見るべき10項目</a></li>
+</ul>
+${cta}
+`,
+    faq: [
+      {
+        question: "SPFチェックでは何を見ればいいですか？",
+        answer: "SPFレコードの有無、送信サービスのinclude漏れ、DNSルックアップ10回制限、複数レコードの有無をまず確認するのが基本です。",
+      },
+      {
+        question: "SPFだけ設定すれば十分ですか？",
+        answer: "十分ではありません。実務ではDMARCやDKIMと組み合わせて運用し、なりすまし対策を段階的に強化するのが一般的です。",
+      },
+      {
+        question: "SPFレコードがあるのにメールが届かないのはなぜですか？",
+        answer: "include漏れ、複数レコード、10ルックアップ超過、-all の厳しすぎる設定などが原因になりやすいです。まず公開設定を棚卸しすると切り分けしやすくなります。",
+      },
+    ]
+  },
 ];
 
 export function getArticleBySlug(slug: string): Article | undefined {

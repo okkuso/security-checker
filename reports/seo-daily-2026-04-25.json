@@ -1,0 +1,46 @@
+{
+  "date": "2026-04-25",
+  "siteUrl": "sc-domain:security-check-site.net",
+  "range": {
+    "startDate": "2026-04-18",
+    "endDate": "2026-04-24"
+  },
+  "summary": {
+    "impressions": 0,
+    "clicks": 0,
+    "ctr": 0,
+    "position": 0
+  },
+  "pages": [],
+  "queries": [],
+  "sitemap": {
+    "path": "https://security-check-site.net/sitemap.xml",
+    "submitted": 63,
+    "indexed": 0,
+    "lastSubmitted": "2026-02-18T13:14:02.556Z",
+    "lastDownloaded": "2026-04-06T22:44:37.096Z",
+    "warnings": 0,
+    "errors": 0
+  },
+  "comparison": {
+    "previousLogDate": "2026-04-24",
+    "impressionsDelta": 0,
+    "clicksDelta": 0,
+    "ctrDelta": 0,
+    "positionDelta": 0,
+    "indexedDelta": 0,
+    "lastDownloadedChanged": false
+  },
+  "actions": [
+    {
+      "type": "content_addition",
+      "target": "/blog/spf-check-guide",
+      "reason": "表示ゼロ継続のため、ホームで訴求済みだが専用入口がなかった『SPFチェック』『SPF確認』需要を直接拾う新規記事を追加"
+    },
+    {
+      "type": "internal_linking",
+      "target": ["/", "/blog", "/site-map", "/sitemap.xml"],
+      "reason": "新記事へのクロール導線と重要URLシグナルを即時補強"
+    }
+  ]
+}
