@@ -19,8 +19,8 @@ export const metadata: Metadata = {
   },
 };
 
-const featuredSlugs = ["site-security-check-guide", "ssl-check-guide", "security-header-check-guide", "dmarc-check-guide", "spf-check-guide", "what-is-https"];
-const foundationalSlugs = ["site-security-check-guide", "ssl-check-guide", "security-header-check-guide", "dmarc-check-guide", "spf-check-guide", "what-is-https", "what-is-hsts", "what-is-csp", "what-is-spf", "what-is-dmarc"];
+const featuredSlugs = ["site-security-check-guide", "ssl-check-guide", "security-header-check-guide", "dmarc-check-guide", "spf-check-guide", "dkim-check-guide", "what-is-https"];
+const foundationalSlugs = ["site-security-check-guide", "ssl-check-guide", "security-header-check-guide", "dmarc-check-guide", "spf-check-guide", "dkim-check-guide", "what-is-https", "what-is-hsts", "what-is-csp", "what-is-spf", "what-is-dmarc"];
 
 const featuredArticles = featuredSlugs
   .map((slug) => articles.find((article) => article.slug === slug))
@@ -148,7 +148,7 @@ export default function SiteMapPage() {
 
         <LinkList
           title="基礎解説ガイド"
-          description="SSLチェック・セキュリティヘッダーチェック・DMARC確認・SPFチェック・HTTPS・HSTS・CSP・SPF・DMARCなど、検索意図が明確な基礎解説記事です。"
+          description="SSLチェック・セキュリティヘッダーチェック・DMARC確認・SPFチェック・DKIM確認・HTTPS・HSTS・CSP・SPF・DMARCなど、検索意図が明確な基礎解説記事です。"
           items={foundationalArticles}
         />
 

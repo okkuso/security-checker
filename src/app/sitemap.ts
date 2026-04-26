@@ -11,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "ssl-check-guide": 0.85,
     "security-header-check-guide": 0.85,
     "spf-check-guide": 0.85,
+    "dkim-check-guide": 0.85,
     "what-is-https": 0.85,
     "what-is-dmarc": 0.8,
     "what-is-spf": 0.8,

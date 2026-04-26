@@ -111,6 +111,7 @@ const webApplicationJsonLd = {
     "HSTSチェック",
     "CSPチェック",
     "SPFチェック",
+    "DKIMチェック",
     "DMARCチェック",
     "ランキング比較",
   ],
@@ -177,7 +178,7 @@ export default function Home() {
           URLを入力するだけで、公開情報からサイトのセキュリティ設定を無料チェック。HTTPS、SSL証明書、HSTS、CSP、SPF、DMARCなど10項目の設定漏れを2分で確認できます。
         </p>
         <p className="text-sm text-zinc-400 mb-6 max-w-2xl mx-auto">
-          「SSLチェックをしたい」「セキュリティヘッダーを確認したい」「DMARC設定を見たい」「SPFチェックをしたい」ときの入口として使える無料ツールです。
+          「SSLチェックをしたい」「セキュリティヘッダーを確認したい」「DMARC設定を見たい」「SPFチェックをしたい」「DKIM確認をしたい」ときの入口として使える無料ツールです。
         </p>
         <div className="flex flex-wrap items-center justify-center gap-2 mb-10 text-sm text-zinc-500">
           <span className="rounded-full border border-zinc-200 bg-white px-3 py-1">無料</span>
@@ -218,7 +219,7 @@ export default function Home() {
         <ul className="grid gap-3 sm:grid-cols-2 text-sm text-zinc-600">
           <li className="rounded-xl border border-zinc-200 bg-white p-4">HTTPSと証明書の有無を確認</li>
           <li className="rounded-xl border border-zinc-200 bg-white p-4">HSTSやCSPなど主要ヘッダーを確認</li>
-          <li className="rounded-xl border border-zinc-200 bg-white p-4">SPF・DMARCなどメール認証設定を確認</li>
+          <li className="rounded-xl border border-zinc-200 bg-white p-4">SPF・DKIM・DMARCなどメール認証設定を確認</li>
           <li className="rounded-xl border border-zinc-200 bg-white p-4">主要企業ランキングと比較記事も読める</li>
         </ul>
       </section>
@@ -238,6 +239,8 @@ export default function Home() {
               "DMARCチェック",
               "SPFチェック",
               "SPF確認",
+              "DKIM確認",
+              "DKIMチェック",
             ].map((keyword) => (
               <span key={keyword} className="rounded-full border border-zinc-200 bg-white px-3 py-1">
                 {keyword}
@@ -332,7 +335,7 @@ export default function Home() {
           <div>
             <h2 className="text-lg font-semibold text-zinc-900">🧭 まず読む基礎解説</h2>
             <p className="text-sm text-zinc-500 mt-1">
-              SSLチェック・セキュリティヘッダーチェック・SPFチェック・HTTPS・DMARC・SPF・CSP・HSTS の基礎記事へ、トップページから直接たどれる導線を追加しています。
+              SSLチェック・セキュリティヘッダーチェック・SPFチェック・DKIM確認・HTTPS・DMARC・SPF・CSP・HSTS の基礎記事へ、トップページから直接たどれる導線を追加しています。
             </p>
           </div>
           <Link href="/blog" className="text-sm text-zinc-400 hover:text-zinc-600 transition-colors whitespace-nowrap">
@@ -340,7 +343,7 @@ export default function Home() {
           </Link>
         </div>
         <div className="flex flex-wrap gap-2">
-          {["site-security-check-guide", "ssl-check-guide", "security-header-check-guide", "dmarc-check-guide", "spf-check-guide", "what-is-https", "what-is-dmarc", "what-is-spf", "what-is-csp", "what-is-hsts"].map((slug) => {
+          {["site-security-check-guide", "ssl-check-guide", "security-header-check-guide", "dmarc-check-guide", "spf-check-guide", "dkim-check-guide", "what-is-https", "what-is-dmarc", "what-is-spf", "what-is-csp", "what-is-hsts"].map((slug) => {
             const article = articles.find((a) => a.slug === slug);
             if (!article) return null;
             return (

@@ -4178,6 +4178,96 @@ ${cta}
       },
     ]
   },
+  {
+    slug: "dkim-check-guide",
+    title: "DKIM確認とは？selectorの見方とチェックしたい5項目を初心者向けに解説",
+    description: "DKIM確認で見るべきポイントを初心者向けに解説。selectorの探し方、公開鍵レコードの有無、署名失敗の原因、SPF・DMARCとの関係、運用時の注意点をまとめました。",
+    publishedAt: "2026-04-26",
+    updatedAt: "2026-04-26",
+    category: "メール認証",
+    tags: ["DKIM確認", "DKIMチェック", "DKIM", "メール認証", "DNS"],
+    content: `
+<h2>DKIM確認とは？</h2>
+<p>DKIM確認とは、<strong>送信メールに付く電子署名が検証できる状態か</strong>を確認することです。Webサイトの問い合わせ通知や採用メール、ニュースレター配信では、SPFやDMARCだけでなく<strong>DKIMの整備</strong>が届きやすさと信頼性に直結します。</p>
+<p>特に「DKIM確認をしたい」「selectorが分からない」「DKIMレコードの見方を知りたい」という場面では、まず公開DNSにある鍵レコードを見て、署名の前提が整っているかを把握するのが第一歩です。</p>
+
+<h2>DKIM確認で見たい5項目</h2>
+<ol>
+  <li><strong>DKIMのselectorが把握できているか</strong></li>
+  <li><strong>selector._domainkey に公開鍵TXTレコードがあるか</strong></li>
+  <li><strong>古いselectorや無効な鍵が残っていないか</strong></li>
+  <li><strong>利用中の送信サービスすべてでDKIM署名されているか</strong></li>
+  <li><strong>SPF・DMARCと整合した運用になっているか</strong></li>
+</ol>
+<p>この5点を押さえるだけでも、DKIMの設定漏れや運用事故の多くを早い段階で見つけやすくなります。</p>
+
+<h2>1. まずselectorを確認する</h2>
+<p>DKIMは通常、<code>selector._domainkey.example.com</code> のような名前で公開鍵を引きます。つまり <strong>どのselectorを使っているか</strong> が分からないと、DNS確認も進みません。</p>
+<p>Google Workspace、Microsoft 365、SendGrid、Mailchimp など送信サービスごとにselector名が違うため、管理画面や設定手順書と照らし合わせることが大切です。</p>
+
+<h2>2. 公開鍵レコードが存在するか</h2>
+<p>selectorが分かったら、<code>selector._domainkey</code> に <strong>TXTレコードが存在するか</strong> を確認します。レコードがなければ、送信側が署名していても受信側は検証できません。</p>
+<p>値の中には <code>v=DKIM1</code> や <code>p=</code> で始まる公開鍵情報が入るのが一般的です。</p>
+
+<h2>3. 古い鍵や不要なselectorが残っていないか</h2>
+<p>送信サービスの移行後に、古いselectorが残り続けることがあります。すぐ危険というわけではありませんが、<strong>どれが現役か分からない状態</strong> は運用事故の原因になります。</p>
+<p>特に複数ベンダーをまたいでメールを送る会社では、定期的にselectorの棚卸しをしておくと安全です。</p>
+
+<h2>4. 使っている送信経路すべてで署名されているか</h2>
+<p>問い合わせ通知は署名されているのに、採用管理ツールやMAツールのメールだけDKIM未対応というケースは珍しくありません。DKIM確認では、<strong>一部だけでなく全送信経路</strong> を意識して見る必要があります。</p>
+
+<h2>5. SPF・DMARCとセットで見られているか</h2>
+<p>DKIM単独でも価値はありますが、実務では <a href="/blog/spf-check-guide">SPFチェック</a> や <a href="/blog/dmarc-check-guide">DMARC確認</a> と組み合わせてはじめて、なりすまし対策の完成度が上がります。</p>
+<p>特にDMARCはSPFまたはDKIMの結果を使って判断するため、DKIM確認は<strong>メール認証全体の要</strong>のひとつです。</p>
+
+<h2>よくあるDKIM運用のつまずき</h2>
+<ul>
+  <li><strong>selectorが分からず確認できない</strong></li>
+  <li><strong>公開鍵レコードの貼り付けミス</strong>で検証失敗する</li>
+  <li><strong>送信サービス追加時にDKIM設定を忘れる</strong></li>
+  <li><strong>古い鍵を放置</strong>して棚卸しできなくなる</li>
+  <li><strong>SPFやDMARCと整合せず</strong>、運用全体では効果が弱い</li>
+</ul>
+
+<h2>こんな人に向いています</h2>
+<ul>
+  <li>自社ドメインのDKIMが最低限整っているか見たい人</li>
+  <li>送信メールの信頼性を改善したい担当者</li>
+  <li>営業前に相手企業のメール認証成熟度をざっと見たい人</li>
+  <li>DMARC導入前にDKIMの土台を確認したい人</li>
+</ul>
+
+<h2>今すぐDKIM確認をする方法</h2>
+<ol>
+  <li><a href="/">トップページの無料診断</a>でドメインを入力する</li>
+  <li>DKIMの有無や、あわせてSPF・DMARCも確認する</li>
+  <li>不足があれば <a href="/blog/dmarc-check-guide">DMARC確認ガイド</a> や <a href="/blog/spf-check-guide">SPFチェックガイド</a> とセットで棚卸しする</li>
+</ol>
+
+<h2>関連記事</h2>
+<ul>
+  <li><a href="/blog/dmarc-check-guide">DMARC確認とは？見るべき5項目を解説</a></li>
+  <li><a href="/blog/spf-check-guide">SPFチェックとは？よくある設定ミスを解説</a></li>
+  <li><a href="/blog/what-is-dmarc">DMARCとは？設定手順5ステップを解説</a></li>
+  <li><a href="/blog/site-security-check-guide">サイトのセキュリティチェックで見るべき10項目</a></li>
+</ul>
+${cta}
+`,
+    faq: [
+      {
+        question: "DKIM確認では何を見ればいいですか？",
+        answer: "selectorの把握、selector._domainkey の公開鍵TXTレコード有無、利用中サービスすべてで署名されているか、SPFやDMARCとの整合をまず確認するのが基本です。",
+      },
+      {
+        question: "DKIMだけ設定すれば十分ですか？",
+        answer: "十分ではありません。実務ではSPFとDMARCも合わせて運用し、送信経路全体でなりすまし対策を整える必要があります。",
+      },
+      {
+        question: "selectorが分からないときはどうすればいいですか？",
+        answer: "まず利用中の送信サービス管理画面や導入手順を確認するのが近道です。Google Workspaceや配信サービスごとにselector名が異なります。",
+      },
+    ]
+  },
 ];
 
 export function getArticleBySlug(slug: string): Article | undefined {
