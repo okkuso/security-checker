@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 };
 
 const featuredSlugs = ["compare-saas", "compare-telecom", "compare-automobile"];
-const foundationSlugs = ["site-security-check-guide", "ssl-check-guide", "security-header-check-guide", "dmarc-check-guide", "spf-check-guide", "dkim-check-guide", "what-is-https", "what-is-dmarc", "what-is-spf", "what-is-csp", "what-is-hsts"];
+const foundationSlugs = ["site-security-check-guide", "ssl-check-guide", "security-header-check-guide", "mail-auth-check-guide", "dmarc-check-guide", "spf-check-guide", "dkim-check-guide", "what-is-https", "what-is-dmarc", "what-is-spf", "what-is-csp", "what-is-hsts"];
 
 function getBreadcrumbJsonLd() {
   return {

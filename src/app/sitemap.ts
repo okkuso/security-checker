@@ -10,6 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "compare-automobile": 0.85,
     "ssl-check-guide": 0.85,
     "security-header-check-guide": 0.85,
+    "mail-auth-check-guide": 0.86,
     "spf-check-guide": 0.85,
     "dkim-check-guide": 0.85,
     "what-is-https": 0.85,

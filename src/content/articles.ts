@@ -4268,6 +4268,82 @@ ${cta}
       },
     ]
   },
+  {
+    slug: "mail-auth-check-guide",
+    title: "メール認証チェックとは？SPF・DKIM・DMARCをまとめて確認したい7項目",
+    description: "メール認証チェックで最初に見るべき7項目を解説。SPF・DKIM・DMARCの役割の違い、送信ドメイン棚卸しの進め方、問い合わせ通知や営業メールで起きやすい失敗をまとめました。",
+    publishedAt: "2026-04-27",
+    updatedAt: "2026-04-27",
+    category: "メール認証",
+    tags: ["メール認証チェック", "SPF", "DKIM", "DMARC", "DNS"],
+    content: `
+<h2>メール認証チェックとは？</h2>
+<p>メール認証チェックとは、<strong>自社ドメインから送るメールが受信側で信頼されやすい状態か</strong> を、SPF・DKIM・DMARCを中心にまとめて確認することです。</p>
+<p>「フォーム通知が迷惑メールに入りやすい」「営業メールの到達率が落ちた」「GoogleやMicrosoftの要件に備えたい」といった場面では、個別設定を見るより <strong>メール認証全体を一度に棚卸しする入口記事</strong> がある方が実務で使いやすいです。</p>
+
+<h2>まず確認したい7項目</h2>
+<ol>
+  <li><strong>SPFレコードが存在するか</strong></li>
+  <li><strong>SPFに送信サービスの include 漏れがないか</strong></li>
+  <li><strong>DKIMのselectorと公開鍵が整っているか</strong></li>
+  <li><strong>主要な送信経路すべてでDKIM署名されているか</strong></li>
+  <li><strong>DMARCレコードがあるか</strong></li>
+  <li><strong>DMARCポリシーが none のまま放置されていないか</strong></li>
+  <li><strong>問い合わせ通知・採用・MA配信など送信経路の棚卸しができているか</strong></li>
+</ol>
+<p>この7項目を押さえると、メール到達率の低下やなりすまし対策漏れの原因を切り分けやすくなります。</p>
+
+<h2>SPF・DKIM・DMARCの違いを3行で整理</h2>
+<ul>
+  <li><strong>SPF</strong> は「どのサーバーから送ってよいか」を宣言する設定</li>
+  <li><strong>DKIM</strong> は「送信メールに改ざん防止の署名を付ける」設定</li>
+  <li><strong>DMARC</strong> は「SPF/DKIMに失敗したメールをどう扱うか」を決める設定</li>
+</ul>
+<p>この3つは役割が違うため、どれか1つだけ整っていても十分ではありません。<strong>まとめて見る前提</strong> が重要です。</p>
+
+<h2>よくある失敗は「一部の送信経路だけ漏れている」こと</h2>
+<p>メール認証チェックで実際によく見つかるのは、コーポレートメールは整っているのに、問い合わせ通知、採用管理ツール、MAツール、請求書配信などの<strong>周辺経路だけ設定が漏れている</strong>ケースです。</p>
+<p>そのため、DNSだけでなく「誰がどのサービスから送っているか」を並べて見ることが大切です。</p>
+
+<h2>メール認証チェックをするときの進め方</h2>
+<ol>
+  <li>まず <a href="/">無料診断ツール</a> でドメイン全体の設定状況をざっと確認する</li>
+  <li>不足が見えたら <a href="/blog/spf-check-guide">SPFチェック</a>、<a href="/blog/dkim-check-guide">DKIM確認</a>、<a href="/blog/dmarc-check-guide">DMARC確認</a> の個別記事で深掘りする</li>
+  <li>最後に、送信サービス一覧と照らして「どのメールがどの認証を通るか」を棚卸しする</li>
+</ol>
+
+<h2>こんな人に向いています</h2>
+<ul>
+  <li>自社ドメインのメール認証をまとめて点検したい担当者</li>
+  <li>営業メールやフォーム通知の到達率を改善したい人</li>
+  <li>DMARC導入前にSPF・DKIMの前提を整理したい人</li>
+  <li>取引先のメール認証成熟度をざっと確認したい人</li>
+</ul>
+
+<h2>関連記事</h2>
+<ul>
+  <li><a href="/blog/spf-check-guide">SPFチェックとは？確認したいレコードの見方とよくある設定ミス</a></li>
+  <li><a href="/blog/dkim-check-guide">DKIM確認とは？selectorの見方とチェックしたい5項目</a></li>
+  <li><a href="/blog/dmarc-check-guide">DMARC確認とは？見るべき5項目を初心者向けに解説</a></li>
+  <li><a href="/blog/what-is-dmarc">DMARCとは？設定手順5ステップとポリシーの選び方</a></li>
+</ul>
+${cta}
+`,
+    faq: [
+      {
+        question: "メール認証チェックでは何から見ればいいですか？",
+        answer: "最初はSPF、DKIM、DMARCの3つが存在しているかを確認し、その後に送信サービスの漏れやDMARCポリシーの強さを見ていくと整理しやすいです。",
+      },
+      {
+        question: "SPF・DKIM・DMARCのどれが一番重要ですか？",
+        answer: "どれか1つではなく3つセットで考えるのが基本です。SPFは送信元、DKIMは署名、DMARCは失敗時ポリシーを担うため、役割が重なりません。",
+      },
+      {
+        question: "メール認証チェックだけで到達率は改善しますか？",
+        answer: "土台改善には有効ですが、送信内容、配信頻度、レピュテーション、宛先品質なども影響します。まず認証漏れをなくしてから他要因を見るのが効率的です。",
+      },
+    ]
+  },
 ];
 
 export function getArticleBySlug(slug: string): Article | undefined {
