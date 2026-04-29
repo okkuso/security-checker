@@ -3549,15 +3549,16 @@ ${cta}
   },
   {
     slug: "compare-saas",
-    title: "【2026年版】SaaS5社セキュリティ比較ランキング｜1位80点・最下位55点はどこ？",
-    description: "freee・SmartHR・Sansan・サイボウズ・マネーフォワードを10項目で比較。1位80点〜最下位55点の差と導入前チェック3点を3分で解説。",
+    title: "SaaSセキュリティ比較ランキング【2026年版】freee・SmartHR・Sansan・サイボウズ・マネーフォワードを診断",
+    description: "SaaSのセキュリティ比較をしたい方向けに、freee・SmartHR・Sansan・サイボウズ・マネーフォワードを10項目で比較。1位80点, 最下位55点の差と導入前に見るべき3つの確認ポイントを整理しました。",
     publishedAt: "2025-02-18",
-    updatedAt: "2026-03-12",
+    updatedAt: "2026-04-29",
     category: "業界比較",
-    tags: ["SaaS", "業界比較", "freee", "SmartHR", "Sansan", "サイボウズ", "マネーフォワード"],
+    tags: ["SaaS", "業界比較", "freee", "SmartHR", "Sansan", "サイボウズ", "マネーフォワード", "SaaS セキュリティ比較"],
     content: `
-<h2>SaaS企業5社のセキュリティスコア比較</h2>
-<p>企業の業務データや従業員情報を預かるSaaS企業5社のWebセキュリティ設定を比較しました。</p>
+<h2>SaaSセキュリティ比較, まず結論</h2>
+<p>主要SaaS 5社を比較すると、<strong>1位はマネーフォワード 80点、最下位はSansan 55点</strong>でした。SaaS導入前に見るべき差は、HTTPSの有無よりも、<strong>DMARC・DKIM・CSPなどの運用系設定</strong>に出やすいです。</p>
+<p>「SaaSのセキュリティ比較を短時間で把握したい」「freeeやSmartHRの対外的な設定レベルを見たい」という方向けに、公開ヘッダーとDNS情報をもとに要点をまとめます。</p>
 
 <div class="not-prose bg-zinc-50 rounded-xl p-6 mb-6">
 <table>
@@ -3571,6 +3572,14 @@ ${cta}
 </tbody>
 </table>
 </div>
+
+<h2>SaaS導入前に確認したい3つのポイント</h2>
+<ol>
+  <li><strong>メール認証が整っているか</strong>：DMARCやDKIMが弱いと、請求や通知メールのなりすまし対策に不安が残ります</li>
+  <li><strong>ブラウザ向け防御があるか</strong>：CSPやPermissions-Policyは、SaaSの信頼性を測るうえで見落としにくい差分です</li>
+  <li><strong>基本ヘッダーが全社共通で揃っているか</strong>：HTTPS、HSTS、X-Frame-Optionsなどの初歩が揃っているかをまず見ます</li>
+</ol>
+<p>つまり、SaaSのセキュリティ比較では「SSL対応済みか」だけでなく、<strong>メール認証とヘッダー運用の成熟度</strong>まで見ると差がわかりやすいです。</p>
 
 <h2>項目別の比較</h2>
 <table>
@@ -3590,25 +3599,32 @@ ${cta}
 </table>
 
 <h2>業界全体の傾向</h2>
-<p>SaaS企業5社の平均スコアは<strong>67点</strong>。テック企業としてはもう一段の強化が期待されます。</p>
+<p>SaaS企業5社の平均スコアは<strong>67点</strong>です。テック企業として基本対応は揃っている一方、<strong>CSP・Permissions-Policy・DMARC</strong>のような一段深い運用で差がついていました。</p>
 <ul>
   <li><strong>マネーフォワードがトップ</strong>：金融データを扱う特性上、セキュリティ意識の高さが反映されています</li>
-  <li><strong>基本項目は全社対応</strong>：HTTPS、HSTS、X-Content-Type-Options、X-Frame-Optionsは全社設定済み</li>
-  <li><strong>CSPは全社未設定</strong>：SaaS製品はSPA（シングルページアプリケーション）が多く、インラインスクリプトへの依存がCSP導入を難しくしている可能性</li>
-  <li><strong>DMARCはマネーフォワードのみ</strong>：BtoBサービスにおいて、取引先を装ったフィッシングメール対策は重要</li>
-  <li><strong>Sansanのスコアが低め</strong>：DKIM未設定かつDMARC未設定で、名刺データという機密情報を扱う企業としてはメール認証の強化が望まれます</li>
+  <li><strong>基本項目は全社対応</strong>：HTTPS、HSTS、X-Content-Type-Options、X-Frame-Optionsは全社設定済みです</li>
+  <li><strong>CSPは全社未設定</strong>：SaaS製品はSPAが多く、インラインスクリプト依存がCSP導入を難しくしている可能性があります</li>
+  <li><strong>DMARCはマネーフォワードのみ</strong>：BtoBサービスでは取引先を装ったフィッシング対策の観点で差が出やすい領域です</li>
+  <li><strong>Sansanのスコアが低め</strong>：DKIM未設定かつDMARC未設定で、機密性の高い名刺データを扱う企業としてはメール認証強化の優先度が高いです</li>
 </ul>
 
 <h2>改善ポイント</h2>
 <ul>
-  <li><strong>全社共通</strong>：CSPの導入。SaaS製品のセキュリティ基準として、コーポレートサイトでもCSPを設定することが信頼性向上につながる</li>
-  <li><strong>サイボウズ・freee・SmartHR・Sansan</strong>：DMARCの導入。BtoB企業間のメールは信頼性が重要で、なりすまし対策は必須</li>
-  <li><strong>Sansan</strong>：DKIMの導入でメール認証の基盤整備が急務</li>
-  <li><strong>SmartHR・Sansan</strong>：Referrer-Policyの設定で外部サイトへの情報漏洩を防止</li>
-  <li><strong>全社共通</strong>：Permissions-Policyの導入</li>
+  <li><strong>全社共通</strong>：CSPの導入。SaaS製品のセキュリティ基準として、コーポレートサイト側でもXSS対策を明示できる状態が望まれます</li>
+  <li><strong>サイボウズ・freee・SmartHR・Sansan</strong>：DMARCの導入。BtoB企業間メールの信頼性を高めるうえで、なりすまし対策は必須です</li>
+  <li><strong>Sansan</strong>：DKIMの導入でメール認証の基盤整備が急務です</li>
+  <li><strong>SmartHR・Sansan</strong>：Referrer-Policyの設定で外部サイトへの情報漏洩リスクを抑えられます</li>
+  <li><strong>全社共通</strong>：Permissions-Policyの導入で不要なブラウザ権限利用を絞れます</li>
 </ul>
 
-<p>SaaS企業は顧客企業の機密データを預かる立場にあり、自社サイトのセキュリティ設定は信頼性の指標の一つです。セキュリティを売りにするSaaS企業こそ、まず自社サイトの設定を万全にすることが求められます。</p>
+<p>SaaS企業は顧客企業の機密データを預かる立場にあり、自社サイトのセキュリティ設定は信頼性の指標の一つです。SaaS比較の検討段階でも、価格や機能だけでなく、<strong>公開設定の整備度合い</strong>を一緒に見る価値があります。</p>
+
+<h2>関連記事</h2>
+<ul>
+  <li><a href="/blog/mail-auth-check-guide">メール認証チェックとは？SPF・DKIM・DMARCをまとめて確認したい7項目</a></li>
+  <li><a href="/blog/what-is-csp">CSPとは？XSS攻撃を防ぐ設定方法</a></li>
+  <li><a href="/blog/what-is-https">HTTPSとは？仕組みと設定方法を図解で解説</a></li>
+</ul>
 
 <h2>各社の詳細分析</h2>
 <ul>
@@ -3624,7 +3640,6 @@ ${cta}
   <li><a href="/blog/compare-telecom">ドコモ・au・ソフトバンクのセキュリティ比較</a>：3社中最下位は40点</li>
   <li><a href="/blog/compare-automobile">トヨタ・ホンダ・日産のセキュリティ比較</a></li>
   <li><a href="/blog/compare-ec">EC大手5社のセキュリティ比較</a></li>
-  <li><a href="/blog/what-is-https">HTTPSとは？仕組みと設定方法を図解で解説</a></li>
 </ul>
 
 <div class="not-prose bg-amber-50 border border-amber-200 rounded-xl p-4 mt-6 text-sm text-amber-800">
@@ -3633,9 +3648,9 @@ ${cta}
 ${cta}
 `,
     faq: [
-      { question: "SaaS企業で最もセキュリティが強いのは？", answer: "マネーフォワードが80点で1位。2位サイボウズ75点、3位Sansan70点、4位freee55点、5位SmartHR55点でした。" },
-      { question: "SaaS企業のセキュリティで特に問題な点は？", answer: "5社平均67点で、特にContent Security Policy（CSP）の未設定が目立ちます。XSS攻撃への脆弱性が懸念されます。" },
-      { question: "SaaSを選ぶ時にセキュリティで確認すべき点は？", answer: "HTTPS対応、セキュリティヘッダー設定、DMARC対応、SOC2/ISMS認証の有無を確認することをおすすめします。" },
+      { question: "SaaS企業で最もセキュリティが強いのは？", answer: "今回比較した5社では、マネーフォワードが80点で1位、サイボウズが70点で2位、freeeとSmartHRが65点で並び、Sansanが55点でした。" },
+      { question: "SaaSセキュリティ比較で特に差が出た項目は？", answer: "差が大きかったのはDMARC、DKIM、Referrer-Policy、Permissions-Policyです。HTTPSやHSTSのような基本対応はほぼ揃っていましたが、運用成熟度が見える項目で差が出ました。" },
+      { question: "SaaSを選ぶ時にセキュリティで確認すべき点は？", answer: "HTTPS対応、セキュリティヘッダー設定、DMARCやDKIMなどのメール認証、加えてSOC2やISMSなど第三者認証の有無を確認するのがおすすめです。" },
     ]
   },
   {

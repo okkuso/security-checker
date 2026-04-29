@@ -1,0 +1,54 @@
+{
+  "date": "2026-04-29",
+  "siteUrl": "sc-domain:security-check-site.net",
+  "range": {
+    "startDate": "2026-04-22",
+    "endDate": "2026-04-28"
+  },
+  "summary": {
+    "impressions": 1,
+    "clicks": 0,
+    "ctr": 0,
+    "position": 11
+  },
+  "pages": [
+    {
+      "page": "https://security-check-site.net/blog/compare-saas",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 11
+    }
+  ],
+  "queries": [],
+  "sitemap": {
+    "path": "https://security-check-site.net/sitemap.xml",
+    "submitted": 63,
+    "indexed": 0,
+    "lastSubmitted": "2026-02-18T13:14:02.556Z",
+    "lastDownloaded": "2026-04-06T22:44:37.096Z",
+    "warnings": 0,
+    "errors": 0
+  },
+  "comparison": {
+    "previousLogDate": "2026-04-27",
+    "impressionsDelta": 1,
+    "clicksDelta": 0,
+    "ctrDelta": 0,
+    "positionDelta": 11,
+    "indexedDelta": 0,
+    "lastDownloadedChanged": false
+  },
+  "actions": [
+    {
+      "type": "title_description_refresh",
+      "target": "/blog/compare-saas",
+      "reason": "直近7日で唯一露出したページのため、タイトル先頭を「SaaSセキュリティ比較」に寄せ、比較対象企業名と導入前チェック要素を明示して検索意図一致を強化"
+    },
+    {
+      "type": "content_refresh",
+      "target": "/blog/compare-saas",
+      "reason": "導入前チェック3項目、関連記事導線、FAQの整合性修正を追加し、順位11付近の再露出ページを優先改善"
+    }
+  ]
+}
