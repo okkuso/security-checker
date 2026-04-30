@@ -3549,10 +3549,10 @@ ${cta}
   },
   {
     slug: "compare-saas",
-    title: "SaaSセキュリティ比較ランキング【2026年版】freee・SmartHR・Sansan・サイボウズ・マネーフォワードを診断",
-    description: "SaaSのセキュリティ比較をしたい方向けに、freee・SmartHR・Sansan・サイボウズ・マネーフォワードを10項目で比較。1位80点, 最下位55点の差と導入前に見るべき3つの確認ポイントを整理しました。",
+    title: "SaaSセキュリティ比較ランキング【2026年版】freee・SmartHR・Sansanは安全？導入前5項目も解説",
+    description: "SaaSのセキュリティ比較をしたい方向けに、freee・SmartHR・Sansan・サイボウズ・マネーフォワードを10項目で比較。1位80点, 最下位55点の差に加えて、導入前に確認したい5項目のチェックリストもまとめました。",
     publishedAt: "2025-02-18",
-    updatedAt: "2026-04-29",
+    updatedAt: "2026-04-30",
     category: "業界比較",
     tags: ["SaaS", "業界比較", "freee", "SmartHR", "Sansan", "サイボウズ", "マネーフォワード", "SaaS セキュリティ比較"],
     content: `
@@ -3580,6 +3580,16 @@ ${cta}
   <li><strong>基本ヘッダーが全社共通で揃っているか</strong>：HTTPS、HSTS、X-Frame-Optionsなどの初歩が揃っているかをまず見ます</li>
 </ol>
 <p>つまり、SaaSのセキュリティ比較では「SSL対応済みか」だけでなく、<strong>メール認証とヘッダー運用の成熟度</strong>まで見ると差がわかりやすいです。</p>
+
+<h2>SaaS選定前のセキュリティチェックリスト5項目</h2>
+<ul>
+  <li><strong>DMARCが設定されているか</strong>：通知メールや請求メールのなりすまし対策の基準になります</li>
+  <li><strong>DKIMが生きているか</strong>：送信ドメイン認証が弱いと、取引先への到達性や信頼性に影響します</li>
+  <li><strong>CSPやHSTSがあるか</strong>：ログイン前のコーポレートサイトでもブラウザ防御の成熟度が見えます</li>
+  <li><strong>Referrer-PolicyやPermissions-Policyが整っているか</strong>：不要な情報漏えいや権限利用を抑える姿勢を確認できます</li>
+  <li><strong>公開情報で説明責任が果たされているか</strong>：セキュリティページ、認証取得、インシデント対応方針が探しやすいかも重要です</li>
+</ul>
+<p>メール認証をまとめて確認したい場合は、<a href="/blog/mail-auth-check-guide">メール認証チェックの記事</a>も合わせて見ると、SaaS比較の観点を整理しやすくなります。</p>
 
 <h2>項目別の比較</h2>
 <table>
@@ -3650,7 +3660,8 @@ ${cta}
     faq: [
       { question: "SaaS企業で最もセキュリティが強いのは？", answer: "今回比較した5社では、マネーフォワードが80点で1位、サイボウズが70点で2位、freeeとSmartHRが65点で並び、Sansanが55点でした。" },
       { question: "SaaSセキュリティ比較で特に差が出た項目は？", answer: "差が大きかったのはDMARC、DKIM、Referrer-Policy、Permissions-Policyです。HTTPSやHSTSのような基本対応はほぼ揃っていましたが、運用成熟度が見える項目で差が出ました。" },
-      { question: "SaaSを選ぶ時にセキュリティで確認すべき点は？", answer: "HTTPS対応、セキュリティヘッダー設定、DMARCやDKIMなどのメール認証、加えてSOC2やISMSなど第三者認証の有無を確認するのがおすすめです。" },
+      { question: "SaaSを選ぶ時にセキュリティで確認すべき点は？", answer: "HTTPS対応、セキュリティヘッダー設定、DMARCやDKIMなどのメール認証、加えてSOC2やISMSなど第三者認証の有無を確認するのがおすすめです。公開サイト上でセキュリティ方針や認証情報が見つけやすいかも実務上は重要です。" },
+      { question: "SaaS導入前に最低限見るべきチェック項目は？", answer: "DMARC、DKIM、CSP、HSTS、Referrer-Policyの5項目です。通知メールのなりすまし対策とブラウザ向け防御の両方を見ると、公開設定の成熟度を短時間で比較しやすくなります。" },
     ]
   },
   {

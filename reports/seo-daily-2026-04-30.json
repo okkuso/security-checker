@@ -1,0 +1,42 @@
+{
+  "date": "2026-04-30",
+  "siteUrl": "sc-domain:security-check-site.net",
+  "range": {
+    "startDate": "2026-04-23",
+    "endDate": "2026-04-29"
+  },
+  "summary": {
+    "impressions": 1,
+    "clicks": 0,
+    "ctr": 0,
+    "position": 11
+  },
+  "pages": [
+    {
+      "page": "https://security-check-site.net/blog/compare-saas",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 11
+    }
+  ],
+  "queries": [],
+  "sitemap": {
+    "path": "https://security-check-site.net/sitemap.xml",
+    "submitted": 63,
+    "indexed": 0,
+    "lastSubmitted": "2026-02-18T13:14:02.556Z",
+    "lastDownloaded": "2026-04-06T22:44:37.096Z",
+    "warnings": 0,
+    "errors": 0
+  },
+  "comparison": {
+    "previousLogDate": "2026-04-29",
+    "impressionsDelta": 0,
+    "clicksDelta": 0,
+    "ctrDelta": 0,
+    "positionDelta": 0,
+    "indexedDelta": 0,
+    "lastDownloadedChanged": false
+  }
+}
