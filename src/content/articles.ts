@@ -3549,16 +3549,17 @@ ${cta}
   },
   {
     slug: "compare-saas",
-    title: "SaaSセキュリティ比較ランキング【2026年版】5社で安全なのはどこ？1位80点, freee・SmartHR・Sansanを比較",
-    description: "freee・SmartHR・Sansan・サイボウズ・マネーフォワードを10項目で比較した一覧です。1位80点, 最下位55点の差と、DMARC・DKIM・CSPなど導入前5項目を3分で確認できます。",
+    title: "SaaSセキュリティ比較ランキング【2026年版】比較表あり, 5社で安全なのはどこ？1位80点",
+    description: "freee・SmartHR・Sansan・サイボウズ・マネーフォワードの比較表を先に見られます。10項目の差と、DMARC・DKIM・CSPなど導入前5項目を3分で確認できます。",
     publishedAt: "2025-02-18",
-    updatedAt: "2026-05-03",
+    updatedAt: "2026-05-04",
     category: "業界比較",
     tags: ["SaaS", "業界比較", "freee", "SmartHR", "Sansan", "サイボウズ", "マネーフォワード", "SaaS セキュリティ比較"],
     content: `
 <h2>SaaSセキュリティ比較, まず結論</h2>
 <p>主要SaaS 5社を比較すると、<strong>1位はマネーフォワード 80点、最下位はSansan 55点</strong>でした。SaaS導入前に見るべき差は、HTTPSの有無よりも、<strong>DMARC・DKIM・CSPなどの運用系設定</strong>に出やすいです。</p>
 <p>「freee・SmartHR・Sansanで安全なのはどこかをすぐ知りたい」「5社の比較表だけ先に見たい」「稟議前に最低限のセキュリティチェック項目だけ押さえたい」という方向けに、公開ヘッダーとDNS情報をもとに要点をまとめます。</p>
+<p><strong>先に結論だけ見るなら、下の比較表で1位から5位まで30秒で把握できます。</strong> そのあとに、なぜ点差がついたのかをDMARC・DKIM・CSP・Referrer-Policyの順で読むと判断しやすいです。</p>
 <p>特に<strong>SaaS選定前のセキュリティチェック</strong>として、メール認証とブラウザ防御の差がどこに出るかを先に把握しておくと、比較表の読み取りがかなり楽になります。3分で見返せるよう、導入前5項目も先に整理しました。</p>
 
 <div class="not-prose bg-zinc-50 rounded-xl p-6 mb-6">
@@ -3572,6 +3573,17 @@ ${cta}
 <tr><td>Sansan</td><td>sansan.com</td><td><strong>55点</strong></td><td>D</td></tr>
 </tbody>
 </table>
+</div>
+
+<div class="not-prose bg-blue-50 border border-blue-200 rounded-xl p-5 mb-6">
+  <p class="font-bold text-blue-900 mb-2">比較表だけ先に見たい方向け</p>
+  <ul class="list-disc pl-5 text-blue-900 space-y-1">
+    <li>1位 マネーフォワード 80点</li>
+    <li>2位 サイボウズ 70点</li>
+    <li>3位 freee / SmartHR 65点</li>
+    <li>5位 Sansan 55点</li>
+  </ul>
+  <p class="text-sm text-blue-800 mt-3">差がついた主因は、DMARC・DKIM・Referrer-Policyの有無です。</p>
 </div>
 
 <h2>SaaS導入前に確認したい3つのポイント</h2>
